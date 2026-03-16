@@ -35,8 +35,9 @@ const HeroSection = () => (
           >
             Browse Products <ArrowDown className="h-4 w-4" />
           </a>
-        </div>
       </div>
+      </div>
+    </div>
     </div>
   </section>
 );
