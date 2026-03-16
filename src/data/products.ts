@@ -52,6 +52,12 @@ export const categories: ProductCategoryInfo[] = [
     description: "Economical and fast-install panels for commercial, agricultural, and industrial roof and wall applications. Trim packages, flat stock, and polycarbonate skylight matches available. Available for will-call pickup at all 9 locations.",
   },
   {
+    id: "shakes-shingles",
+    label: "Shakes & Shingles",
+    subtitle: "Aluminum · Country Manor · Rustic",
+    description: "Aluminum shakes and shingles with a rustic wood-shake aesthetic. Four-sided interlock, 120 mph wind rating, 98% post-consumer recycled content. Cool Roof paint system standard.",
+  },
+  {
     id: "corrugated",
     label: "Corrugated & Wall",
     subtitle: "Corrugated · WS-100",
