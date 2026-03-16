@@ -321,6 +321,23 @@ export const products: ProductPanel[] = [
     ],
     showLocation: true,
   },
+  // ── Shakes & Shingles ──
+  {
+    id: "shakes",
+    code: "SHAKES",
+    name: "Aluminum Shakes & Shingles",
+    bestFor: "Traditional residential, fire-resistant",
+    description: "Rustic wood-shake aesthetic in aluminum. Interlocks on all four sides for a weather-tight seal. Rated to 120 mph wind. Made from 98% post-consumer recycled metal. Cool Roof paint system standard.",
+    category: "shakes-shingles",
+    meta: [
+      { key: "Wind Rating", value: "120 mph", status: "yes" },
+      { key: "Recycled Content", value: "98%", status: "yes" },
+      { key: "Cool Roof", value: "Yes", status: "yes" },
+      { key: "Fire Resistant", value: "Yes", status: "yes" },
+    ],
+    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-2000.jpg",
+    links: [],
+  },
   // ── Corrugated & Wall ──
   {
     id: "corrugated",
