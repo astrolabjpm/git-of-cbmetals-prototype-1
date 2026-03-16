@@ -10,7 +10,8 @@ const HeroSection = () => (
       loading="eager"
     />
     <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
-    <div className="relative mx-auto flex max-w-[1200px] items-center px-8 py-20 sm:py-28">
+    <div className="relative px-8 py-20 sm:py-28">
+      <div className="mx-auto flex max-w-[1200px] items-center">
       <div className="max-w-[680px]">
         <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
           Metal Roofing Systems
@@ -34,8 +35,9 @@ const HeroSection = () => (
           >
             Browse Products <ArrowDown className="h-4 w-4" />
           </a>
-        </div>
       </div>
+      </div>
+    </div>
     </div>
   </section>
 );
