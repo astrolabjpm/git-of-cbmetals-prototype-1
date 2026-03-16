@@ -2,8 +2,7 @@ export type ProductCategory =
   | "standing-seam"
   | "exposed-fastener"
   | "shakes-shingles"
-  | "corrugated"
-  | "specialty";
+  | "corrugated";
 
 export interface ProductMeta {
   key: string;
