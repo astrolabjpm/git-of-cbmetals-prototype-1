@@ -58,15 +58,9 @@ export const categories: ProductCategoryInfo[] = [
   },
   {
     id: "corrugated",
-    label: "Corrugated & Wall",
-    subtitle: "Corrugated · WS-100",
-    description: "Classic corrugated profiles for residential and agricultural roofing, plus the WS-100 interlocking wall and soffit system for commercial and residential exterior applications.",
-  },
-  {
-    id: "specialty",
-    label: "Specialty & Bare Metal",
-    subtitle: "Copper · Zinc · Zincalume · A606",
-    description: "Architectural-grade bare metals for projects where natural patina and premium aesthetics are the priority. Available across CBM standing seam profiles. No reflective or emissive coatings applied.",
+    label: "Corrugated",
+    subtitle: "Corrugated Metal Panel",
+    description: "Classic corrugated profiles for residential and agricultural roofing. Full color range available in steel and aluminum.",
   },
 ];
 
