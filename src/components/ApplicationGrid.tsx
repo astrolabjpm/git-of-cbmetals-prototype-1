@@ -1,12 +1,12 @@
 import { applications } from "@/data/products";
 
 const ApplicationGrid = () => (
-  <section className="border-b border-border bg-background px-8 py-12" id="applications">
+  <section className="bg-background px-8 py-12" id="applications">
     <div className="mx-auto max-w-[1200px]">
       <div className="mb-6">
         <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Browse by Project Type</h2>
-        <div className="mt-2 h-[2px] w-12 bg-foreground" />
-        <p className="mt-3 max-w-[580px] text-[14px] leading-[1.4] text-muted-foreground">
+        <hr className="mt-2 border-t-2 border-foreground" />
+        <p className="mt-3 max-w-[580px] text-[14px] leading-[1.5] text-muted-foreground">
           Not sure which category fits? Browse by application — each links to the relevant product sections above.
         </p>
       </div>
@@ -20,7 +20,7 @@ const ApplicationGrid = () => (
             </div>
             <div className="p-4">
               <h3 className="text-[15px] font-bold leading-[1.2] text-foreground">{app.title}</h3>
-              <p className="mt-1 text-[13px] leading-[1.4] text-muted-foreground">{app.subtitle}</p>
+              <p className="mt-1 text-[14px] leading-[1.5] text-muted-foreground">{app.subtitle}</p>
               <p className="font-meta mt-1.5 text-[12px] font-medium text-info">{app.products}</p>
             </div>
           </div>

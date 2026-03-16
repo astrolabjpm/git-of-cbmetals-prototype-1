@@ -6,18 +6,18 @@ const stats = [
 ];
 
 const WhyCBM = () => (
-  <section className="border-b border-border bg-background px-8 py-12" id="why-cbm">
+  <section className="bg-background px-8 py-12" id="why-cbm">
     <div className="mx-auto max-w-[1200px]">
       <div className="mb-6">
         <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Why Contractors and Architects Choose CBM</h2>
-        <div className="mt-2 h-[2px] w-12 bg-foreground" />
+        <hr className="mt-2 border-t-2 border-foreground" />
       </div>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((s) => (
           <div key={s.label}>
             <p className="font-meta text-[28px] font-medium leading-[1.2] text-accent">{s.num}</p>
             <p className="mt-1.5 text-[15px] font-bold leading-[1.2] text-foreground">{s.label}</p>
-            <p className="mt-1 text-[14px] leading-[1.4] text-muted-foreground">{s.sub}</p>
+            <p className="mt-1 text-[14px] leading-[1.5] text-muted-foreground">{s.sub}</p>
           </div>
         ))}
       </div>

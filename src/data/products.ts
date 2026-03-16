@@ -1,6 +1,7 @@
 export type ProductCategory =
   | "standing-seam"
   | "exposed-fastener"
+  | "shakes-shingles"
   | "corrugated"
   | "specialty";
 
@@ -49,6 +50,12 @@ export const categories: ProductCategoryInfo[] = [
     label: "Exposed Fastener",
     subtitle: "TFR-36 · PBR",
     description: "Economical and fast-install panels for commercial, agricultural, and industrial roof and wall applications. Trim packages, flat stock, and polycarbonate skylight matches available. Available for will-call pickup at all 9 locations.",
+  },
+  {
+    id: "shakes-shingles",
+    label: "Shakes & Shingles",
+    subtitle: "Aluminum · Country Manor · Rustic",
+    description: "Aluminum shakes and shingles with a rustic wood-shake aesthetic. Four-sided interlock, 120 mph wind rating, 98% post-consumer recycled content. Cool Roof paint system standard.",
   },
   {
     id: "corrugated",
@@ -313,6 +320,23 @@ export const products: ProductPanel[] = [
       { label: "PBR-TFR Installation Guide", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/PBR-TFR_Guide.pdf", type: "PDF" },
     ],
     showLocation: true,
+  },
+  // ── Shakes & Shingles ──
+  {
+    id: "shakes",
+    code: "SHAKES",
+    name: "Aluminum Shakes & Shingles",
+    bestFor: "Traditional residential, fire-resistant",
+    description: "Rustic wood-shake aesthetic in aluminum. Interlocks on all four sides for a weather-tight seal. Rated to 120 mph wind. Made from 98% post-consumer recycled metal. Cool Roof paint system standard.",
+    category: "shakes-shingles",
+    meta: [
+      { key: "Wind Rating", value: "120 mph", status: "yes" },
+      { key: "Recycled Content", value: "98%", status: "yes" },
+      { key: "Cool Roof", value: "Yes", status: "yes" },
+      { key: "Fire Resistant", value: "Yes", status: "yes" },
+    ],
+    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-2000.jpg",
+    links: [],
   },
   // ── Corrugated & Wall ──
   {

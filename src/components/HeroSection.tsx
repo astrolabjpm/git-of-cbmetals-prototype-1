@@ -21,7 +21,7 @@ const HeroSection = () => (
         <p className="mt-3 text-[20px] font-semibold leading-[1.2] text-primary-foreground/85 sm:text-[22px]">
           Standing Seam. Exposed Fastener. Specialty Metals.
         </p>
-        <p className="mt-4 max-w-[420px] text-[14px] leading-[1.4] text-primary-foreground/65">
+        <p className="mt-4 max-w-[420px] text-[14px] leading-[1.5] text-primary-foreground/65">
           Same-day quotes, onsite roll forming, and complete metal roofing systems. Serving contractors and architects across the Western U.S. since 1980.
         </p>
         <div className="mt-6 flex gap-3">
