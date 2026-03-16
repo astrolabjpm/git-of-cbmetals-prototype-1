@@ -328,7 +328,7 @@ export const products: ProductPanel[] = [
       { key: "Cool Roof", value: "Yes", status: "yes" },
       { key: "Fire Resistant", value: "Yes", status: "yes" },
     ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-2000.jpg",
+    image: "",
     links: [],
   },
   // ── Corrugated & Wall ──
