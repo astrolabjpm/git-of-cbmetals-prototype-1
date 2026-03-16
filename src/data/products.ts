@@ -385,7 +385,7 @@ export const applications: ApplicationCard[] = [
   {
     title: "Institutional / Civic",
     subtitle: "Schools, government, cultural, healthcare",
-    products: "CB-2000 · CS-100 · Rheinzink · Specialty",
+    products: "CB-2000 · CS-100",
     image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CS-100.jpg",
   },
 ];

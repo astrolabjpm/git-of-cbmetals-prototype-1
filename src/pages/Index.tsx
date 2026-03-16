@@ -104,31 +104,13 @@ const Index = () => {
           columns={1}
         />
 
-        {/* Corrugated & Wall */}
+        {/* Corrugated */}
         <ProductSection
           id="corrugated"
-          title="Corrugated & Wall Panels"
+          title="Corrugated Metal Panels"
           description={categories[3].description}
           products={corrugated}
-          columns={2}
-        />
-
-        {/* Specialty */}
-        <ProductSection
-          id="specialty"
-          title="Specialty & Bare Metal"
-          description={categories[4].description}
-          products={specialty}
-          columns={4}
-          compact
-          callout={
-            <p className="font-meta mt-4 text-[14px] text-muted-foreground">
-              Architects: CAD files, full specifications, and fire ratings available in the{" "}
-              <a href="https://www.custombiltmetals.com/resources/" className="font-semibold text-info underline">
-                Resources Library →
-              </a>
-            </p>
-          }
+          columns={1}
         />
 
         <ApplicationGrid />

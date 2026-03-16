@@ -10,8 +10,8 @@ const blurbs: Record<string, string> = {
   "Standing Seam": "Concealed fastener panels roll-formed onsite in CB and SL series profiles.",
   "Exposed Fastener": "TFR-36 and PBR panels for commercial, ag, and industrial buildings.",
   "Shakes & Shingles": "Aluminum shakes with four-sided interlock. Fire-resistant, recycled metal.",
-  "Corrugated & Wall": "Classic corrugated profiles plus WS-100 interlocking wall and soffit panels.",
-  "Specialty & Bare Metal": "Copper, zinc, Zincalume, and weathering steel in standing seam profiles.",
+  "Corrugated": "Classic corrugated profiles for residential and agricultural roofing.",
+  "Resources & Downloads": "Brochures, color charts, fire ratings, and seaming machine rentals.",
 };
 
 const PageIntro = () => (
