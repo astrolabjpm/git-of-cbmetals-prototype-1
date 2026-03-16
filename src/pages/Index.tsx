@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import SiteNav from "@/components/SiteNav";
+import ProductCard from "@/components/ProductCard";
 import HeroSection from "@/components/HeroSection";
 import PageIntro from "@/components/PageIntro";
 import ProductSection from "@/components/ProductSection";
