@@ -10,19 +10,16 @@ const HeroSection = () => (
       loading="eager"
     />
     <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
-    <div className="relative mx-auto flex max-w-[1200px] items-center px-8 py-20 sm:py-28 lg:px-10">
+    <div className="relative mx-auto flex max-w-[1200px] items-center px-8 py-20 sm:py-28">
       <div className="max-w-[560px]">
         <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
-          Custom-Bilt Metals — Roofing Systems
+          Metal Roofing Systems
         </p>
-        <h1 className="text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
-          Metal Roofing Systems &amp; Panels
+        <h1 className="text-[36px] font-bold leading-[1.15] text-primary-foreground sm:text-[44px]">
+          Standing Seam Metal Roofing: Concealed Fasteners, Zero Leak Points
         </h1>
-        <p className="mt-3 text-[20px] font-semibold leading-[1.2] text-primary-foreground/85 sm:text-[22px]">
-          Standing Seam. Exposed Fastener. Specialty Metals.
-        </p>
         <p className="mt-4 max-w-[420px] text-[14px] leading-[1.5] text-primary-foreground/65">
-          Same-day quotes, onsite roll forming, and complete metal roofing systems. Serving contractors and architects across the Western U.S. since 1980.
+          Custom-Bilt Metal roofing systems are one of the most beautiful and highly functional roofing solutions.
         </p>
         <div className="mt-6 flex gap-3">
           <a
