@@ -373,7 +373,7 @@ export const applications: ApplicationCard[] = [
   {
     title: "Commercial",
     subtitle: "Retail, office, mixed-use, light industrial",
-    products: "CB-2000 · TFR-36 · PBR · WS-100",
+    products: "CB-2000 · TFR-36 · PBR",
     image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/TFR.jpg",
   },
   {
