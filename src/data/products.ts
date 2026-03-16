@@ -2,8 +2,7 @@ export type ProductCategory =
   | "standing-seam"
   | "exposed-fastener"
   | "shakes-shingles"
-  | "corrugated"
-  | "specialty";
+  | "corrugated";
 
 export interface ProductMeta {
   key: string;
@@ -59,15 +58,9 @@ export const categories: ProductCategoryInfo[] = [
   },
   {
     id: "corrugated",
-    label: "Corrugated & Wall",
-    subtitle: "Corrugated · WS-100",
-    description: "Classic corrugated profiles for residential and agricultural roofing, plus the WS-100 interlocking wall and soffit system for commercial and residential exterior applications.",
-  },
-  {
-    id: "specialty",
-    label: "Specialty & Bare Metal",
-    subtitle: "Copper · Zinc · Zincalume · A606",
-    description: "Architectural-grade bare metals for projects where natural patina and premium aesthetics are the priority. Available across CBM standing seam profiles. No reflective or emissive coatings applied.",
+    label: "Corrugated",
+    subtitle: "Corrugated Metal Panel",
+    description: "Classic corrugated profiles for residential and agricultural roofing. Full color range available in steel and aluminum.",
   },
 ];
 
@@ -335,7 +328,7 @@ export const products: ProductPanel[] = [
       { key: "Cool Roof", value: "Yes", status: "yes" },
       { key: "Fire Resistant", value: "Yes", status: "yes" },
     ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-2000.jpg",
+    image: "",
     links: [],
   },
   // ── Corrugated & Wall ──
@@ -361,87 +354,6 @@ export const products: ProductPanel[] = [
     ],
     showLocation: true,
   },
-  {
-    id: "ws-100",
-    code: "WS-100",
-    name: "Wall & Soffit Panel — WS-100",
-    bestFor: "Exterior walls, soffits, commercial facades",
-    description: "Interlocking wall and soffit panel for commercial and residential exteriors. Available with or without reveal option. Full install guide available.",
-    category: "corrugated",
-    meta: [
-      { key: "Fastener", value: "Concealed" },
-      { key: "Coverage Width", value: "Confirm", status: "confirm" },
-      { key: "Material", value: "Steel · Alum" },
-      { key: "Reveal Option", value: "Yes", status: "yes" },
-      { key: "Soffit Use", value: "Yes", status: "yes" },
-      { key: "Install Guide", value: "Available", status: "yes" },
-    ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/corrugated-1.jpg",
-    links: [
-      { label: "WS-100 Sale Sheet", url: "#", type: "PDF" },
-      { label: "WS-100 Specifications", url: "#", type: "PDF" },
-      { label: "WS-100 with Reveal", url: "#", type: "PDF" },
-      { label: "WS-100 Install Guide", url: "#", type: "PDF" },
-    ],
-    showLocation: true,
-  },
-  // ── Specialty & Bare Metal ──
-  {
-    id: "copper",
-    code: "COPPER",
-    name: "True Copper",
-    bestFor: "Premium residential & heritage",
-    description: "Natural patina develops over time. Available across standing seam profiles.",
-    category: "specialty",
-    meta: [
-      { key: "Patina", value: "Natural", status: "yes" },
-      { key: "Cool Roof", value: "No", status: "no" },
-    ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-2000.jpg",
-    links: [{ label: "Copper Spec Sheet", url: "#", type: "PDF" }],
-  },
-  {
-    id: "rheinzink",
-    code: "RHEINZINK®",
-    name: "Rheinzink®",
-    bestFor: "European aesthetic, high-end commercial",
-    description: "Pre-weathered zinc with a blue-grey finish used in architectural projects.",
-    category: "specialty",
-    meta: [
-      { key: "Pre-weathered", value: "Yes", status: "yes" },
-      { key: "Cool Roof", value: "No", status: "no" },
-    ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-150.jpg",
-    links: [{ label: "Rheinzink Spec Sheet", url: "#", type: "PDF" }],
-  },
-  {
-    id: "zincalume",
-    code: "ZINCALUME®",
-    name: "Bare Zincalume®",
-    bestFor: "Traditional metal look, cost-efficient",
-    description: "Zinc-aluminum coated bare steel. Classic metallic appearance without paint.",
-    category: "specialty",
-    meta: [
-      { key: "Finish", value: "Bare metallic" },
-      { key: "Cool Roof", value: "No", status: "no" },
-    ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-100.jpg",
-    links: [{ label: "Zincalume Spec Sheet", url: "#", type: "PDF" }],
-  },
-  {
-    id: "a606",
-    code: "A606",
-    name: "A606 Weathering Steel",
-    bestFor: "Industrial aesthetic, design-forward projects",
-    description: "Cor-ten style steel that develops a stable rust patina. Specified for dramatic commercial and residential builds.",
-    category: "specialty",
-    meta: [
-      { key: "Patina", value: "Oxidized rust" },
-      { key: "Cool Roof", value: "No", status: "no" },
-    ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/SL-1750.jpg",
-    links: [{ label: "A606 Spec Sheet", url: "#", type: "PDF" }],
-  },
 ];
 
 export interface ApplicationCard {
@@ -461,7 +373,7 @@ export const applications: ApplicationCard[] = [
   {
     title: "Commercial",
     subtitle: "Retail, office, mixed-use, light industrial",
-    products: "CB-2000 · TFR-36 · PBR · WS-100",
+    products: "CB-2000 · TFR-36 · PBR",
     image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/TFR.jpg",
   },
   {
@@ -473,7 +385,7 @@ export const applications: ApplicationCard[] = [
   {
     title: "Institutional / Civic",
     subtitle: "Schools, government, cultural, healthcare",
-    products: "CB-2000 · CS-100 · Rheinzink · Specialty",
+    products: "CB-2000 · CS-100",
     image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CS-100.jpg",
   },
 ];
