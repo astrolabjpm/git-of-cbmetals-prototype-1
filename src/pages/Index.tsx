@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import SiteNav from "@/components/SiteNav";
+import ProductCard from "@/components/ProductCard";
 import HeroSection from "@/components/HeroSection";
 import PageIntro from "@/components/PageIntro";
 import ProductSection from "@/components/ProductSection";
@@ -95,23 +96,44 @@ const Index = () => {
           }
         />
 
-        {/* Shakes & Shingles */}
-        <ProductSection
-          id="shakes-shingles"
-          title="Aluminum Shakes & Shingles"
-          description={categories[2].description}
-          products={shakesShingles}
-          columns={1}
-        />
+        {/* Shakes & Shingles + Corrugated side by side */}
+        <section id="shakes-shingles" className="px-8 py-12 bg-background">
+          <div className="mx-auto max-w-[1200px]">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              {/* Shakes & Shingles */}
+              <div>
+                <div className="mb-6">
+                  <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Aluminum Shakes & Shingles</h2>
+                  <hr className="mt-2 border-t-2 border-foreground" />
+                  <p className="mt-3 text-[14px] leading-[1.5] text-muted-foreground">
+                    {categories[2].description}
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 gap-4">
+                  {shakesShingles.map((p) => (
+                    <ProductCard key={p.id} product={p} />
+                  ))}
+                </div>
+              </div>
 
-        {/* Corrugated */}
-        <ProductSection
-          id="corrugated"
-          title="Corrugated Metal Panels"
-          description={categories[3].description}
-          products={corrugated}
-          columns={1}
-        />
+              {/* Corrugated */}
+              <div id="corrugated">
+                <div className="mb-6">
+                  <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Corrugated Metal Panels</h2>
+                  <hr className="mt-2 border-t-2 border-foreground" />
+                  <p className="mt-3 text-[14px] leading-[1.5] text-muted-foreground">
+                    {categories[3].description}
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 gap-4">
+                  {corrugated.map((p) => (
+                    <ProductCard key={p.id} product={p} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <ApplicationGrid />
         <WhyCBM />
