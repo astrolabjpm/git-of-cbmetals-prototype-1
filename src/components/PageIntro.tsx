@@ -2,8 +2,8 @@ const links = [
   { label: "Standing Seam", anchor: "#standing-seam" },
   { label: "Exposed Fastener", anchor: "#exposed-fastener" },
   { label: "Shakes & Shingles", anchor: "#shakes-shingles" },
-  { label: "Corrugated & Wall", anchor: "#corrugated" },
-  { label: "Specialty & Bare Metal", anchor: "#specialty" },
+  { label: "Corrugated", anchor: "#corrugated" },
+  { label: "Resources & Downloads", anchor: "#resources-downloads" },
 ];
 
 const blurbs: Record<string, string> = {
