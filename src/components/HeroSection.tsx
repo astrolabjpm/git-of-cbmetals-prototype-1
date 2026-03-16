@@ -18,7 +18,7 @@ const HeroSection = () => (
         <h1 className="text-[36px] font-bold leading-[1.15] text-primary-foreground sm:text-[44px]">
           Standing Seam Metal Roofing: Concealed Fasteners, Zero Leak Points
         </h1>
-        <p className="mt-4 max-w-[420px] text-[14px] leading-[1.5] text-primary-foreground/65">
+        <p className="mt-4 max-w-[500px] text-[20px] leading-[1.5] text-primary-foreground/65">
           Custom-Bilt Metal roofing systems are one of the most beautiful and highly functional roofing solutions.
         </p>
         <div className="mt-6 flex gap-3">
