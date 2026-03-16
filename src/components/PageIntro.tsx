@@ -17,8 +17,8 @@ const blurbs: Record<string, string> = {
 };
 
 const PageIntro = () => (
-  <div className="bg-secondary py-6">
-    <div className="mx-auto max-w-[1200px] px-8">
+  <div className="bg-secondary px-8 py-6">
+    <div className="mx-auto max-w-[1200px]">
       <p className="font-meta text-[12px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
         On This Page
       </p>
