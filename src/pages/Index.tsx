@@ -18,7 +18,6 @@ const Index = () => {
   const exposedFastener = useMemo(() => products.filter((p) => p.category === "exposed-fastener"), []);
   const shakesShingles = useMemo(() => products.filter((p) => p.category === "shakes-shingles"), []);
   const corrugated = useMemo(() => products.filter((p) => p.category === "corrugated"), []);
-  const specialty = useMemo(() => products.filter((p) => p.category === "specialty"), []);
 
   return (
     <>
