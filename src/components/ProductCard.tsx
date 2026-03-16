@@ -38,13 +38,13 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
         </h3>
 
         {/* Best for */}
-        <p className="mt-1 text-[13px] font-semibold text-accent">
+        <p className="mt-1 text-[14px] font-semibold text-accent">
           Best for: {product.bestFor}
         </p>
 
         {/* Description */}
         {!compact && (
-          <p className="mt-2 text-[14px] leading-[1.4] text-muted-foreground">
+          <p className="mt-2 text-[14px] leading-[1.5] text-muted-foreground">
             {product.description}
           </p>
         )}
