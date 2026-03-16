@@ -1,3 +1,5 @@
+import { ChevronDown } from "lucide-react";
+
 const links = [
   { label: "Standing Seam", anchor: "#standing-seam" },
   { label: "Exposed Fastener", anchor: "#exposed-fastener" },
@@ -15,7 +17,7 @@ const blurbs: Record<string, string> = {
 };
 
 const PageIntro = () => (
-  <div className="bg-background py-6">
+  <div className="bg-secondary py-6">
     <div className="mx-auto max-w-[1200px] px-8">
       <p className="font-meta text-[12px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
         On This Page
@@ -33,8 +35,9 @@ const PageIntro = () => (
             }}
             className="group"
           >
-            <span className="block text-[14px] font-semibold text-foreground group-hover:text-accent transition-colors">
+            <span className="flex items-center gap-1 text-[14px] font-semibold text-foreground transition-colors group-hover:text-accent">
               {link.label}
+              <ChevronDown className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-accent" />
             </span>
             <span className="mt-0.5 block text-[13px] leading-[1.5] text-muted-foreground">
               {blurbs[link.label]}
