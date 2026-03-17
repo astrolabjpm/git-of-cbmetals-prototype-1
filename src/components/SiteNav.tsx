@@ -297,47 +297,40 @@ const SiteNav = () => {
                   Product Categories
                 </span>
 
-                {productCategories.map((cat) => (
-                  <button
+                {allCategories.map((cat) => (
+                  <div
                     key={cat.id}
-                    onClick={() => setActiveCategory(cat.id)}
-                    className={`flex items-center gap-3 border-l-[3px] px-5 py-2.5 text-left transition-colors ${
+                    className={`group/cat flex items-center gap-2 px-5 py-3 transition-colors cursor-pointer ${
                       activeCategory === cat.id
-                        ? "border-accent bg-foreground/5"
-                        : "border-transparent hover:bg-foreground/5"
+                        ? "bg-foreground text-background"
+                        : "text-foreground hover:bg-foreground hover:text-background"
                     }`}
                   >
-                    <div className="h-[34px] w-[44px] flex-shrink-0 rounded-sm bg-foreground/10" />
-                    <div className="flex-1">
-                      <div className="text-[13px] font-bold text-foreground">{cat.label}</div>
-                      <div className="font-meta text-[12px] text-muted-foreground">{cat.count}</div>
-                    </div>
-                    <ChevronRight
-                      className={`h-3 w-3 ${
-                        activeCategory === cat.id ? "text-accent" : "text-foreground/20"
-                      }`}
-                    />
-                  </button>
-                ))}
-
-                {/* Secondary */}
-                <div className="mx-5 mt-4 border-t border-foreground/10 pt-3">
-                  <span className="font-meta text-[12px] uppercase tracking-widest text-muted-foreground">
-                    Also available
-                  </span>
-                  {secondaryCategories.map((cat) => (
                     <button
-                      key={cat.id}
                       onClick={() => setActiveCategory(cat.id)}
-                      className={`flex w-full items-center justify-between border-b border-foreground/5 py-2 text-left ${
-                        activeCategory === cat.id ? "text-accent" : "text-muted-foreground hover:text-foreground"
-                      }`}
+                      className="flex-1 text-left"
                     >
-                      <span className="text-[13px]">{cat.label}</span>
-                      <ChevronRight className="h-3 w-3 text-foreground/20" />
+                      <div className="text-[14px] font-bold leading-[1.3]">{cat.label}</div>
+                      <div className={`font-meta text-[12px] transition-colors ${
+                        activeCategory === cat.id
+                          ? "text-background/60"
+                          : "text-muted-foreground group-hover/cat:text-background/60"
+                      }`}>{cat.count}</div>
                     </button>
-                  ))}
-                </div>
+                    <Link
+                      to={cat.href}
+                      onClick={closeAll}
+                      className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-accent transition-opacity ${
+                        activeCategory === cat.id
+                          ? "opacity-100"
+                          : "opacity-0 group-hover/cat:opacity-100"
+                      }`}
+                      title={`Go to ${cat.label}`}
+                    >
+                      <ChevronRight className="h-3 w-3 text-accent-foreground" />
+                    </Link>
+                  </div>
+                ))}
 
                 <div className="font-meta mt-auto px-5 pt-4 text-[12px] leading-[1.4] text-muted-foreground">
                   All products available for same-day quoting. Onsite roll forming at 9 Western U.S. locations.
