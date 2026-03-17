@@ -669,7 +669,7 @@ const SiteNav = () => {
                   All 9 locations offer onsite roll forming, same-day quoting, and will-call pickup for in-stock
                   products.
                 </p>
-                <button className="rounded-sm bg-accent py-2.5 text-center text-[13px] font-bold text-accent-foreground transition-opacity hover:opacity-90">
+                <button className="rounded-sm bg-accent py-2.5 text-center text-[13px] font-bold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
                   Find Nearest Location →
                 </button>
                 <div className="font-meta border-t border-border pt-2 text-[12px] leading-[1.4] text-muted-foreground">

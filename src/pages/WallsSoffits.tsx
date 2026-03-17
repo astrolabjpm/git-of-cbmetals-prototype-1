@@ -280,7 +280,7 @@ const WallsSoffits = () => {
             <div className="px-10 py-12" style={{ backgroundColor: 'hsl(197 57% 17%)' }}>
               <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Specs, CAD &amp; LEED Docs</h3>
               <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Download installation guides, specifications, CAD files, and LEED documentation packages.</p>
-              <a href="https://www.custombiltmetals.com/resources/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm border-2 border-cta-foreground/35 px-6 py-3 text-[14px] font-bold text-cta-foreground transition-colors hover:border-cta-foreground/60">
+              <a href="https://www.custombiltmetals.com/resources/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm border-2 border-cta-foreground/35 px-6 py-3 text-[14px] font-bold text-cta-foreground transition-colors hover:border-cta-foreground/60 hover:bg-cta-foreground/10">
                 Go to Resources <ArrowRight className="h-4 w-4" />
               </a>
             </div>

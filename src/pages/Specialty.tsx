@@ -118,7 +118,7 @@ const Specialty = () => (
                 </a>
                 <a
                   href="https://www.custombiltmetals.com/contact-us/"
-                  className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+                  className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/15 hover:border-primary-foreground/70"
                 >
                   Contact Us <ArrowRight className="h-4 w-4" />
                 </a>
