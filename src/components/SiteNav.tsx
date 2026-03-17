@@ -529,7 +529,7 @@ const SiteNav = () => {
                 <Link
                   to="/products"
                   onClick={closeAll}
-                  className="font-meta mt-4 inline-block self-start rounded-sm bg-accent px-3 py-2 text-[12px] font-medium text-accent-foreground"
+                  className="font-meta mt-4 inline-block self-start rounded-sm bg-accent px-3 py-2 text-[12px] font-medium text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm"
                 >
                   Contractor Hub →
                 </Link>
@@ -547,7 +547,7 @@ const SiteNav = () => {
                 <Link
                   to="/products"
                   onClick={closeAll}
-                  className="font-meta mt-4 inline-block self-start rounded-sm bg-info px-3 py-2 text-[12px] font-medium text-accent-foreground"
+                  className="font-meta mt-4 inline-block self-start rounded-sm bg-info px-3 py-2 text-[12px] font-medium text-accent-foreground transition-colors hover:bg-info/80 hover:shadow-sm"
                 >
                   Architect Hub →
                 </Link>
@@ -565,7 +565,7 @@ const SiteNav = () => {
                 <Link
                   to="/products"
                   onClick={closeAll}
-                  className="font-meta mt-4 inline-block self-start rounded-sm bg-[hsl(var(--green))] px-3 py-2 text-[12px] font-medium text-accent-foreground"
+                  className="font-meta mt-4 inline-block self-start rounded-sm bg-[hsl(var(--green))] px-3 py-2 text-[12px] font-medium text-accent-foreground transition-colors hover:bg-[hsl(var(--green)/0.8)] hover:shadow-sm"
                 >
                   Find an Installer →
                 </Link>
@@ -648,22 +648,17 @@ const SiteNav = () => {
                         {state.state}
                       </div>
                       {state.cities.map((city) => (
-                        <div
+                        <a
                           key={city.city}
-                          className="group border-b border-surface py-1.5"
+                          href="https://www.custombiltmetals.com/locations/"
+                          onClick={closeAll}
+                          className="group block border-b border-surface py-1.5 transition-colors hover:bg-surface rounded-sm px-1.5 -mx-1.5"
                         >
                           <div className="text-[13px] font-semibold transition-colors group-hover:text-accent">
                             {city.city}
                           </div>
                           <div className="font-meta text-[12px] text-info">{city.phone}</div>
-                          <a
-                            href={`https://www.custombiltmetals.com/locations/`}
-                            onClick={closeAll}
-                            className="font-meta mt-0.5 inline-block rounded-sm bg-accent px-1.5 py-px text-[11px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover"
-                          >
-                            Contact
-                          </a>
-                        </div>
+                        </a>
                       ))}
                       {state.state === "Hawaii" && (
                         <p className="font-meta mt-3 text-[12px] leading-[1.4] text-muted-foreground">
