@@ -4,7 +4,6 @@ import ProductCard from "@/components/ProductCard";
 import { ArrowRight, ArrowDown, MapPin, ChevronDown, Recycle, Sun, Leaf, Shield, Award, Droplets } from "lucide-react";
 import heroImg from "@/assets/hero-walls.jpg";
 import {
-  wallCategories,
   wallPanels,
   wallRoofPanels,
   wallApplications,
