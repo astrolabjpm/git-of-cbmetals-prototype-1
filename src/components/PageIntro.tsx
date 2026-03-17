@@ -22,8 +22,7 @@ const PageIntro = () => (
       <p className="font-meta text-[12px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
         On This Page
       </p>
-      <hr className="mt-2 border-t-2 border-[hsl(207_43%_27%)]" />
-      <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-5">
+      <div className="mt-3 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-5">
         {links.map((link) => (
           <a
             key={link.label}
@@ -35,7 +34,8 @@ const PageIntro = () => (
             }}
             className="group"
           >
-            <span className="flex items-center gap-1 text-[14px] font-semibold text-foreground transition-colors group-hover:text-accent">
+            <div className="h-[4px] bg-foreground transition-colors duration-200 group-hover:bg-accent" />
+            <span className="mt-2 flex items-center gap-1 text-[14px] font-semibold text-foreground transition-colors group-hover:text-accent">
               {link.label}
               <ChevronDown className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-accent" />
             </span>

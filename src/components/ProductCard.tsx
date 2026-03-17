@@ -12,7 +12,7 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
   const [docsOpen, setDocsOpen] = useState(false);
 
   return (
-    <article className="overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
+    <article className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
       {/* Image with padding */}
       {product.image && (
         <div className="p-5 pb-0">
@@ -28,7 +28,7 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
       )}
 
       {/* Body */}
-      <div className={compact ? "p-4 px-5" : "p-5"}>
+      <div className={`flex flex-1 flex-col ${compact ? "p-4 px-5" : "p-5"}`}>
         {/* Code */}
         <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground/60">
           {product.code}
@@ -93,7 +93,7 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
 
         {/* Document accordion */}
         {product.links.length > 0 && (
-          <div className="mt-3 border-t border-border">
+          <div className="mt-auto pt-3 border-t border-border">
             <button
               onClick={() => setDocsOpen(!docsOpen)}
               className="font-meta flex w-full items-center justify-between py-2 text-[12px] font-medium text-info transition-colors hover:text-foreground"
