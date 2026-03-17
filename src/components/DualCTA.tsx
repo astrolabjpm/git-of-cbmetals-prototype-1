@@ -10,7 +10,7 @@ const DualCTA = () => (
         </p>
         <a
           href="https://www.custombiltmetals.com/request-a-quote/"
-          className="mt-5 inline-flex items-center gap-1.5 rounded-sm bg-accent px-6 py-3 text-[14px] font-bold text-accent-foreground transition-opacity hover:opacity-90"
+          className="mt-5 inline-flex items-center gap-1.5 rounded-sm bg-accent px-6 py-3 text-[14px] font-bold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm"
         >
           Request a Quote <ArrowRight className="h-4 w-4" />
         </a>
