@@ -1,4 +1,3 @@
-import { useState } from "react";
 import SiteNav from "@/components/SiteNav";
 import ProductCard from "@/components/ProductCard";
 import { ArrowRight, ArrowDown, MapPin, ChevronDown, Recycle, Sun, Leaf, Shield, Award, Droplets } from "lucide-react";
