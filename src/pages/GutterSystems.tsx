@@ -431,7 +431,7 @@ const GutterSystems = () => {
                     <h3 className="text-[14px] font-bold leading-[1.2] text-foreground">{m.name}</h3>
                     <p className="font-meta mt-1 text-[12px] text-muted-foreground">{m.profile}</p>
                     <div className="mt-3 pb-2 flex gap-2">
-                      <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">Inquire</a>
+                      <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">Inquire</a>
                     </div>
                     <MachineDocAccordion specSheet={m.specSheet} />
                   </div>
