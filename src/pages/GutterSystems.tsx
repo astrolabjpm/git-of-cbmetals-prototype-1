@@ -1,4 +1,10 @@
-import { useState } from "react";
+import ironManJunior from "@/assets/iron-man-junior.jpg";
+import ironMan6Seamless from "@/assets/iron-man-6-seamless.jpg";
+import ironMan5Fascia from "@/assets/iron-man-5-fascia.jpg";
+import ironMan6HalfRound from "@/assets/iron-man-6-half-round.jpg";
+import ironMan5Seamless from "@/assets/iron-man-5-seamless.jpg";
+import ironMan7Seamless from "@/assets/iron-man-7-seamless.jpg";
+import ironMan56Seamless from "@/assets/iron-man-56-seamless.jpg";
 import SiteNav from "@/components/SiteNav";
 import { ArrowRight, ArrowDown, MapPin, ChevronDown, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-gutters.jpg";
@@ -18,6 +24,13 @@ const imageMap: Record<string, string> = {
   "gutters-half-round": guttersHalfRound,
   "gutters-facia": guttersFacia,
   "gutters-super": guttersSuper,
+  "iron-man-junior": ironManJunior,
+  "iron-man-6-seamless": ironMan6Seamless,
+  "iron-man-5-fascia": ironMan5Fascia,
+  "iron-man-6-half-round": ironMan6HalfRound,
+  "iron-man-5-seamless": ironMan5Seamless,
+  "iron-man-7-seamless": ironMan7Seamless,
+  "iron-man-56-seamless": ironMan56Seamless,
 };
 
 const pageLinks = [
@@ -293,12 +306,16 @@ const GutterSystems = () => {
                 CBM sells and supports the Iron Man series. Purchase includes free alignment and maintenance for the lifetime of the machine while you remain a CBM customer.
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {gutterMachines.map((m) => (
-                <div key={m.id} className="flex items-start gap-4 rounded-sm border border-border bg-card p-4">
-                  <div className="h-12 w-12 flex-shrink-0 rounded-sm bg-muted" />
-                  <div>
-                    <h3 className="text-[15px] font-bold leading-[1.2] text-foreground">{m.name}</h3>
+                <div key={m.id} className="overflow-hidden rounded-sm border border-border bg-card">
+                  <div className="p-4 pb-0">
+                    <div className="relative h-[140px] overflow-hidden rounded-sm bg-white">
+                      <img src={imageMap[m.image] || m.image} alt={m.name} loading="lazy" className="h-full w-full object-contain" />
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-[14px] font-bold leading-[1.2] text-foreground">{m.name}</h3>
                     <p className="font-meta mt-1 text-[12px] text-muted-foreground">{m.profile}</p>
                     <div className="mt-3 flex gap-2">
                       <a href={m.specSheet} target="_blank" rel="noopener noreferrer" className="font-meta text-[12px] font-semibold text-info hover:underline">Spec Sheet ↓</a>
@@ -307,14 +324,12 @@ const GutterSystems = () => {
                   </div>
                 </div>
               ))}
-              <div className="flex items-start gap-4 rounded-sm border border-dashed border-border bg-surface p-4">
-                <div>
-                  <h3 className="text-[14px] font-bold leading-[1.2] text-foreground">Used Machines Available</h3>
-                  <p className="mt-1 text-[14px] leading-[1.5] text-muted-foreground">Availability varies by location. Contact your local CBM branch to ask about current used machine inventory.</p>
-                  <a href="https://www.custombiltmetals.com/locations/" className="font-meta mt-3 inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground hover:text-foreground">
-                    <MapPin className="h-3 w-3" /> Find a Location
-                  </a>
-                </div>
+              <div className="flex flex-col justify-center rounded-sm border border-dashed border-border bg-surface p-4">
+                <h3 className="text-[14px] font-bold leading-[1.2] text-foreground">Used Machines Available</h3>
+                <p className="mt-1 text-[14px] leading-[1.5] text-muted-foreground">Availability varies by location. Contact your local CBM branch for current inventory.</p>
+                <a href="https://www.custombiltmetals.com/locations/" className="font-meta mt-3 inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground hover:text-foreground">
+                  <MapPin className="h-3 w-3" /> Find a Location
+                </a>
               </div>
             </div>
             <div className="mt-4 rounded-sm border-l-[3px] border-accent bg-accent/5 px-4 py-3 text-[14px] text-muted-foreground">

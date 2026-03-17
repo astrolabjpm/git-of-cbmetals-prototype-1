@@ -28,6 +28,7 @@ export interface GutterMachine {
   name: string;
   profile: string;
   specSheet: string;
+  image: string;
 }
 
 export const gutterCategories = [
@@ -127,11 +128,13 @@ export const gutterComponents: GutterComponent[] = [
 ];
 
 export const gutterMachines: GutterMachine[] = [
-  { id: "im-5", name: 'Iron Man 5" Seamless Rollformer', profile: "K-Style · 5\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5in-Seamless.pdf" },
-  { id: "im-56", name: 'Iron Man 5/6" Seamless Rollformer', profile: "K-Style · 5\" & 6\" combo · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5-6-Seamless.pdf" },
-  { id: "im-6hr", name: 'Iron Man 6" Half-Round Rollformer', profile: "Half-Round · 6\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-6in-Half-Round.pdf" },
-  { id: "im-55f", name: 'Iron Man 5" Fascia Cutter', profile: "Fascia · 5.5\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5.5in-Fascia.pdf" },
-  { id: "im-7", name: 'Iron Man 7" Seamless Rollformer', profile: "Fascia/K-Style · 7\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-7in-Seamless.pdf" },
+  { id: "im-jr", name: "Iron Man Junior", profile: "Compact entry-level rollformer", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5in-Seamless.pdf", image: "iron-man-junior" },
+  { id: "im-6", name: 'Iron Man 6" Seamless Rollformer', profile: "K-Style · 6\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5in-Seamless.pdf", image: "iron-man-6-seamless" },
+  { id: "im-55f", name: 'Iron Man 5" Fascia Cutter', profile: "Fascia · 5.5\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5.5in-Fascia.pdf", image: "iron-man-5-fascia" },
+  { id: "im-6hr", name: 'Iron Man 6" Half-Round Seamless Rollformer', profile: "Half-Round · 6\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-6in-Half-Round.pdf", image: "iron-man-6-half-round" },
+  { id: "im-5", name: 'Iron Man 5" Seamless Rollformer', profile: "K-Style · 5\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5in-Seamless.pdf", image: "iron-man-5-seamless" },
+  { id: "im-7", name: 'Iron Man 7" Seamless Rollformer', profile: "Fascia/K-Style · 7\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-7in-Seamless.pdf", image: "iron-man-7-seamless" },
+  { id: "im-56", name: 'Iron Man 5/6" Seamless Rollformer', profile: "K-Style · 5\" & 6\" combo · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5-6-Seamless.pdf", image: "iron-man-56-seamless" },
 ];
 
 export const gutterLocations = [
