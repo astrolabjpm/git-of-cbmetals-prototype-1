@@ -72,24 +72,41 @@ const WallsSoffits = () => {
           </div>
         </section>
 
-        {/* Page Intro */}
-        <div className="border-b border-border bg-background">
-          <div className="mx-auto grid max-w-[1200px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { title: "WS-100 Wall & Soffit", body: "Concealed fastener interlocking panel. 1\" depth. Vented option for soffit airflow.", tag: "→ Concealed fastener · 1\" depth · Vented option", icon: LayoutGrid },
-              { title: "Corrugated Wall", body: "Classic 7/8\" corrugation for agricultural, industrial, and contemporary accent walls.", tag: "→ 7/8\" corrugation · Bare metals · LEED", icon: Grid2x2 },
-              { title: "TFR-36 & PBR", body: "Exposed fastener panels for fast commercial and agricultural wall installations.", tag: '→ 36" coverage · Ag + commercial walls', icon: Hammer },
-              { title: "LEED & Sustainability", body: "25% recycled content. 100% recyclable. ULTRA-Cool® reflective coating technology.", tag: "→ 25% recycled · 100% recyclable · ULTRA-Cool®", icon: Leaf },
-            ].map((p, i) => (
-              <div key={p.title} className={`px-6 py-8 lg:px-7 ${i < 3 ? "border-b sm:border-b-0 lg:border-r border-border" : ""} ${i === 1 ? "sm:border-r border-border" : ""}`}>
-                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-sm bg-surface text-foreground">
-                  <p.icon className="h-5 w-5" />
-                </div>
-                <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">{p.title}</h3>
-                <p className="text-[14px] leading-[1.5] text-muted-foreground">{p.body}</p>
-                <p className="font-meta mt-2 text-[12px] font-semibold text-accent">{p.tag}</p>
-              </div>
-            ))}
+        {/* On This Page */}
+        <div className="bg-secondary px-8 py-10">
+          <div className="mx-auto max-w-[1200px]">
+            <p className="font-meta text-[12px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+              On This Page
+            </p>
+            <div className="mt-3 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-2 lg:grid-cols-5">
+              {[
+                { label: "Wall & Soffit Panels", anchor: "#wall-soffit", blurb: "WS-100 concealed fastener and corrugated wall panels." },
+                { label: "Corrugated Wall", anchor: "#wall-soffit", blurb: "Classic 7/8\" corrugation for agricultural and accent walls." },
+                { label: "TFR-36 & PBR", anchor: "#roof-wall", blurb: "Exposed fastener panels for fast commercial wall installs." },
+                { label: "LEED & Sustainability", anchor: "#leed", blurb: "25% recycled content, ULTRA-Cool® reflective coating." },
+                { label: "Applications", anchor: "#applications", blurb: "Commercial, agricultural, residential soffit, institutional." },
+              ].map((link) => (
+                <a
+                  key={link.label}
+                  href={link.anchor}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.querySelector(link.anchor);
+                    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }}
+                  className="group"
+                >
+                  <div className="h-[4px] bg-foreground transition-colors duration-200 group-hover:bg-accent" />
+                  <span className="mt-2 flex items-center gap-1 text-[14px] font-semibold text-foreground transition-colors group-hover:text-accent">
+                    {link.label}
+                    <ChevronDown className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-accent" />
+                  </span>
+                  <span className="mt-0.5 block text-[14px] leading-[1.5] text-muted-foreground">
+                    {link.blurb}
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
