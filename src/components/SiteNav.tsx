@@ -39,13 +39,24 @@ const productCategories = [
         ],
       },
       {
-        heading: "Additional Profiles",
+        heading: "Additional Standing Seam",
         items: [
           { code: "SLZ-1000", name: "Snap-Lock Zee", desc: '1" zee profile · Residential + light commercial' },
-          { code: "CS-100", name: "Clip Seam", desc: "Concealed clip · Architectural + commercial" },
+          { code: "CS-100", name: "Cap Seam", desc: "Concealed clip · Architectural + commercial" },
           { code: "Vintage", name: "Vintage Profile", desc: "Traditional profile · Heritage residential" },
+          { code: "SHAKES", name: "Aluminum Shakes & Shingles", desc: "120 mph wind rated · 98% recycled · Cool Roof" },
+        ],
+      },
+      {
+        heading: "Exposed Fastener",
+        items: [
           { code: "TFR-36", name: "TFR-36 Panel", desc: "Exposed fastener · 36\" coverage · Roof + wall" },
           { code: "PBR", name: "PBR Panel", desc: "Structural overlap · Ag + heavy commercial" },
+        ],
+      },
+      {
+        heading: "Corrugated & Wall",
+        items: [
           { code: "Corrugated", name: "Corrugated Panel", desc: "Classic profile · Roof + wall · Ag + residential" },
         ],
       },
@@ -225,7 +236,7 @@ const SiteNav = () => {
                     className={`flex h-full items-center gap-1.5 border-b-[3px] px-4 text-[14px] font-semibold transition-colors ${
                       activeMenu === name
                         ? "border-accent text-foreground"
-                        : "border-transparent text-foreground/65 hover:text-foreground"
+                        : "border-transparent text-muted-foreground hover:text-foreground"
                     }`}
                   >
                     <span className="capitalize">{name}</span>
@@ -300,7 +311,7 @@ const SiteNav = () => {
                   >
                     <div className="h-[34px] w-[44px] flex-shrink-0 rounded-sm bg-foreground/10" />
                     <div className="flex-1">
-                      <div className="text-[13px] font-bold text-foreground/85">{cat.label}</div>
+                      <div className="text-[13px] font-bold text-foreground">{cat.label}</div>
                       <div className="font-meta text-[12px] text-muted-foreground">{cat.count}</div>
                     </div>
                     <ChevronRight
@@ -321,7 +332,7 @@ const SiteNav = () => {
                       key={cat.id}
                       onClick={() => setActiveCategory(cat.id)}
                       className={`flex w-full items-center justify-between border-b border-foreground/5 py-2 text-left ${
-                        activeCategory === cat.id ? "text-accent" : "text-foreground/45 hover:text-foreground/85"
+                        activeCategory === cat.id ? "text-accent" : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
                       <span className="text-[13px]">{cat.label}</span>
@@ -367,7 +378,7 @@ const SiteNav = () => {
                                 {item.code}
                               </div>
                               <div className="text-[13px] font-semibold text-foreground">{item.name}</div>
-                              <div className="text-[12px] leading-[1.4] text-muted-foreground">{item.desc}</div>
+                              <div className="text-[12px] leading-[1.5] text-muted-foreground">{item.desc}</div>
                             </Link>
                           ))}
                         </div>
