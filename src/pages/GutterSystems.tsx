@@ -79,45 +79,97 @@ const MachineDocAccordion = ({ specSheet }: { specSheet: string }) => {
   );
 };
 
-const componentCards = [
-  {
-    title: "Downspouts",
-    items: [
-      'Aluminum: 2"×3", 3"×4", 4"×5"',
-      '2" round, 3" round, 4" round',
-      "Copper & Steel: same sizing",
-      "Contact branch for complete list",
-    ],
-  },
-  {
-    title: "Elbows, Miters & End Caps",
-    items: [
-      "Elbows: A, B, Round, Offset, Y-Branch",
-      'Miters: 5" & 6" Box, Strip, Strip Bay',
-      'End Caps: 4"K, 5"K, 6"K, 5" Fascia, 5" Line',
-      "Conductor Heads: Box w/ Round Outlet, Square Leader Head",
-    ],
-  },
-  {
-    title: "Hangers, Outlets & Flashing",
-    items: [
-      'Hidden Hangers: 5" and 6"',
-      'S.S.T. Bar: 5" and 6"',
-      "Wrap Around hanger",
-      'Outlets: 2"×3", Round, Pop-in, Ultimate, Adaptors',
-      "Flashing: Drip Edge, Lip Guard, Custom Form",
-    ],
-  },
-  {
-    title: "Guards, Strainers & Accessories",
-    items: [
-      'Gutter Guards: 6"×25\' Roll, 5"×4\' & 6"×4\' Flat Deluxe, 20" Roll Plastic, E-Z Lock',
-      'Strainers: 2", 3", Perforated Flat, Cage',
-      "Accessories: Sealants, Aerosol Paint, Expansion Joints, Rain Chains, Splash Blocks",
-      "Tools: Crimpers, Aviation Snip, Gutter Savers, Ladder Max",
-    ],
-  },
-];
+const ComponentCardDownspouts = () => (
+  <div className="rounded-sm p-5">
+    <h3 className="mb-3 text-[14px] font-bold text-foreground">Downspouts</h3>
+    <div className="space-y-0">
+      {['2"×3"', '3"×4"', '4"×5"', '2" Round', '3" Round', '4" Round'].map((item) => (
+        <p key={item} className="text-[13px] leading-[1.6] text-muted-foreground">{item}</p>
+      ))}
+    </div>
+    <p className="mt-3 text-[13px] leading-[1.6] text-muted-foreground">Aluminum, copper &amp; steel available. Contact your branch for complete sizing list.</p>
+  </div>
+);
+
+const ComponentCardFittings = () => (
+  <div className="rounded-sm p-5">
+    <h3 className="mb-3 text-[14px] font-bold text-foreground">Fittings</h3>
+    <div className="grid grid-cols-2 gap-4">
+      <div>
+        <p className="text-[13px] font-semibold text-foreground mb-1">Elbows</p>
+        {["A-Style", "B-Style", "Round", "Offset", "Y-Branch"].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+        <p className="mt-3 text-[13px] font-semibold text-foreground mb-1">Miters</p>
+        {['5" Box', '6" Box', '5" Strip', '6" Strip', '5" Strip Bay', '6" Strip Bay'].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+      </div>
+      <div>
+        <p className="text-[13px] font-semibold text-foreground mb-1">End Caps</p>
+        {['4" K-Style', '5" K-Style', '6" K-Style', '5" Fascia', '5" Line'].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+        <p className="mt-3 text-[13px] font-semibold text-foreground mb-1">Conductor Heads</p>
+        {["Box with Round Outlet", "Square Leader Head"].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
+const ComponentCardHangers = () => (
+  <div className="rounded-sm p-5">
+    <h3 className="mb-3 text-[14px] font-bold text-foreground">Hangers, Outlets &amp; Flashing</h3>
+    <div className="grid grid-cols-2 gap-4">
+      <div>
+        <p className="text-[13px] font-semibold text-foreground mb-1">Hangers</p>
+        {['5" Hidden', '6" Hidden', '5" S.S.T. Bar', '6" S.S.T. Bar', "Wrap Around"].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+        <p className="mt-3 text-[13px] font-semibold text-foreground mb-1">Outlets</p>
+        {['2"×3"', "Round", "Pop-in", "Ultimate", "Adaptors"].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+      </div>
+      <div>
+        <p className="text-[13px] font-semibold text-foreground mb-1">Flashing</p>
+        {["Drip Edge", "Lip Guard", "Custom Form"].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+      </div>
+    </div>
+  </div>
+);
+
+const ComponentCardGuards = () => (
+  <div className="rounded-sm p-5">
+    <h3 className="mb-3 text-[14px] font-bold text-foreground">Guards, Strainers &amp; Accessories</h3>
+    <div className="grid grid-cols-2 gap-4">
+      <div>
+        <p className="text-[13px] font-semibold text-foreground mb-1">Gutter Guards</p>
+        {["6\"×25' Roll", "5\"×4' Flat Deluxe", "6\"×4' Flat Deluxe", "20\" Roll Plastic", "E-Z Lock"].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+        <p className="mt-3 text-[13px] font-semibold text-foreground mb-1">Strainers</p>
+        {['2" Strainer', '3" Strainer', "Perforated Flat", "Cage Strainer"].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+      </div>
+      <div>
+        <p className="text-[13px] font-semibold text-foreground mb-1">Accessories</p>
+        {["Sealants", "Aerosol Paint", "Expansion Joints", "Rain Chains", "Splash Blocks"].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+        <p className="mt-3 text-[13px] font-semibold text-foreground mb-1">Tools</p>
+        {["Crimpers", "Aviation Snip", "Gutter Savers", "Ladder Max", "Caulking Gun", "Hole Saws"].map((i) => (
+          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
+        ))}
+      </div>
+    </div>
+  </div>
+);
 
 const GutterSystems = () => {
   return (
@@ -281,34 +333,28 @@ const GutterSystems = () => {
         </section>
 
         {/* S3B — Component List */}
-        <section id="components" className="border-b border-border bg-surface px-8 py-12">
+        <section id="components" className="border-b border-border bg-background px-8 py-12">
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Gutter Systems – Component List</h2>
               <hr className="mt-2 border-t-2 border-foreground" />
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {componentCards.map((card) => (
-                <div key={card.title} className="flex flex-col rounded-sm border border-border bg-card p-5 shadow-[var(--card-shadow)]">
-                  <h3 className="mb-3 text-[14px] font-bold text-foreground">{card.title}</h3>
-                  <div className="flex-1">
-                    {card.items.map((item, i) => (
-                      <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{item}</p>
-                    ))}
-                  </div>
-                  <div className="mt-4 pt-3 pb-2 flex flex-wrap gap-2">
-                    <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">Get a Quote</a>
-                    <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
-                      <MapPin className="h-3 w-3" /> Find a Location
-                    </a>
-                  </div>
-                </div>
-              ))}
+              <ComponentCardDownspouts />
+              <ComponentCardFittings />
+              <ComponentCardHangers />
+              <ComponentCardGuards />
             </div>
 
-            {/* Component PDF ribbon */}
-            <div className="mt-4 flex flex-wrap items-center gap-4 rounded-sm border border-border bg-card px-4 py-3">
-              <span className="text-[14px] text-muted-foreground">Full component reference:</span>
+            {/* Ribbon with CTAs + PDF */}
+            <div className="mt-4 flex flex-wrap items-center gap-4 rounded-sm border border-border bg-surface px-4 py-3">
+              <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-flex items-center gap-1.5 rounded-sm bg-accent px-4 py-2 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+                Get a Quote <ArrowRight className="h-3.5 w-3.5" />
+              </a>
+              <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1.5 rounded-sm border border-border px-4 py-2 text-[13px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
+                <MapPin className="h-3.5 w-3.5" /> Find a Location
+              </a>
+              <span className="text-muted-foreground">|</span>
               <a
                 href="https://www.custombiltmetals.com/wp-content/uploads/2015/07/Gutter-Systems-Component-List-9-15-15.pdf"
                 target="_blank"
