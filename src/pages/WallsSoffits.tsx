@@ -167,11 +167,24 @@ const WallsSoffits = () => {
                 CBM wall and soffit panels are designed to support LEED certification on qualifying projects.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 rounded-sm border border-green-700/25 bg-green-700/5 px-4 py-3">
-              {leedCredentials.map((cred) => (
-                <span key={cred} className="font-meta inline-flex items-center gap-1 text-[12px] font-medium text-green-700">
-                  <Check className="h-3 w-3" /> {cred}
-                </span>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                { icon: Recycle, title: "25% Recycled Content", desc: "Steel substrate contains minimum 25% post-consumer recycled material, contributing to LEED Materials & Resources credits." },
+                { icon: Recycle, title: "100% Recyclable", desc: "At end of life, metal panels are fully recyclable — zero landfill contribution. Cradle-to-cradle lifecycle." },
+                { icon: Sun, title: "ULTRA-Cool® Coating", desc: "Reflects more solar heat than virtually any other coating. Lowers interior temperatures and reduces HVAC energy load." },
+                { icon: Shield, title: "Kynar 500® / Hylar® 5000", desc: "PVDF-based pigment systems resist chalking, fading, and chemical degradation for 40+ year color retention." },
+                { icon: Award, title: "LEED Documentation", desc: "Full documentation package available for qualifying projects — Materials & Resources and Energy & Atmosphere categories." },
+                { icon: Droplets, title: "Marine-Grade PVDF", desc: "Select products available in marine-grade PVDF for coastal and high-corrosion environments." },
+              ].map((item) => (
+                <div key={item.title} className="flex gap-4 rounded-sm border border-border bg-card p-5">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-accent/10 text-accent">
+                    <item.icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-[14px] font-bold text-foreground">{item.title}</h3>
+                    <p className="mt-1 text-[13px] leading-[1.5] text-muted-foreground">{item.desc}</p>
+                  </div>
+                </div>
               ))}
             </div>
             <p className="mt-5 text-[14px] leading-[1.5] text-muted-foreground">
