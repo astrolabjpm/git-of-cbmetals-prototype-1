@@ -74,7 +74,7 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
         </div>
 
         {/* CTAs */}
-        <div className="mt-3 flex flex-wrap gap-2">
+        <div className="mt-3 mb-4 flex flex-wrap gap-2">
           <a
             href="https://www.custombiltmetals.com/request-a-quote/"
             className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-opacity hover:opacity-90"
