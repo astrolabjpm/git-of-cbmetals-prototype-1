@@ -238,25 +238,10 @@ const Specialty = () => (
       </section>
 
       {/* CTA */}
-      <DualCTA
-        leftTitle="Designing or Building a New Project?"
-        leftDescription="Contact us today to discuss your specialty metal roofing project or request product specifications."
-        leftLink="https://www.custombiltmetals.com/request-a-quote/"
-        leftLabel="Request a Quote"
-        rightTitle="Need Specs or Data Sheets?"
-        rightDescription="Download spec sheets, installation guides, and CAD details from our resource library."
-        rightLink="https://www.custombiltmetals.com/resources/"
-        rightLabel="See Product Data Sheets"
-      />
+      <DualCTA />
 
       {/* Footer */}
-      <FooterNav
-        breadcrumbs={[
-          { label: "Home", href: "https://www.custombiltmetals.com" },
-          { label: "Products", href: "/products" },
-          { label: "Specialty" },
-        ]}
-      />
+      <FooterNav />
     </div>
   </>
 );
