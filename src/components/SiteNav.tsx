@@ -113,6 +113,7 @@ const secondaryCategories = [
   {
     id: "specialty",
     label: "Specialty & Bare Metals",
+    count: "Weathering steel · Alloys · Copper shingles",
     href: "/specialty",
     sections: [
       {
