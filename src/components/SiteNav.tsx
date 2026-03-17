@@ -120,7 +120,8 @@ const secondaryCategories = [
     href: "/specialty",
     sections: [
       {
-      heading: "Bare Metals & Alloys",
+        heading: "Bare Metals & Alloys",
+        anchor: "/specialty#specialty-products",
         items: [
           { code: "A606", name: "A606 Weathering Steel", desc: "Rust-orange patina · Self-protecting · Design-forward" },
           { code: "SPECIALTY ALLOYS", name: "Specialty Alloys (Rheinzink®)", desc: "Blue-grey · Pre-aged finish · Architectural" },
@@ -129,6 +130,7 @@ const secondaryCategories = [
       },
       {
         heading: "Specialty Profiles & Shingles",
+        anchor: "/specialty#specialty-products",
         items: [
           { code: "VINTAGE®", name: "Vintage® Standing Seam", desc: "Traditional profile · Specialty print coats + bare metals" },
           { code: "COPPER SHINGLES", name: "Copper Shingles", desc: "Premium residential · Heritage restoration" },
