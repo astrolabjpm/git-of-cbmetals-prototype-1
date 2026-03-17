@@ -69,6 +69,7 @@ const productCategories = [
     sections: [
       {
         heading: "Seamless Gutter Profiles",
+        anchor: "/gutter-systems#profiles",
         items: [
           { code: "K-STYLE", name: "K-Style / O.G. Gutter", desc: '5" & 6" · Most common profile · Al, Cu, Steel' },
           { code: "HALF-ROUND", name: "Half-Round Gutter", desc: '5" & 6" · Historic + premium residential · Copper' },
@@ -78,6 +79,7 @@ const productCategories = [
       },
       {
         heading: "Equipment",
+        anchor: "/gutter-systems#machines",
         items: [
           { code: "IRON MAN", name: "Seamless Rollformers", desc: '7 models · 5" through 7" · K-Style, Half-Round, Fascia' },
         ],
