@@ -48,15 +48,10 @@ const productCategories = [
         ],
       },
       {
-        heading: "Exposed Fastener",
+        heading: "Exposed Fastener & Corrugated",
         items: [
           { code: "TFR-36", name: "TFR-36 Panel", desc: "Exposed fastener · 36\" coverage · Roof + wall" },
           { code: "PBR", name: "PBR Panel", desc: "Structural overlap · Ag + heavy commercial" },
-        ],
-      },
-      {
-        heading: "Corrugated & Wall",
-        items: [
           { code: "Corrugated", name: "Corrugated Panel", desc: "Classic profile · Roof + wall · Ag + residential" },
         ],
       },
@@ -292,7 +287,7 @@ const SiteNav = () => {
             transition={{ duration: 0.15 }}
             className="fixed left-0 right-0 top-[70px] z-50 border-t-2 border-accent bg-card shadow-lg shadow-foreground/20"
           >
-            <div className="mx-auto grid max-w-[1400px] grid-cols-[260px_1fr_220px]">
+            <div className="mx-auto grid max-w-[1400px] grid-cols-[260px_1fr]">
               {/* Left: category column */}
               <div className="flex flex-col bg-surface py-6">
                 <span className="font-meta mb-3 px-5 text-[12px] uppercase tracking-widest text-muted-foreground">
@@ -356,10 +351,10 @@ const SiteNav = () => {
 
                     {currentCat.sections.map((section) => (
                       <div key={section.heading}>
-                        <div className="font-meta mb-2 mt-4 border-b border-border pb-1 text-[12px] uppercase tracking-widest text-muted-foreground">
+                        <div className="font-meta mb-1 mt-3 border-b border-border pb-1 text-[12px] uppercase tracking-widest text-muted-foreground">
                           {section.heading}
                         </div>
-                        <div className="grid grid-cols-3 gap-1">
+                        <div className="grid grid-cols-4 gap-1">
                           {section.items.map((item) => (
                             <Link
                               key={item.code}
@@ -381,40 +376,6 @@ const SiteNav = () => {
                 )}
               </div>
 
-              {/* Right: promo column */}
-              <div className="flex flex-col gap-4 border-l border-border bg-cta p-5">
-                <div className="grid grid-cols-2 gap-2">
-                  {[
-                    { num: "9", lbl: "Western U.S. Locations" },
-                    { num: "40+", lbl: "Years in Business" },
-                    { num: "Same", lbl: "Day Quotes" },
-                    { num: "1", lbl: "Supplier: Roof + Gutter" },
-                  ].map((s) => (
-                    <div key={s.lbl} className="rounded-sm border border-cta-foreground/15 p-2.5">
-                      <div className="font-meta text-[18px] font-medium leading-[1.2] text-accent">{s.num}</div>
-                      <div className="mt-1 text-[12px] font-semibold leading-tight text-cta-foreground/55">
-                        {s.lbl}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <Link
-                  to="/products"
-                  onClick={closeAll}
-                  className="rounded-sm bg-accent py-2.5 text-center text-[13px] font-bold text-accent-foreground transition-opacity hover:opacity-90"
-                >
-                  Request a Quote →
-                </Link>
-
-                <Link
-                  to="/products"
-                  onClick={closeAll}
-                  className="font-meta text-center text-[12px] text-cta-foreground/40 hover:text-accent transition-colors"
-                >
-                  Warranty information →
-                </Link>
-              </div>
             </div>
           </motion.div>
         )}
