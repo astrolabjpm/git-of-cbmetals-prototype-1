@@ -1,4 +1,10 @@
-import { useState } from "react";
+import ironManJunior from "@/assets/iron-man-junior.jpg";
+import ironMan6Seamless from "@/assets/iron-man-6-seamless.jpg";
+import ironMan5Fascia from "@/assets/iron-man-5-fascia.jpg";
+import ironMan6HalfRound from "@/assets/iron-man-6-half-round.jpg";
+import ironMan5Seamless from "@/assets/iron-man-5-seamless.jpg";
+import ironMan7Seamless from "@/assets/iron-man-7-seamless.jpg";
+import ironMan56Seamless from "@/assets/iron-man-56-seamless.jpg";
 import SiteNav from "@/components/SiteNav";
 import { ArrowRight, ArrowDown, MapPin, ChevronDown, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-gutters.jpg";
