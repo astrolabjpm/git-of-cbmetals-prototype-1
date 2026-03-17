@@ -30,7 +30,7 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
       {/* Body */}
       <div className={`flex flex-1 flex-col ${compact ? "p-4 px-5" : "p-5"}`}>
         {/* Code */}
-        <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground/60">
+        <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">
           {product.code}
         </p>
 
@@ -55,7 +55,7 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
         <div className={`mt-3 grid gap-1.5 border-t border-border pt-3 ${compact ? "grid-cols-2" : "grid-cols-2"}`}>
           {product.meta.map((m) => (
             <div key={m.key}>
-              <p className="font-meta text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground/60">
+              <p className="font-meta text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">
                 {m.key}
               </p>
               <p className={`font-meta text-[12px] font-medium ${

@@ -14,8 +14,8 @@ const ApplicationGrid = () => (
         {applications.map((app) => (
           <div key={app.title} className="overflow-hidden rounded-sm border border-border bg-card transition-shadow hover:shadow-[var(--card-shadow-hover)]">
             <div className="p-4 pb-0">
-              <div className="relative h-[100px] overflow-hidden rounded-sm bg-muted">
-                <img src={app.image} alt={app.title} loading="lazy" className="h-full w-full object-cover" />
+              <div className="relative h-[100px] overflow-hidden rounded-sm bg-white">
+                <img src={app.image} alt={app.title} loading="lazy" className="h-full w-full object-contain" />
               </div>
             </div>
             <div className="p-4">
