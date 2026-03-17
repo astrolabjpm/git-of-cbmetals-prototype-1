@@ -252,7 +252,7 @@ const GutterSystems = () => {
                   <a href="https://www.custombiltmetals.com/locations/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
                     Find a Location <ArrowRight className="h-4 w-4" />
                   </a>
-                  <a href="#profiles" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+                  <a href="#profiles" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/15 hover:border-primary-foreground/70">
                     Browse Profiles <ArrowDown className="h-4 w-4" />
                   </a>
                 </div>
