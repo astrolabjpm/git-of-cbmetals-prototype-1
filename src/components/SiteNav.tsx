@@ -650,15 +650,19 @@ const SiteNav = () => {
                       {state.cities.map((city) => (
                         <div
                           key={city.city}
-                          className="group cursor-pointer border-b border-surface py-1.5"
+                          className="group border-b border-surface py-1.5"
                         >
                           <div className="text-[13px] font-semibold transition-colors group-hover:text-accent">
                             {city.city}
                           </div>
                           <div className="font-meta text-[12px] text-info">{city.phone}</div>
-                          <span className="font-meta mt-0.5 inline-block rounded-sm border border-accent/20 bg-accent/10 px-1.5 py-px text-[12px] text-accent">
-                            Roll form
-                          </span>
+                          <a
+                            href={`https://www.custombiltmetals.com/locations/`}
+                            onClick={closeAll}
+                            className="font-meta mt-0.5 inline-block rounded-sm bg-accent px-1.5 py-px text-[11px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover"
+                          >
+                            Contact
+                          </a>
                         </div>
                       ))}
                       {state.state === "Hawaii" && (
