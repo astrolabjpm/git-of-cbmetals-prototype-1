@@ -15,7 +15,7 @@ const bareMetals = [
     code: "COPPER",
     name: "True Copper",
     description: "16 oz. natural copper develops a rich verdigris patina over time. A living finish that evolves with the environment — ideal for architectural accents, custom homes, and restoration projects.",
-    image: imgCopper,
+    image: "",
   },
   {
     code: "RHEINZINK®",
@@ -27,7 +27,7 @@ const bareMetals = [
     code: "ZINCALUME+",
     name: "Bare Zincalume® Plus",
     description: "Zinc-aluminum coated bare steel delivering the classic bright metallic appearance without paint. Cost-efficient option for traditional metal roofing aesthetics.",
-    image: imgZincalume,
+    image: "",
   },
   {
     code: "A606",
@@ -39,7 +39,7 @@ const bareMetals = [
     code: "ALUMINUM",
     name: "Bare & Coated Aluminum",
     description: "Bare and PVDF-coated aluminum panels for enhanced durability. Coastal and marine-grade options with manufacturer-backed corrosion warranties.",
-    image: "",
+    image: imgZincalume,
   },
 ];
 
