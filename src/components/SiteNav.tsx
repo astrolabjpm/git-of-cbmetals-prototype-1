@@ -91,6 +91,7 @@ const secondaryCategories = [
   {
     id: "walls",
     label: "Walls, Soffits & Airflow",
+    count: "Wall panels · Soffit · Vented options",
     href: "/walls-soffits",
     sections: [
       {
