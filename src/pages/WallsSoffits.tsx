@@ -257,7 +257,7 @@ const WallsSoffits = () => {
         <section className="border-b border-border bg-surface px-8 py-12" id="walls-guide">
           <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-12 lg:grid-cols-[200px_1fr]">
             <div>
-              <p className="font-meta mb-3 text-[12px] font-medium uppercase tracking-[0.08em] text-muted-foreground">On This Page</p>
+              <p className="font-meta mb-3 text-[12px] font-medium uppercase tracking-[0.08em] text-muted-foreground">In This Guide</p>
               {["Metal Wall Panels vs. Siding", "Concealed vs. Exposed Fastener Walls", "Soffit Venting: Solid vs. Perforated", "LEED Wall Panel Credits", "Color Matching Roof + Wall"].map((item) => (
                 <div key={item} className="font-meta border-b border-border py-2 text-[12px] font-medium text-info">→ {item}</div>
               ))}
