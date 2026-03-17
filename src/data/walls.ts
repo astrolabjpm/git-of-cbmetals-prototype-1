@@ -36,12 +36,12 @@ export const wallPanels: WallPanel[] = [
       { key: "Surface", value: "Stucco · Smooth · Vented" },
       { key: "LEED", value: "Eligible", status: "yes" },
     ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/corrugated-1.jpg",
+    image: "",
     links: [
-      { label: "WS-100 Sale Sheet", url: "#", type: "PDF" },
-      { label: "WS-100 Specifications", url: "#", type: "PDF" },
-      { label: "WS-100 with Reveal", url: "#", type: "PDF" },
-      { label: "WS-100 Install Guide", url: "#", type: "PDF" },
+      { label: "WS-100 Sale Sheet", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/WS-100_Sale_Sheet.pdf", type: "PDF" },
+      { label: "WS-100 Specifications", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/WS100_Specifications.pdf", type: "PDF" },
+      { label: "WS-100 with Reveal", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/WS100_Reveal.pdf", type: "PDF" },
+      { label: "WS-100 Install Guide", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/WS100_Installation_Guide.pdf", type: "PDF" },
     ],
   },
   {
@@ -87,6 +87,7 @@ export const wallRoofPanels: WallPanel[] = [
     links: [
       { label: "TFR-36 Sale Sheet", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/TFR-36_Panel_Sale_Sheet.pdf", type: "PDF" },
       { label: "PBR-TFR Guide", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/PBR-TFR_Guide.pdf", type: "PDF" },
+      { label: "PBR-TFR Color Chart", url: "https://www.custombiltmetals.com/wp-content/uploads/2021/11/pbr-tfr-color-chart.pdf", type: "PDF" },
     ],
   },
   {
@@ -108,6 +109,7 @@ export const wallRoofPanels: WallPanel[] = [
     links: [
       { label: "PBR Sale Sheet", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/PBR_Panel_Sale_Sheet.pdf", type: "PDF" },
       { label: "PBR-TFR Guide", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/PBR-TFR_Guide.pdf", type: "PDF" },
+      { label: "PBR-TFR Color Chart", url: "https://www.custombiltmetals.com/wp-content/uploads/2021/11/pbr-tfr-color-chart.pdf", type: "PDF" },
     ],
   },
 ];
