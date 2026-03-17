@@ -55,7 +55,7 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
         <div className={`mt-3 grid gap-1.5 border-t border-border pt-3 ${compact ? "grid-cols-2" : "grid-cols-2"}`}>
           {product.meta.map((m) => (
             <div key={m.key}>
-              <p className="font-meta text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground/60">
+              <p className="font-meta text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">
                 {m.key}
               </p>
               <p className={`font-meta text-[12px] font-medium ${
