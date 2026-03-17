@@ -75,7 +75,7 @@ const productCategories = [
       {
         heading: "Equipment",
         items: [
-          { code: "IRON MAN", name: "Seamless Rollformers", desc: '5", 5/6", 6" Half-Round, 5.5" Fascia — free alignment for life' },
+          { code: "IRON MAN", name: "Seamless Rollformers", desc: '7 models · 5" through 7" · K-Style, Half-Round, Fascia' },
         ],
       },
     ],
