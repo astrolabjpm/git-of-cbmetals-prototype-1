@@ -311,7 +311,7 @@ const SiteNav = () => {
                   >
                     <div className="h-[34px] w-[44px] flex-shrink-0 rounded-sm bg-foreground/10" />
                     <div className="flex-1">
-                      <div className="text-[13px] font-bold text-foreground/85">{cat.label}</div>
+                      <div className="text-[13px] font-bold text-foreground">{cat.label}</div>
                       <div className="font-meta text-[12px] text-muted-foreground">{cat.count}</div>
                     </div>
                     <ChevronRight
