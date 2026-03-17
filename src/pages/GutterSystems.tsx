@@ -79,96 +79,137 @@ const MachineDocAccordion = ({ specSheet }: { specSheet: string }) => {
   );
 };
 
+const SubHead = ({ children }: { children: React.ReactNode }) => (
+  <p className="font-meta text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground mb-1">{children}</p>
+);
+
 const ComponentCardDownspouts = () => (
-  <div className="rounded-sm p-5">
-    <h3 className="mb-3 text-[14px] font-bold text-foreground">Downspouts</h3>
-    <div className="space-y-0">
-      {['2"×3"', '3"×4"', '4"×5"', '2" Round', '3" Round', '4" Round'].map((item) => (
-        <p key={item} className="text-[13px] leading-[1.6] text-muted-foreground">{item}</p>
-      ))}
+  <article className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
+    <div className="flex flex-1 flex-col p-5">
+      <h3 className="text-[15px] font-bold leading-[1.2] text-foreground">Downspouts</h3>
+      <p className="mt-1 text-[13px] font-semibold text-accent">Rectangular &amp; round profiles</p>
+
+      <div className="mt-3 border-t border-border pt-3">
+        <SubHead>Rectangular</SubHead>
+        {['2"×3"', '3"×4"', '4"×5"'].map((item) => (
+          <p key={item} className="font-meta text-[12px] font-medium text-foreground">{item}</p>
+        ))}
+      </div>
+
+      <div className="mt-3 border-t border-border pt-3">
+        <SubHead>Round</SubHead>
+        {['2" Round', '3" Round', '4" Round'].map((item) => (
+          <p key={item} className="font-meta text-[12px] font-medium text-foreground">{item}</p>
+        ))}
+      </div>
+
+      <p className="mt-3 border-t border-border pt-3 text-[13px] leading-[1.5] text-muted-foreground">
+        Aluminum, copper &amp; steel available. Contact your branch for complete sizing list.
+      </p>
     </div>
-    <p className="mt-3 text-[13px] leading-[1.6] text-muted-foreground">Aluminum, copper &amp; steel available. Contact your branch for complete sizing list.</p>
-  </div>
+  </article>
 );
 
 const ComponentCardFittings = () => (
-  <div className="rounded-sm p-5">
-    <h3 className="mb-3 text-[14px] font-bold text-foreground">Fittings</h3>
-    <div className="grid grid-cols-2 gap-4">
-      <div>
-        <p className="text-[13px] font-semibold text-foreground mb-1">Elbows</p>
-        {["A-Style", "B-Style", "Round", "Offset", "Y-Branch"].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
-        <p className="mt-3 text-[13px] font-semibold text-foreground mb-1">Miters</p>
-        {['5" Box', '6" Box', '5" Strip', '6" Strip', '5" Strip Bay', '6" Strip Bay'].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
-      </div>
-      <div>
-        <p className="text-[13px] font-semibold text-foreground mb-1">End Caps</p>
-        {['4" K-Style', '5" K-Style', '6" K-Style', '5" Fascia', '5" Line'].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
-        <p className="mt-3 text-[13px] font-semibold text-foreground mb-1">Conductor Heads</p>
-        {["Box with Round Outlet", "Square Leader Head"].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
+  <article className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
+    <div className="flex flex-1 flex-col p-5">
+      <h3 className="text-[15px] font-bold leading-[1.2] text-foreground">Fittings</h3>
+      <p className="mt-1 text-[13px] font-semibold text-accent">Elbows, miters, end caps &amp; conductor heads</p>
+
+      <div className="mt-3 border-t border-border pt-3 grid grid-cols-2 gap-4">
+        <div>
+          <SubHead>Elbows</SubHead>
+          {["A-Style", "B-Style", "Round", "Offset", "Y-Branch"].map((i) => (
+            <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+          ))}
+          <div className="mt-3">
+            <SubHead>Miters</SubHead>
+            {['5" Box', '6" Box', '5" Strip', '6" Strip', '5" Strip Bay', '6" Strip Bay'].map((i) => (
+              <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+            ))}
+          </div>
+        </div>
+        <div>
+          <SubHead>End Caps</SubHead>
+          {['4" K-Style', '5" K-Style', '6" K-Style', '5" Fascia', '5" Line'].map((i) => (
+            <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+          ))}
+          <div className="mt-3">
+            <SubHead>Conductor Heads</SubHead>
+            {["Box with Round Outlet", "Square Leader Head"].map((i) => (
+              <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </article>
 );
 
 const ComponentCardHangers = () => (
-  <div className="rounded-sm p-5">
-    <h3 className="mb-3 text-[14px] font-bold text-foreground">Hangers, Outlets &amp; Flashing</h3>
-    <div className="grid grid-cols-2 gap-4">
-      <div>
-        <p className="text-[13px] font-semibold text-foreground mb-1">Hangers</p>
-        {['5" Hidden', '6" Hidden', '5" S.S.T. Bar', '6" S.S.T. Bar', "Wrap Around"].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
-        <p className="mt-3 text-[13px] font-semibold text-foreground mb-1">Outlets</p>
-        {['2"×3"', "Round", "Pop-in", "Ultimate", "Adaptors"].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
-      </div>
-      <div>
-        <p className="text-[13px] font-semibold text-foreground mb-1">Flashing</p>
-        {["Drip Edge", "Lip Guard", "Custom Form"].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
+  <article className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
+    <div className="flex flex-1 flex-col p-5">
+      <h3 className="text-[15px] font-bold leading-[1.2] text-foreground">Hangers, Outlets &amp; Flashing</h3>
+      <p className="mt-1 text-[13px] font-semibold text-accent">Mounting, drainage &amp; edge protection</p>
+
+      <div className="mt-3 border-t border-border pt-3 grid grid-cols-2 gap-4">
+        <div>
+          <SubHead>Hangers</SubHead>
+          {['5" Hidden', '6" Hidden', '5" S.S.T. Bar', '6" S.S.T. Bar', "Wrap Around"].map((i) => (
+            <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+          ))}
+          <div className="mt-3">
+            <SubHead>Outlets</SubHead>
+            {['2"×3"', "Round", "Pop-in", "Ultimate", "Adaptors"].map((i) => (
+              <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+            ))}
+          </div>
+        </div>
+        <div>
+          <SubHead>Flashing</SubHead>
+          {["Drip Edge", "Lip Guard", "Custom Form"].map((i) => (
+            <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
+  </article>
 );
 
 const ComponentCardGuards = () => (
-  <div className="rounded-sm p-5">
-    <h3 className="mb-3 text-[14px] font-bold text-foreground">Guards, Strainers &amp; Accessories</h3>
-    <div className="grid grid-cols-2 gap-4">
-      <div>
-        <p className="text-[13px] font-semibold text-foreground mb-1">Gutter Guards</p>
-        {["6\"×25' Roll", "5\"×4' Flat Deluxe", "6\"×4' Flat Deluxe", "20\" Roll Plastic", "E-Z Lock"].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
-        <p className="mt-3 text-[13px] font-semibold text-foreground mb-1">Strainers</p>
-        {['2" Strainer', '3" Strainer', "Perforated Flat", "Cage Strainer"].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
-      </div>
-      <div>
-        <p className="text-[13px] font-semibold text-foreground mb-1">Accessories</p>
-        {["Sealants", "Aerosol Paint", "Expansion Joints", "Rain Chains", "Splash Blocks"].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
-        <p className="mt-3 text-[13px] font-semibold text-foreground mb-1">Tools</p>
-        {["Crimpers", "Aviation Snip", "Gutter Savers", "Ladder Max", "Caulking Gun", "Hole Saws"].map((i) => (
-          <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{i}</p>
-        ))}
+  <article className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
+    <div className="flex flex-1 flex-col p-5">
+      <h3 className="text-[15px] font-bold leading-[1.2] text-foreground">Guards, Strainers &amp; Accessories</h3>
+      <p className="mt-1 text-[13px] font-semibold text-accent">Protection, maintenance &amp; installation tools</p>
+
+      <div className="mt-3 border-t border-border pt-3 grid grid-cols-2 gap-4">
+        <div>
+          <SubHead>Gutter Guards</SubHead>
+          {["6\"×25' Roll", "5\"×4' Flat Deluxe", "6\"×4' Flat Deluxe", "20\" Roll Plastic", "E-Z Lock"].map((i) => (
+            <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+          ))}
+          <div className="mt-3">
+            <SubHead>Strainers</SubHead>
+            {['2" Strainer', '3" Strainer', "Perforated Flat", "Cage Strainer"].map((i) => (
+              <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+            ))}
+          </div>
+        </div>
+        <div>
+          <SubHead>Accessories</SubHead>
+          {["Sealants", "Aerosol Paint", "Expansion Joints", "Rain Chains", "Splash Blocks"].map((i) => (
+            <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+          ))}
+          <div className="mt-3">
+            <SubHead>Tools</SubHead>
+            {["Crimpers", "Aviation Snip", "Gutter Savers", "Ladder Max", "Caulking Gun", "Hole Saws"].map((i) => (
+              <p key={i} className="font-meta text-[12px] font-medium text-foreground">{i}</p>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </article>
 );
 
 const GutterSystems = () => {
