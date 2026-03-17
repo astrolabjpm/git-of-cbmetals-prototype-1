@@ -1,6 +1,6 @@
 import SiteNav from "@/components/SiteNav";
 import ProductCard from "@/components/ProductCard";
-import { ArrowRight, ArrowDown, MapPin, ChevronDown, Recycle, Sun, Leaf, Shield, Award, Droplets } from "lucide-react";
+import { ArrowRight, ArrowDown, MapPin, ChevronDown, Recycle, Sun, Shield, Award, Droplets } from "lucide-react";
 import heroImg from "@/assets/hero-walls.jpg";
 import {
   wallPanels,
