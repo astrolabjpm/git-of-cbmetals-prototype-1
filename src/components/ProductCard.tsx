@@ -12,7 +12,7 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
   const [docsOpen, setDocsOpen] = useState(false);
 
   return (
-    <article className="overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
+    <article className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
       {/* Image with padding */}
       {product.image && (
         <div className="p-5 pb-0">
