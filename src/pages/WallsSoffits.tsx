@@ -1,14 +1,11 @@
-import { useState } from "react";
 import SiteNav from "@/components/SiteNav";
 import ProductCard from "@/components/ProductCard";
-import { ArrowRight, ArrowDown, MapPin, Check, ChevronDown } from "lucide-react";
+import { ArrowRight, ArrowDown, MapPin, ChevronDown, Recycle, Sun, Shield, Award, Droplets } from "lucide-react";
 import heroImg from "@/assets/hero-walls.jpg";
 import {
-  wallCategories,
   wallPanels,
   wallRoofPanels,
   wallApplications,
-  leedCredentials,
 } from "@/data/walls";
 import type { ProductPanel } from "@/data/products";
 
@@ -20,7 +17,6 @@ const toProductPanel = (w: typeof wallPanels[0]): ProductPanel => ({
 });
 
 const WallsSoffits = () => {
-  const [activeTab, setActiveTab] = useState("wall-soffit");
 
   return (
     <>
@@ -48,16 +44,13 @@ const WallsSoffits = () => {
             <div className="mx-auto flex max-w-[1200px] items-center py-20 sm:py-28">
               <div className="max-w-[560px]">
                 <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
-                  Custom-Bilt Metals — Wall &amp; Soffit Systems
+                  Walls, Soffits and Airflow
                 </p>
                 <h1 className="text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
-                  Metal Wall &amp; Soffit Panels
+                  Metal Wall and Soffit Panels with Cool Technology
                 </h1>
-                <p className="mt-3 text-[20px] font-semibold leading-[1.2] text-primary-foreground/85 sm:text-[22px]">
-                  Beyond the Roof. Wall. Soffit. Complete Envelope.
-                </p>
-                <p className="mt-4 max-w-[420px] text-[14px] leading-[1.5] text-primary-foreground/65">
-                  Metal wall and soffit panels in matching or accent colors to your roofing system. Concealed fastener, LEED-compliant, ULTRA-Cool® coated.
+                <p className="mt-3 text-[20px] font-semibold leading-[1.3] text-primary-foreground/85 sm:text-[22px]">
+                  Custom-Bilt offer designs to create finished appearances that range from historical or rustic designs in natural or weathered metals to an edgier contemporary look in painted colors.
                 </p>
                 <div className="mt-6 flex gap-3">
                   <a href="https://www.custombiltmetals.com/request-a-quote/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
@@ -110,26 +103,6 @@ const WallsSoffits = () => {
           </div>
         </div>
 
-        {/* Tabs */}
-        <nav className="sticky top-0 z-50 border-b border-border bg-background shadow-sm">
-          <div className="mx-auto flex max-w-[1200px] overflow-x-auto">
-            {wallCategories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => {
-                  setActiveTab(cat.id);
-                  document.getElementById(cat.id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-                className={`shrink-0 border-b-[3px] px-6 py-4 text-left transition-colors ${
-                  activeTab === cat.id ? "border-accent" : "border-transparent hover:border-muted-foreground/30"
-                }`}
-              >
-                <span className="block text-[13px] font-bold text-foreground">{cat.label}</span>
-                <span className="font-meta block text-[12px] text-muted-foreground">{cat.subtitle}</span>
-              </button>
-            ))}
-          </div>
-        </nav>
 
         {/* S3A — Wall & Soffit Panels */}
         <section id="wall-soffit" className="border-b border-border bg-background px-8 py-12">
@@ -160,25 +133,22 @@ const WallsSoffits = () => {
               </p>
             </div>
 
-            <div className="mb-4 rounded-sm border border-border bg-card px-4 py-3 text-[14px] text-muted-foreground">
-              These panels also appear on <a href="/" className="font-semibold text-info hover:underline">/products/roofing-systems/ →</a> for roofing applications. This section covers their use as <strong className="text-foreground">wall cladding</strong>.
-            </div>
-
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {wallRoofPanels.map((p) => (
-                <ProductCard key={p.id} product={toProductPanel(p)} />
+                <div key={p.id}>
+                  <ProductCard product={toProductPanel(p)} />
+                  <div className="mt-2 rounded-sm border border-border bg-card px-4 py-3">
+                    <p className="font-meta mb-1 text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">
+                      {p.id === "tfr-36-wall" ? "Choose TFR-36 when" : "Choose PBR when"}
+                    </p>
+                    <p className="text-[14px] leading-[1.5] text-muted-foreground">
+                      {p.id === "tfr-36-wall"
+                        ? "You need polycarbonate skylight match, anti-siphon groove is a spec requirement, or substrate is open framing."
+                        : "You need structural side lap for wind/load conditions, heavier gauge (24ga) is required, or the project is agricultural or heavy commercial."}
+                    </p>
+                  </div>
+                </div>
               ))}
-            </div>
-
-            <div className="mt-4 grid grid-cols-1 gap-6 rounded-sm border border-border bg-card px-4 py-4 sm:grid-cols-2">
-              <div>
-                <p className="font-meta mb-1 text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">Choose TFR-36 when</p>
-                <p className="text-[14px] leading-[1.5] text-muted-foreground">You need polycarbonate skylight match, anti-siphon groove is a spec requirement, or substrate is open framing.</p>
-              </div>
-              <div>
-                <p className="font-meta mb-1 text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">Choose PBR when</p>
-                <p className="text-[14px] leading-[1.5] text-muted-foreground">You need structural side lap for wind/load conditions, heavier gauge (24ga) is required, or the project is agricultural or heavy commercial.</p>
-              </div>
             </div>
           </div>
         </section>
@@ -193,11 +163,24 @@ const WallsSoffits = () => {
                 CBM wall and soffit panels are designed to support LEED certification on qualifying projects.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 rounded-sm border border-green-700/25 bg-green-700/5 px-4 py-3">
-              {leedCredentials.map((cred) => (
-                <span key={cred} className="font-meta inline-flex items-center gap-1 text-[12px] font-medium text-green-700">
-                  <Check className="h-3 w-3" /> {cred}
-                </span>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[
+                { icon: Recycle, title: "25% Recycled Content", desc: "Steel substrate contains minimum 25% post-consumer recycled material, contributing to LEED Materials & Resources credits." },
+                { icon: Recycle, title: "100% Recyclable", desc: "At end of life, metal panels are fully recyclable — zero landfill contribution. Cradle-to-cradle lifecycle." },
+                { icon: Sun, title: "ULTRA-Cool® Coating", desc: "Reflects more solar heat than virtually any other coating. Lowers interior temperatures and reduces HVAC energy load." },
+                { icon: Shield, title: "Kynar 500® / Hylar® 5000", desc: "PVDF-based pigment systems resist chalking, fading, and chemical degradation for 40+ year color retention." },
+                { icon: Award, title: "LEED Documentation", desc: "Full documentation package available for qualifying projects — Materials & Resources and Energy & Atmosphere categories." },
+                { icon: Droplets, title: "Marine-Grade PVDF", desc: "Select products available in marine-grade PVDF for coastal and high-corrosion environments." },
+              ].map((item) => (
+                <div key={item.title} className="flex gap-4 rounded-sm border border-border bg-card p-5">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-accent/10 text-accent">
+                    <item.icon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-[14px] font-bold text-foreground">{item.title}</h3>
+                    <p className="mt-1 text-[13px] leading-[1.5] text-muted-foreground">{item.desc}</p>
+                  </div>
+                </div>
               ))}
             </div>
             <p className="mt-5 text-[14px] leading-[1.5] text-muted-foreground">
