@@ -236,7 +236,7 @@ const SiteNav = () => {
                     className={`flex h-full items-center gap-1.5 border-b-[3px] px-4 text-[14px] font-semibold transition-colors ${
                       activeMenu === name
                         ? "border-accent text-foreground"
-                        : "border-transparent text-foreground/65 hover:text-foreground"
+                        : "border-transparent text-muted-foreground hover:text-foreground"
                     }`}
                   >
                     <span className="capitalize">{name}</span>
