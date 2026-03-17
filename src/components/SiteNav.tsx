@@ -75,7 +75,6 @@ const productCategories = [
           { code: "HALF-ROUND", name: "Half-Round Gutter", desc: '5" & 6" · Historic + premium residential · Copper' },
           { code: "FASCIA", name: "Fascia Style Gutter", desc: '5.5" & 6" · Contemporary clean roofline' },
           { code: "SUPER FASCIA", name: "Super/Deep Fascia", desc: '7.25" · High-volume drainage · Cu + Steel only' },
-          { code: "INTEGRATED", name: "Integrated Roof + Gutter", desc: "Zero-joint single system · New construction" },
         ],
       },
       {
