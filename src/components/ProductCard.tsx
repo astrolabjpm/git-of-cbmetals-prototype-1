@@ -28,7 +28,7 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
       )}
 
       {/* Body */}
-      <div className={compact ? "p-4 px-5" : "p-5"}>
+      <div className={`flex flex-1 flex-col ${compact ? "p-4 px-5" : "p-5"}`}>
         {/* Code */}
         <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground/60">
           {product.code}
