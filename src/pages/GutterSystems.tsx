@@ -24,6 +24,13 @@ const imageMap: Record<string, string> = {
   "gutters-half-round": guttersHalfRound,
   "gutters-facia": guttersFacia,
   "gutters-super": guttersSuper,
+  "iron-man-junior": ironManJunior,
+  "iron-man-6-seamless": ironMan6Seamless,
+  "iron-man-5-fascia": ironMan5Fascia,
+  "iron-man-6-half-round": ironMan6HalfRound,
+  "iron-man-5-seamless": ironMan5Seamless,
+  "iron-man-7-seamless": ironMan7Seamless,
+  "iron-man-56-seamless": ironMan56Seamless,
 };
 
 const pageLinks = [
