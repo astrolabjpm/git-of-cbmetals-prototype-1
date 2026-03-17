@@ -332,7 +332,7 @@ const SiteNav = () => {
                       key={cat.id}
                       onClick={() => setActiveCategory(cat.id)}
                       className={`flex w-full items-center justify-between border-b border-foreground/5 py-2 text-left ${
-                        activeCategory === cat.id ? "text-accent" : "text-foreground/45 hover:text-foreground/85"
+                        activeCategory === cat.id ? "text-accent" : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
                       <span className="text-[13px]">{cat.label}</span>
