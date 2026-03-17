@@ -224,18 +224,6 @@ const Specialty = () => (
         </div>
       </section>
 
-      {/* Cross-reference callout */}
-      <section id="resources-specs" className="bg-background px-8 py-8">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="rounded-sm border border-border border-l-4 border-l-accent bg-card px-6 py-5">
-            <p className="text-[14px] leading-[1.5] text-foreground">
-              <span className="font-bold">Vintage® Standing Seam</span> also appears on the{" "}
-              <a href="/products" className="font-semibold text-info hover:text-foreground underline">Roofing Systems page</a>{" "}
-              for standard panel applications. Specialty bare metal versions are available on request.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <DualCTA />
