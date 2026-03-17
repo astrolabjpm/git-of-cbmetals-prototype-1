@@ -48,15 +48,10 @@ const productCategories = [
         ],
       },
       {
-        heading: "Exposed Fastener",
+        heading: "Exposed Fastener & Corrugated",
         items: [
           { code: "TFR-36", name: "TFR-36 Panel", desc: "Exposed fastener · 36\" coverage · Roof + wall" },
           { code: "PBR", name: "PBR Panel", desc: "Structural overlap · Ag + heavy commercial" },
-        ],
-      },
-      {
-        heading: "Corrugated & Wall",
-        items: [
           { code: "Corrugated", name: "Corrugated Panel", desc: "Classic profile · Roof + wall · Ag + residential" },
         ],
       },
