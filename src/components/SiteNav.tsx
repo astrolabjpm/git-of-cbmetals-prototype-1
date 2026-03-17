@@ -24,6 +24,7 @@ const productCategories = [
     sections: [
       {
         heading: "Standing Seam — CB Series (concealed fastener)",
+        anchor: "/#standing-seam",
         items: [
           { code: "CB-2000", name: '2" Seam Standing Seam', desc: "Most popular · Residential + commercial" },
           { code: "CB-150", name: '1.5" Seam Standing Seam', desc: "Residential · Lower pitch applications" },
@@ -32,6 +33,7 @@ const productCategories = [
       },
       {
         heading: "Standing Seam — SL Series (snap-lock)",
+        anchor: "/#sl-series",
         items: [
           { code: "SL-1750", name: '1.75" Snap-Lock', desc: "Commercial + faster-install residential" },
           { code: "SL-150", name: '1.5" Snap-Lock', desc: "Residential · Mid-pitch" },
@@ -40,6 +42,7 @@ const productCategories = [
       },
       {
         heading: "Additional Standing Seam",
+        anchor: "/#additional-ss",
         items: [
           { code: "SLZ-1000", name: "Snap-Lock Zee", desc: '1" zee profile · Residential + light commercial' },
           { code: "CS-100", name: "Cap Seam", desc: "Concealed clip · Architectural + commercial" },
@@ -49,6 +52,7 @@ const productCategories = [
       },
       {
         heading: "Exposed Fastener & Corrugated",
+        anchor: "/#exposed-fastener",
         items: [
           { code: "TFR-36", name: "TFR-36 Panel", desc: "Exposed fastener · 36\" coverage · Roof + wall" },
           { code: "PBR", name: "PBR Panel", desc: "Structural overlap · Ag + heavy commercial" },
@@ -65,6 +69,7 @@ const productCategories = [
     sections: [
       {
         heading: "Seamless Gutter Profiles",
+        anchor: "/gutter-systems#profiles",
         items: [
           { code: "K-STYLE", name: "K-Style / O.G. Gutter", desc: '5" & 6" · Most common profile · Al, Cu, Steel' },
           { code: "HALF-ROUND", name: "Half-Round Gutter", desc: '5" & 6" · Historic + premium residential · Copper' },
@@ -74,6 +79,7 @@ const productCategories = [
       },
       {
         heading: "Equipment",
+        anchor: "/gutter-systems#machines",
         items: [
           { code: "IRON MAN", name: "Seamless Rollformers", desc: '7 models · 5" through 7" · K-Style, Half-Round, Fascia' },
         ],
@@ -91,6 +97,7 @@ const secondaryCategories = [
     sections: [
       {
         heading: "Wall & Soffit Panels",
+        anchor: "/walls-soffits#wall-soffit",
         items: [
           { code: "WS-100", name: "Wall & Soffit Panel", desc: '1" concealed fastener · 12" width · Vented option · LEED' },
           { code: "CORRUGATED", name: "Corrugated Wall Panel", desc: '7/8" corrugation · Bare metal options · ULTRA-Cool®' },
@@ -98,6 +105,7 @@ const secondaryCategories = [
       },
       {
         heading: "Roof + Wall Panels",
+        anchor: "/walls-soffits#roof-wall",
         items: [
           { code: "TFR-36", name: "TFR-36 Panel", desc: "36\" coverage · Polycarbonate skylight match · Commercial + ag" },
           { code: "PBR", name: "PBR Panel", desc: "Structural overlap · 26ga + 24ga · Heavy commercial + ag" },
@@ -112,7 +120,8 @@ const secondaryCategories = [
     href: "/specialty",
     sections: [
       {
-      heading: "Bare Metals & Alloys",
+        heading: "Bare Metals & Alloys",
+        anchor: "/specialty#specialty-products",
         items: [
           { code: "A606", name: "A606 Weathering Steel", desc: "Rust-orange patina · Self-protecting · Design-forward" },
           { code: "SPECIALTY ALLOYS", name: "Specialty Alloys (Rheinzink®)", desc: "Blue-grey · Pre-aged finish · Architectural" },
@@ -121,6 +130,7 @@ const secondaryCategories = [
       },
       {
         heading: "Specialty Profiles & Shingles",
+        anchor: "/specialty#specialty-products",
         items: [
           { code: "VINTAGE®", name: "Vintage® Standing Seam", desc: "Traditional profile · Specialty print coats + bare metals" },
           { code: "COPPER SHINGLES", name: "Copper Shingles", desc: "Premium residential · Heritage restoration" },
@@ -352,13 +362,17 @@ const SiteNav = () => {
                     {currentCat.sections.map((section) => (
                       <div key={section.heading}>
                         <div className="font-meta mb-1 mt-3 border-b border-border pb-1 text-[12px] uppercase tracking-widest text-muted-foreground">
-                          {section.heading}
+                          {section.anchor ? (
+                            <Link to={section.anchor} onClick={closeAll} className="hover:text-accent transition-colors">
+                              {section.heading}
+                            </Link>
+                          ) : section.heading}
                         </div>
                         <div className="grid grid-cols-4 gap-1">
                           {section.items.map((item) => (
                             <Link
                               key={item.code}
-                              to={currentCat.href}
+                              to={section.anchor || currentCat.href}
                               onClick={closeAll}
                               className="rounded-sm border border-transparent p-2.5 transition-colors hover:border-border hover:bg-surface"
                             >
@@ -636,15 +650,19 @@ const SiteNav = () => {
                       {state.cities.map((city) => (
                         <div
                           key={city.city}
-                          className="group cursor-pointer border-b border-surface py-1.5"
+                          className="group border-b border-surface py-1.5"
                         >
                           <div className="text-[13px] font-semibold transition-colors group-hover:text-accent">
                             {city.city}
                           </div>
                           <div className="font-meta text-[12px] text-info">{city.phone}</div>
-                          <span className="font-meta mt-0.5 inline-block rounded-sm border border-accent/20 bg-accent/10 px-1.5 py-px text-[12px] text-accent">
-                            Roll form
-                          </span>
+                          <a
+                            href={`https://www.custombiltmetals.com/locations/`}
+                            onClick={closeAll}
+                            className="font-meta mt-0.5 inline-block rounded-sm bg-accent px-1.5 py-px text-[11px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover"
+                          >
+                            Contact
+                          </a>
                         </div>
                       ))}
                       {state.state === "Hawaii" && (
