@@ -381,40 +381,6 @@ const SiteNav = () => {
                 )}
               </div>
 
-              {/* Right: promo column */}
-              <div className="flex flex-col gap-4 border-l border-border bg-cta p-5">
-                <div className="grid grid-cols-2 gap-2">
-                  {[
-                    { num: "9", lbl: "Western U.S. Locations" },
-                    { num: "40+", lbl: "Years in Business" },
-                    { num: "Same", lbl: "Day Quotes" },
-                    { num: "1", lbl: "Supplier: Roof + Gutter" },
-                  ].map((s) => (
-                    <div key={s.lbl} className="rounded-sm border border-cta-foreground/15 p-2.5">
-                      <div className="font-meta text-[18px] font-medium leading-[1.2] text-accent">{s.num}</div>
-                      <div className="mt-1 text-[12px] font-semibold leading-tight text-cta-foreground/55">
-                        {s.lbl}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <Link
-                  to="/products"
-                  onClick={closeAll}
-                  className="rounded-sm bg-accent py-2.5 text-center text-[13px] font-bold text-accent-foreground transition-opacity hover:opacity-90"
-                >
-                  Request a Quote →
-                </Link>
-
-                <Link
-                  to="/products"
-                  onClick={closeAll}
-                  className="font-meta text-center text-[12px] text-cta-foreground/40 hover:text-accent transition-colors"
-                >
-                  Warranty information →
-                </Link>
-              </div>
             </div>
           </motion.div>
         )}
