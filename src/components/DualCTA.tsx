@@ -5,7 +5,7 @@ const DualCTA = () => (
     <div className="mx-auto grid max-w-[1200px] grid-cols-1 sm:grid-cols-2">
       <div className="px-10 py-12">
         <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Ready to Get a Quote?</h3>
-        <p className="mt-2 max-w-sm text-[14px] leading-[1.4] text-cta-foreground/60">
+        <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">
           Tell us your project details and a CBM rep will respond same or next business day with pricing and availability.
         </p>
         <a
