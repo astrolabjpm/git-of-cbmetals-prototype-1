@@ -48,7 +48,7 @@ const specialtyProducts = [
     code: "COPPER SHINGLES",
     name: "Copper Shingles",
     description: "Premium copper shingles for residential and heritage restoration projects. Natural patina finish develops over time.",
-    image: imgFlatShingles,
+    image: imgCopper,
   },
   {
     code: "VAIL®",
@@ -60,7 +60,7 @@ const specialtyProducts = [
     code: "CUSTOM FLAT",
     name: "Custom Flat Shingles",
     description: "Architect-specified flat shingles available in custom dimensions. For unique residential and commercial designs.",
-    image: "",
+    image: imgFlatShingles,
   },
   {
     code: "VINTAGE",
