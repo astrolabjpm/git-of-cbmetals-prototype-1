@@ -39,27 +39,29 @@ const GutterSystems = () => {
         <section className="relative min-h-[480px] sm:min-h-[540px]">
           <img src={heroImg} alt="Pacific Northwest home with metal roof and seamless gutters" className="absolute inset-0 h-full w-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
-          <div className="relative mx-auto flex max-w-[1200px] items-center px-8 py-20 sm:py-28 lg:px-10">
-            <div className="max-w-[560px]">
-              <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
-                Custom-Bilt Metals — Gutter Systems
-              </p>
-              <h1 className="text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
-                Seamless Gutter Systems &amp; Components
-              </h1>
-              <p className="mt-3 text-[20px] font-semibold leading-[1.2] text-primary-foreground/85 sm:text-[22px]">
-                Custom Seamless. No Seams to Leak. Western U.S. Stock.
-              </p>
-              <p className="mt-4 max-w-[420px] text-[14px] leading-[1.4] text-primary-foreground/65">
-                Continuous seamless gutter systems in K-style, half-round, and fascia profiles. Aluminum, steel, copper, and Zincalume. Available from 10 locations.
-              </p>
-              <div className="mt-6 flex gap-3">
-                <a href="https://www.custombiltmetals.com/locations/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
-                  Find a Location <ArrowRight className="h-4 w-4" />
-                </a>
-                <a href="#profiles" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
-                  Browse Profiles <ArrowDown className="h-4 w-4" />
-                </a>
+          <div className="relative px-8">
+            <div className="mx-auto flex max-w-[1200px] items-center py-20 sm:py-28">
+              <div className="max-w-[560px]">
+                <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
+                  Custom-Bilt Metals — Gutter Systems
+                </p>
+                <h1 className="text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
+                  Seamless Gutter Systems &amp; Components
+                </h1>
+                <p className="mt-3 text-[20px] font-semibold leading-[1.2] text-primary-foreground/85 sm:text-[22px]">
+                  Custom Seamless. No Seams to Leak. Western U.S. Stock.
+                </p>
+                <p className="mt-4 max-w-[420px] text-[14px] leading-[1.5] text-primary-foreground/65">
+                  Continuous seamless gutter systems in K-style, half-round, and fascia profiles. Aluminum, steel, copper, and Zincalume. Available from 10 locations.
+                </p>
+                <div className="mt-6 flex gap-3">
+                  <a href="https://www.custombiltmetals.com/locations/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+                    Find a Location <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <a href="#profiles" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+                    Browse Profiles <ArrowDown className="h-4 w-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -79,7 +81,7 @@ const GutterSystems = () => {
                   <p.icon className="h-5 w-5" />
                 </div>
                 <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">{p.title}</h3>
-                <p className="text-[13px] leading-[1.4] text-muted-foreground">{p.body}</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">{p.body}</p>
                 <p className="font-meta mt-2 text-[12px] font-semibold text-accent">{p.tag}</p>
               </div>
             ))}
@@ -112,8 +114,8 @@ const GutterSystems = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Seamless Gutter Profiles</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
-              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.4] text-muted-foreground">
+              <hr className="mt-2 border-t-2 border-foreground" />
+              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.5] text-muted-foreground">
                 All profiles are continuous seamless — formed on-site by your contractor. Available in aluminum, steel, copper (16 oz.), and Zincalume®.
               </p>
             </div>
@@ -121,24 +123,24 @@ const GutterSystems = () => {
               {gutterProfiles.map((profile) => (
                 <article key={profile.id} className="overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
                   <div className="p-5 pb-0">
-                    <div className="relative h-[170px] overflow-hidden rounded-sm bg-muted">
-                      <img src={profile.image} alt={`${profile.name} profile`} loading="lazy" className="h-full w-full object-cover" />
+                    <div className="relative h-[170px] overflow-hidden rounded-sm bg-white">
+                      <img src={profile.image} alt={`${profile.name} profile`} loading="lazy" className="h-full w-full object-contain" />
                     </div>
                   </div>
                   <div className="p-5">
-                    <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground/60">{profile.code}</p>
+                    <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">{profile.code}</p>
                     <h3 className="mt-1 text-[16px] font-bold leading-[1.2] text-foreground">{profile.name}</h3>
-                    <p className="mt-1 text-[13px] font-semibold text-accent">Best for: {profile.bestFor}</p>
-                    <p className="mt-2 text-[14px] leading-[1.4] text-muted-foreground">{profile.description}</p>
+                    <p className="mt-1 text-[14px] font-semibold text-accent">Best for: {profile.bestFor}</p>
+                    <p className="mt-2 text-[14px] leading-[1.5] text-muted-foreground">{profile.description}</p>
 
                     {/* Size table */}
                     <div className="mt-3 border-t border-border pt-3">
                       <table className="w-full text-left">
                         <thead>
                           <tr>
-                            <th className="font-meta pb-2 text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground/60">Size</th>
-                            <th className="font-meta pb-2 text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground/60">Materials</th>
-                            <th className="font-meta pb-2 text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground/60">Gauge</th>
+                            <th className="font-meta pb-2 text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">Size</th>
+                            <th className="font-meta pb-2 text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">Materials</th>
+                            <th className="font-meta pb-2 text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">Gauge</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -181,30 +183,30 @@ const GutterSystems = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Integrated Gutter and Roof System</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
-              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.4] text-muted-foreground">
+              <hr className="mt-2 border-t-2 border-foreground" />
+              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.5] text-muted-foreground">
                 A single continuous system where the roofing panel and gutter are formed as one unit — eliminating the joint between roof and gutter entirely.
               </p>
             </div>
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
               <article className="overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)]">
                 <div className="p-5 pb-0">
-                  <div className="relative h-[220px] overflow-hidden rounded-sm bg-muted">
-                    <img src="https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-2000.jpg" alt="Integrated roof and gutter system" loading="lazy" className="h-full w-full object-cover" />
+                  <div className="relative h-[220px] overflow-hidden rounded-sm bg-white">
+                    <img src="https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-2000.jpg" alt="Integrated roof and gutter system" loading="lazy" className="h-full w-full object-contain" />
                   </div>
                 </div>
                 <div className="p-5">
-                  <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground/60">INTEGRATED SYSTEM</p>
+                  <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">INTEGRATED SYSTEM</p>
                   <h3 className="mt-1 text-[16px] font-bold leading-[1.2] text-foreground">Integrated Gutter and Roof System</h3>
-                  <p className="mt-1 text-[13px] font-semibold text-accent">Best for: New construction, premium residential — zero-joint water management</p>
-                  <p className="mt-2 text-[14px] leading-[1.4] text-muted-foreground">
+                  <p className="mt-1 text-[14px] font-semibold text-accent">Best for: New construction, premium residential — zero-joint water management</p>
+                  <p className="mt-2 text-[14px] leading-[1.5] text-muted-foreground">
                     Roof panel and gutter channel formed as a continuous single piece. Eliminates the most common failure point in conventional roofing.
                   </p>
                   <div className="mt-3 grid grid-cols-2 gap-1.5 border-t border-border pt-3">
-                    <div><p className="font-meta text-[10px] font-medium uppercase text-muted-foreground/60">System type</p><p className="font-meta text-[12px] font-medium text-foreground">Roof + gutter combined</p></div>
-                    <div><p className="font-meta text-[10px] font-medium uppercase text-muted-foreground/60">Joint count</p><p className="font-meta text-[12px] font-medium text-green-700">Zero (continuous)</p></div>
-                    <div><p className="font-meta text-[10px] font-medium uppercase text-muted-foreground/60">Material</p><p className="font-meta text-[12px] font-medium text-yellow-600">Confirm w/ branch</p></div>
-                    <div><p className="font-meta text-[10px] font-medium uppercase text-muted-foreground/60">Availability</p><p className="font-meta text-[12px] font-medium text-yellow-600">Region-specific</p></div>
+                    <div><p className="font-meta text-[10px] font-medium uppercase text-muted-foreground">System type</p><p className="font-meta text-[12px] font-medium text-foreground">Roof + gutter combined</p></div>
+                    <div><p className="font-meta text-[10px] font-medium uppercase text-muted-foreground">Joint count</p><p className="font-meta text-[12px] font-medium text-green-700">Zero (continuous)</p></div>
+                    <div><p className="font-meta text-[10px] font-medium uppercase text-muted-foreground">Material</p><p className="font-meta text-[12px] font-medium text-yellow-600">Confirm w/ branch</p></div>
+                    <div><p className="font-meta text-[10px] font-medium uppercase text-muted-foreground">Availability</p><p className="font-meta text-[12px] font-medium text-yellow-600">Region-specific</p></div>
                   </div>
                   <div className="mt-3 flex gap-2">
                     <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground">Get a Quote</a>
@@ -216,13 +218,13 @@ const GutterSystems = () => {
               </article>
               <div className="pt-4">
                 <h3 className="mb-4 text-[15px] font-bold leading-[1.2] text-foreground">Why integrated?</h3>
-                <div className="space-y-3 text-[14px] leading-[1.4] text-muted-foreground">
+                <div className="space-y-3 text-[14px] leading-[1.5] text-muted-foreground">
                   <p>→ Eliminates the #1 leak point — the roof-to-gutter joint</p>
                   <p>→ Cleaner roofline — no visible gutter bracket hardware</p>
                   <p>→ Matched finish to roofing panel — single color system</p>
                   <p>→ Faster contractor install — one system, one supplier</p>
                 </div>
-                <p className="font-meta mt-6 text-[12px] text-muted-foreground/60">⚠ Requires specialist installer — confirm with local CBM branch for contractor referral and regional availability</p>
+                <p className="font-meta mt-6 text-[12px] text-muted-foreground">⚠ Requires specialist installer — confirm with local CBM branch for contractor referral and regional availability</p>
               </div>
             </div>
           </div>
@@ -233,8 +235,8 @@ const GutterSystems = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Downspouts &amp; System Components</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
-              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.4] text-muted-foreground">
+              <hr className="mt-2 border-t-2 border-foreground" />
+              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.5] text-muted-foreground">
                 Complete system components from CBM to ensure profile, color, and gauge match across every element.
               </p>
             </div>
@@ -242,15 +244,15 @@ const GutterSystems = () => {
               {gutterComponents.map((comp) => (
                 <article key={comp.id} className="overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow hover:shadow-[var(--card-shadow-hover)]">
                   <div className="p-4 pb-0">
-                    <div className="relative h-[120px] overflow-hidden rounded-sm bg-muted">
-                      <img src={comp.image} alt={comp.name} loading="lazy" className="h-full w-full object-cover" />
+                    <div className="relative h-[120px] overflow-hidden rounded-sm bg-white">
+                      <img src={comp.image} alt={comp.name} loading="lazy" className="h-full w-full object-contain" />
                     </div>
                   </div>
                   <div className="p-4">
-                    <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground/60">{comp.code}</p>
+                    <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">{comp.code}</p>
                     <h3 className="mt-0.5 text-[15px] font-bold leading-[1.2] text-foreground">{comp.name}</h3>
-                    <p className="mt-1 text-[13px] font-semibold text-accent">{comp.bestFor}</p>
-                    <p className="mt-1 text-[13px] leading-[1.4] text-muted-foreground">{comp.description}</p>
+                    <p className="mt-1 text-[14px] font-semibold text-accent">{comp.bestFor}</p>
+                    <p className="mt-1 text-[14px] leading-[1.5] text-muted-foreground">{comp.description}</p>
                     <div className="mt-3 flex gap-2">
                       {comp.hasColorChart ? (
                         <a href="#" className="font-meta text-[12px] font-semibold text-info hover:underline">Color Chart ↓</a>
@@ -275,8 +277,8 @@ const GutterSystems = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Iron Man Seamless Rollformers</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
-              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.4] text-muted-foreground">
+              <hr className="mt-2 border-t-2 border-foreground" />
+              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.5] text-muted-foreground">
                 CBM sells and supports the Iron Man series. Purchase includes free alignment and maintenance for the lifetime of the machine while you remain a CBM customer.
               </p>
             </div>
@@ -297,7 +299,7 @@ const GutterSystems = () => {
               <div className="flex items-start gap-4 rounded-sm border border-dashed border-border bg-surface p-4">
                 <div>
                   <h3 className="text-[14px] font-bold leading-[1.2] text-foreground">Used Machines Available</h3>
-                  <p className="mt-1 text-[13px] leading-[1.4] text-muted-foreground">Availability varies by location. Contact your local CBM branch to ask about current used machine inventory.</p>
+                  <p className="mt-1 text-[14px] leading-[1.5] text-muted-foreground">Availability varies by location. Contact your local CBM branch to ask about current used machine inventory.</p>
                   <a href="https://www.custombiltmetals.com/locations/" className="font-meta mt-3 inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground hover:text-foreground">
                     <MapPin className="h-3 w-3" /> Find a Location
                   </a>
@@ -315,8 +317,8 @@ const GutterSystems = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Gutter Stock at 10 Locations</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
-              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.4] text-muted-foreground">
+              <hr className="mt-2 border-t-2 border-foreground" />
+              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.5] text-muted-foreground">
                 Gutter profiles and components are stocked at all CBM branches. Contact your nearest location for availability.
               </p>
             </div>
@@ -328,7 +330,7 @@ const GutterSystems = () => {
                 </div>
               ))}
             </div>
-            <p className="font-meta mt-4 text-[13px] text-muted-foreground">⚠ Profile availability varies by region. Contact location before specifying.</p>
+            <p className="font-meta mt-4 text-[14px] text-muted-foreground">⚠ Profile availability varies by region. Contact location before specifying.</p>
           </div>
         </section>
 
@@ -337,7 +339,7 @@ const GutterSystems = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Why Contractors Choose CBM for Gutters</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
+              <hr className="mt-2 border-t-2 border-foreground" />
             </div>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {[
@@ -349,7 +351,7 @@ const GutterSystems = () => {
                 <div key={s.label}>
                   <p className="font-meta text-[28px] font-medium leading-[1.2] text-accent">{s.num}</p>
                   <p className="mt-1.5 text-[15px] font-bold leading-[1.2] text-foreground">{s.label}</p>
-                  <p className="mt-1 text-[14px] leading-[1.4] text-muted-foreground">{s.sub}</p>
+                  <p className="mt-1 text-[14px] leading-[1.5] text-muted-foreground">{s.sub}</p>
                 </div>
               ))}
             </div>
@@ -369,19 +371,19 @@ const GutterSystems = () => {
               <h2 className="mb-4 text-xl font-bold leading-[1.2] text-foreground">Seamless Gutter Systems: Profiles, Materials, and Sizing</h2>
               <div className="mb-5">
                 <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">K-Style vs. Half-Round vs. Fascia Gutters</h3>
-                <p className="text-[14px] leading-[1.4] text-muted-foreground">K-style gutters feature a flat back and decorative front, making them the most popular residential profile in North America. Half-round gutters use a semicircular trough — preferred for historic homes and copper installations. Fascia-style gutters cover the fascia board entirely, creating a sleek, modern roofline.</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">K-style gutters feature a flat back and decorative front, making them the most popular residential profile in North America. Half-round gutters use a semicircular trough — preferred for historic homes and copper installations. Fascia-style gutters cover the fascia board entirely, creating a sleek, modern roofline.</p>
               </div>
               <div className="mb-5">
                 <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">Seamless vs. Sectional: Why Seamless Wins</h3>
-                <p className="text-[14px] leading-[1.4] text-muted-foreground">Sectional gutters join pre-cut pieces at seams — every seam is a potential leak point. Seamless gutters are formed on-site to the exact length of the roofline, eliminating joints entirely. The result is a cleaner look, longer lifespan, and dramatically less maintenance.</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">Sectional gutters join pre-cut pieces at seams — every seam is a potential leak point. Seamless gutters are formed on-site to the exact length of the roofline, eliminating joints entirely. The result is a cleaner look, longer lifespan, and dramatically less maintenance.</p>
               </div>
               <div className="mb-5">
                 <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">Aluminum vs. Copper Gutters</h3>
-                <p className="text-[14px] leading-[1.4] text-muted-foreground">Aluminum is the standard choice — lightweight, corrosion-resistant, available in 20+ painted colors. Copper gutters cost significantly more but develop a distinctive green patina and are the material of choice for historic restoration and premium residential.</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">Aluminum is the standard choice — lightweight, corrosion-resistant, available in 20+ painted colors. Copper gutters cost significantly more but develop a distinctive green patina and are the material of choice for historic restoration and premium residential.</p>
               </div>
               <div>
                 <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">What Size Gutter for Your Roof?</h3>
-                <p className="text-[14px] leading-[1.4] text-muted-foreground">Gutter sizing depends on roof area, pitch, and local rainfall intensity. A 5" gutter handles most residential roofs under 2,400 sq ft. Larger roofs or high-rainfall areas need 6" or 7.25" (super fascia).</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">Gutter sizing depends on roof area, pitch, and local rainfall intensity. A 5" gutter handles most residential roofs under 2,400 sq ft. Larger roofs or high-rainfall areas need 6" or 7.25" (super fascia).</p>
               </div>
             </div>
           </div>
@@ -392,14 +394,14 @@ const GutterSystems = () => {
           <div className="mx-auto grid max-w-[1200px] grid-cols-1 sm:grid-cols-2">
             <div className="px-10 py-12">
               <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Find Your Nearest Location</h3>
-              <p className="mt-2 max-w-sm text-[14px] leading-[1.4] text-cta-foreground/60">Gutter stock is available at 10 CBM branches across the Western U.S. Call ahead to confirm profile and color availability.</p>
+              <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Gutter stock is available at 10 CBM branches across the Western U.S. Call ahead to confirm profile and color availability.</p>
               <a href="https://www.custombiltmetals.com/locations/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm bg-accent px-6 py-3 text-[14px] font-bold text-accent-foreground transition-opacity hover:opacity-90">
                 Find a Location <ArrowRight className="h-4 w-4" />
               </a>
             </div>
             <div className="px-10 py-12" style={{ backgroundColor: 'hsl(197 57% 17%)' }}>
               <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Need a Quote?</h3>
-              <p className="mt-2 max-w-sm text-[14px] leading-[1.4] text-cta-foreground/60">Tell us your project and a CBM rep will respond same or next business day with sizing, pricing, and machine availability.</p>
+              <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Tell us your project and a CBM rep will respond same or next business day with sizing, pricing, and machine availability.</p>
               <a href="https://www.custombiltmetals.com/request-a-quote/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm border-2 border-cta-foreground/35 px-6 py-3 text-[14px] font-bold text-cta-foreground transition-colors hover:border-cta-foreground/60">
                 Request a Quote <ArrowRight className="h-4 w-4" />
               </a>
@@ -408,7 +410,7 @@ const GutterSystems = () => {
         </div>
 
         {/* Footer */}
-        <footer className="border-t border-border bg-background px-8 py-6 text-center text-[13px] text-muted-foreground">
+        <footer className="border-t border-border bg-background px-8 py-6 text-center text-[14px] text-muted-foreground">
           <nav aria-label="Breadcrumb">
             <ol className="inline-flex items-center gap-1">
               <li><a href="https://www.custombiltmetals.com" className="hover:text-foreground">Home</a></li>
