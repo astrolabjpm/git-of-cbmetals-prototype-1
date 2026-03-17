@@ -249,10 +249,10 @@ const GutterSystems = () => {
                   Custom-Bilt continuous rain gutter systems offer the most efficient way to collect and drain rainwater.
                 </p>
                 <div className="mt-6 flex gap-3">
-                  <a href="https://www.custombiltmetals.com/locations/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+                  <a href="https://www.custombiltmetals.com/locations/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
                     Find a Location <ArrowRight className="h-4 w-4" />
                   </a>
-                  <a href="#profiles" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+                  <a href="#profiles" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/15 hover:border-primary-foreground/70">
                     Browse Profiles <ArrowDown className="h-4 w-4" />
                   </a>
                 </div>
@@ -338,8 +338,8 @@ const GutterSystems = () => {
 
                     {/* CTAs — bottom aligned */}
                     <div className="mt-auto pt-3 pb-2 flex flex-wrap gap-2">
-                      <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">Get a Quote</a>
-                      <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
+                      <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">Get a Quote</a>
+                      <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground transition-colors hover:text-foreground hover:bg-surface">
                         <MapPin className="h-3 w-3" /> Find a Location
                       </a>
                     </div>
@@ -389,10 +389,10 @@ const GutterSystems = () => {
 
             {/* Ribbon with CTAs + PDF */}
             <div className="mt-4 flex flex-wrap items-center gap-4 rounded-sm border border-border bg-surface px-4 py-3">
-              <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-flex items-center gap-1.5 rounded-sm bg-accent px-4 py-2 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+              <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-flex items-center gap-1.5 rounded-sm bg-accent px-4 py-2 text-[13px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
                 Get a Quote <ArrowRight className="h-3.5 w-3.5" />
               </a>
-              <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1.5 rounded-sm border border-border px-4 py-2 text-[13px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
+              <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1.5 rounded-sm border border-border px-4 py-2 text-[13px] font-semibold text-muted-foreground transition-colors hover:text-foreground hover:bg-surface">
                 <MapPin className="h-3.5 w-3.5" /> Find a Location
               </a>
               <span className="text-muted-foreground">|</span>
@@ -431,7 +431,7 @@ const GutterSystems = () => {
                     <h3 className="text-[14px] font-bold leading-[1.2] text-foreground">{m.name}</h3>
                     <p className="font-meta mt-1 text-[12px] text-muted-foreground">{m.profile}</p>
                     <div className="mt-3 pb-2 flex gap-2">
-                      <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">Inquire</a>
+                      <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">Inquire</a>
                     </div>
                     <MachineDocAccordion specSheet={m.specSheet} />
                   </div>
@@ -534,7 +534,7 @@ const GutterSystems = () => {
             <div className="px-10 py-12">
               <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Find Your Nearest Location</h3>
               <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Gutter stock is available at 10 CBM branches across the Western U.S. Call ahead to confirm profile and color availability.</p>
-              <a href="https://www.custombiltmetals.com/locations/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm bg-accent px-6 py-3 text-[14px] font-bold text-accent-foreground transition-opacity hover:opacity-90">
+              <a href="https://www.custombiltmetals.com/locations/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm bg-accent px-6 py-3 text-[14px] font-bold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
                 Find a Location <ArrowRight className="h-4 w-4" />
               </a>
             </div>

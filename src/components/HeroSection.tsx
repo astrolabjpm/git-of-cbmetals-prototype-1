@@ -25,13 +25,13 @@ const HeroSection = () => (
         <div className="mt-6 flex gap-3">
           <a
             href="https://www.custombiltmetals.com/request-a-quote/"
-            className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm"
           >
             Request a Quote <ArrowRight className="h-4 w-4" />
           </a>
           <a
             href="#standing-seam"
-            className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+            className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/15 hover:border-primary-foreground/70"
           >
             Browse Products <ArrowDown className="h-4 w-4" />
           </a>

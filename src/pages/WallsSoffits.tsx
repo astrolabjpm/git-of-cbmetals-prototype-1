@@ -53,10 +53,10 @@ const WallsSoffits = () => {
                   Custom-Bilt offer designs to create finished appearances that range from historical or rustic designs in natural or weathered metals to an edgier contemporary look in painted colors.
                 </p>
                 <div className="mt-6 flex gap-3">
-                  <a href="https://www.custombiltmetals.com/request-a-quote/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+                  <a href="https://www.custombiltmetals.com/request-a-quote/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
                     Get a Quote <ArrowRight className="h-4 w-4" />
                   </a>
-                  <a href="#wall-soffit" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+                  <a href="#wall-soffit" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/15 hover:border-primary-foreground/70">
                     Browse Panels <ArrowDown className="h-4 w-4" />
                   </a>
                 </div>
@@ -273,14 +273,14 @@ const WallsSoffits = () => {
             <div className="px-10 py-12">
               <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Ready to Spec?</h3>
               <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Tell us your project type, panel application, and color requirements. A CBM rep will respond same or next business day.</p>
-              <a href="https://www.custombiltmetals.com/request-a-quote/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm bg-accent px-6 py-3 text-[14px] font-bold text-accent-foreground transition-opacity hover:opacity-90">
+              <a href="https://www.custombiltmetals.com/request-a-quote/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm bg-accent px-6 py-3 text-[14px] font-bold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
                 Request a Quote <ArrowRight className="h-4 w-4" />
               </a>
             </div>
             <div className="px-10 py-12" style={{ backgroundColor: 'hsl(197 57% 17%)' }}>
               <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Specs, CAD &amp; LEED Docs</h3>
               <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Download installation guides, specifications, CAD files, and LEED documentation packages.</p>
-              <a href="https://www.custombiltmetals.com/resources/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm border-2 border-cta-foreground/35 px-6 py-3 text-[14px] font-bold text-cta-foreground transition-colors hover:border-cta-foreground/60">
+              <a href="https://www.custombiltmetals.com/resources/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm border-2 border-cta-foreground/35 px-6 py-3 text-[14px] font-bold text-cta-foreground transition-colors hover:border-cta-foreground/60 hover:bg-cta-foreground/10">
                 Go to Resources <ArrowRight className="h-4 w-4" />
               </a>
             </div>

@@ -250,7 +250,7 @@ const SiteNav = () => {
             <span className="font-meta text-[13px] text-muted-foreground">1-800-826-7813</span>
             <Link
               to="/products"
-              className="rounded-sm bg-accent px-[18px] py-2.5 text-[13px] font-bold text-accent-foreground transition-opacity hover:opacity-90"
+              className="rounded-sm bg-accent px-[18px] py-2.5 text-[13px] font-bold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm"
             >
               Request a Quote →
             </Link>
@@ -459,7 +459,7 @@ const SiteNav = () => {
                   Upload a photo of your home or building. Browse colors and panel profiles in real time. No account
                   needed.
                 </p>
-                <button className="rounded-sm bg-accent py-2.5 text-center text-[13px] font-bold text-accent-foreground transition-opacity hover:opacity-90">
+                <button className="rounded-sm bg-accent py-2.5 text-center text-[13px] font-bold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
                   Launch Visualizer →
                 </button>
 
@@ -669,7 +669,7 @@ const SiteNav = () => {
                   All 9 locations offer onsite roll forming, same-day quoting, and will-call pickup for in-stock
                   products.
                 </p>
-                <button className="rounded-sm bg-accent py-2.5 text-center text-[13px] font-bold text-accent-foreground transition-opacity hover:opacity-90">
+                <button className="rounded-sm bg-accent py-2.5 text-center text-[13px] font-bold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
                   Find Nearest Location →
                 </button>
                 <div className="font-meta border-t border-border pt-2 text-[12px] leading-[1.4] text-muted-foreground">
