@@ -137,25 +137,22 @@ const WallsSoffits = () => {
               </p>
             </div>
 
-            <div className="mb-4 rounded-sm border border-border bg-card px-4 py-3 text-[14px] text-muted-foreground">
-              These panels also appear on <a href="/" className="font-semibold text-info hover:underline">/products/roofing-systems/ →</a> for roofing applications. This section covers their use as <strong className="text-foreground">wall cladding</strong>.
-            </div>
-
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {wallRoofPanels.map((p) => (
-                <ProductCard key={p.id} product={toProductPanel(p)} />
+                <div key={p.id}>
+                  <ProductCard product={toProductPanel(p)} />
+                  <div className="mt-2 rounded-sm border border-border bg-card px-4 py-3">
+                    <p className="font-meta mb-1 text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">
+                      {p.id === "tfr-36-wall" ? "Choose TFR-36 when" : "Choose PBR when"}
+                    </p>
+                    <p className="text-[14px] leading-[1.5] text-muted-foreground">
+                      {p.id === "tfr-36-wall"
+                        ? "You need polycarbonate skylight match, anti-siphon groove is a spec requirement, or substrate is open framing."
+                        : "You need structural side lap for wind/load conditions, heavier gauge (24ga) is required, or the project is agricultural or heavy commercial."}
+                    </p>
+                  </div>
+                </div>
               ))}
-            </div>
-
-            <div className="mt-4 grid grid-cols-1 gap-6 rounded-sm border border-border bg-card px-4 py-4 sm:grid-cols-2">
-              <div>
-                <p className="font-meta mb-1 text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">Choose TFR-36 when</p>
-                <p className="text-[14px] leading-[1.5] text-muted-foreground">You need polycarbonate skylight match, anti-siphon groove is a spec requirement, or substrate is open framing.</p>
-              </div>
-              <div>
-                <p className="font-meta mb-1 text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">Choose PBR when</p>
-                <p className="text-[14px] leading-[1.5] text-muted-foreground">You need structural side lap for wind/load conditions, heavier gauge (24ga) is required, or the project is agricultural or heavy commercial.</p>
-              </div>
             </div>
           </div>
         </section>
