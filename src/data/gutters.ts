@@ -10,8 +10,7 @@ export interface GutterProfile {
 
 export interface GutterSize {
   size: string;
-  materials: string;
-  gauge: string;
+  materials: { name: string; gauge: string }[];
   note?: string;
 }
 
@@ -47,23 +46,35 @@ export const gutterProfiles: GutterProfile[] = [
     description:
       "The most widely installed gutter profile in the U.S. Flat back mounts flush to fascia. Available in two sizes for different roof drainage loads.",
     sizes: [
-      { size: '5"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
-      { size: '6"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
+      {
+        size: '5" & 6"',
+        materials: [
+          { name: "Aluminum", gauge: "0.27" },
+          { name: "Copper", gauge: "16 oz." },
+          { name: "Steel", gauge: "26 gauge" },
+        ],
+      },
     ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/Seamless-CIMG0883-1024x768.jpg",
+    image: "gutters-k",
   },
   {
     id: "half-round",
     code: "HALF-ROUND",
-    name: "Half-Round Style Seamless Gutter",
+    name: "Half Round Style Gutter",
     bestFor: "Historic, traditional, and premium residential",
     description:
-      "Semicircular profile used in historic restoration and high-end residential. Self-cleaning profile — debris passes through rather than accumulating. Copper option for premium projects.",
+      "Semicircular profile used in historic restoration and high-end residential. Self-cleaning profile — debris passes through rather than accumulating.",
     sizes: [
-      { size: '5"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
-      { size: '6"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
+      {
+        size: '5" & 6"',
+        materials: [
+          { name: "Aluminum", gauge: "0.27" },
+          { name: "Copper", gauge: "16 oz." },
+          { name: "Steel", gauge: "26 gauge" },
+        ],
+      },
     ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/Half-Round-20150610_103158-Copy-1024x576.jpg",
+    image: "gutters-half-round",
   },
   {
     id: "fascia",
@@ -71,13 +82,36 @@ export const gutterProfiles: GutterProfile[] = [
     name: "Fascia Style Seamless Gutter",
     bestFor: "Contemporary residential and commercial — clean roofline",
     description:
-      "Hides the fascia board completely for a finished, integrated look. Higher capacity than K-style at equivalent widths. Super/deep fascia at 7.25\" for high-volume drainage.",
+      "Hides the fascia board completely for a finished, integrated look. Higher capacity than K-style at equivalent widths.",
     sizes: [
-      { size: '5.5"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
-      { size: '6"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
-      { size: '7.25"', materials: "Copper · Steel", gauge: "Cu 16 oz · Steel 26ga", note: "Super/Deep" },
+      {
+        size: '5½" & 6"',
+        materials: [
+          { name: "Aluminum", gauge: "0.27" },
+          { name: "Copper", gauge: "16 oz." },
+          { name: "Steel", gauge: "26 gauge" },
+        ],
+      },
     ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/architecturalelements.00451-1024x682.jpg",
+    image: "gutters-facia",
+  },
+  {
+    id: "super-fascia",
+    code: "SUPER / DEEP FASCIA",
+    name: 'Super or Deep Fascia Style Seamless Gutter',
+    bestFor: "High-volume drainage, large commercial roofs",
+    description:
+      'Extra-deep 7¼" fascia profile for maximum water capacity on large roof areas and high-rainfall regions.',
+    sizes: [
+      {
+        size: '7¼"',
+        materials: [
+          { name: "Copper", gauge: "16 oz." },
+          { name: "Steel", gauge: "26 gauge" },
+        ],
+      },
+    ],
+    image: "gutters-super",
   },
 ];
 

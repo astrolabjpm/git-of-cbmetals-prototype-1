@@ -2,12 +2,23 @@ import { useState } from "react";
 import SiteNav from "@/components/SiteNav";
 import { ArrowRight, ArrowDown, MapPin, ChevronDown, ExternalLink } from "lucide-react";
 import heroImg from "@/assets/hero-gutters.jpg";
+import guttersK from "@/assets/gutters-k.jpg";
+import guttersHalfRound from "@/assets/gutters-half-round.jpg";
+import guttersFacia from "@/assets/gutters-facia.jpg";
+import guttersSuper from "@/assets/gutters-super.jpg";
 import {
   gutterProfiles,
   gutterComponents,
   gutterMachines,
   gutterLocations,
 } from "@/data/gutters";
+
+const imageMap: Record<string, string> = {
+  "gutters-k": guttersK,
+  "gutters-half-round": guttersHalfRound,
+  "gutters-facia": guttersFacia,
+  "gutters-super": guttersSuper,
+};
 
 const pageLinks = [
   { label: "Gutter Profiles", anchor: "#profiles", blurb: "K-Style, Half-Round, and Fascia seamless profiles in aluminum, steel, copper." },
@@ -24,8 +35,6 @@ const gutterDocs = [
 ];
 
 const GutterSystems = () => {
-  const [activeTab, setActiveTab] = useState("profiles");
-
   return (
     <>
       <script
@@ -77,7 +86,7 @@ const GutterSystems = () => {
         </section>
 
         {/* On This Page */}
-        <div className="bg-secondary px-8 py-6">
+        <div className="bg-secondary px-8 py-10">
           <div className="mx-auto max-w-[1200px]">
             <p className="font-meta text-[12px] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
               On This Page
@@ -108,32 +117,6 @@ const GutterSystems = () => {
           </div>
         </div>
 
-        {/* Category Tabs */}
-        <nav className="sticky top-0 z-50 border-b border-border bg-background shadow-sm">
-          <div className="mx-auto flex max-w-[1200px] overflow-x-auto">
-            {[
-              { id: "profiles", label: "Gutter Profiles", subtitle: "K-Style · Half-Round · Fascia" },
-              { id: "integrated", label: "Integrated System", subtitle: "Roof + gutter combined" },
-              { id: "components", label: "Downspouts & Components", subtitle: "Downspouts · Hangers · Miters" },
-              { id: "machines", label: "Gutter Machines", subtitle: "Iron Man rollformer series" },
-            ].map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => {
-                  setActiveTab(cat.id);
-                  document.getElementById(cat.id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-                className={`shrink-0 border-b-[3px] px-6 py-4 text-left transition-colors ${
-                  activeTab === cat.id ? "border-accent" : "border-transparent hover:border-muted-foreground/30"
-                }`}
-              >
-                <span className="block text-[13px] font-bold text-foreground">{cat.label}</span>
-                <span className="font-meta block text-[12px] text-muted-foreground">{cat.subtitle}</span>
-              </button>
-            ))}
-          </div>
-        </nav>
-
         {/* S3A — Gutter Profiles */}
         <section id="profiles" className="border-b border-border bg-background px-8 py-12">
           <div className="mx-auto max-w-[1200px]">
@@ -144,43 +127,36 @@ const GutterSystems = () => {
                 All profiles are continuous seamless — formed on-site by your contractor. Available in aluminum, steel, copper (16 oz.), and Zincalume®.
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {gutterProfiles.map((profile) => (
-                <article key={profile.id} className="overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
+                <article key={profile.id} className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow duration-300 hover:shadow-[var(--card-shadow-hover)]">
                   <div className="p-5 pb-0">
-                    <div className="relative h-[170px] overflow-hidden rounded-sm bg-white">
-                      <img src={profile.image} alt={`${profile.name} profile`} loading="lazy" className="h-full w-full object-contain" />
+                    <div className="relative h-[140px] overflow-hidden rounded-sm bg-white">
+                      <img src={imageMap[profile.image] || profile.image} alt={`${profile.name} profile`} loading="lazy" className="h-full w-full object-contain" />
                     </div>
                   </div>
-                  <div className="p-5">
+                  <div className="flex flex-1 flex-col p-5">
                     <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">{profile.code}</p>
-                    <h3 className="mt-1 text-[16px] font-bold leading-[1.2] text-foreground">{profile.name}</h3>
-                    <p className="mt-1 text-[14px] font-semibold text-accent">Best for: {profile.bestFor}</p>
+                    <h3 className="mt-1 text-[15px] font-bold leading-[1.2] text-foreground">{profile.name}</h3>
+                    <p className="mt-1 text-[13px] font-semibold text-accent">Best for: {profile.bestFor}</p>
                     <p className="mt-2 text-[14px] leading-[1.5] text-muted-foreground">{profile.description}</p>
 
-                    {/* Size table */}
+                    {/* Materials by size */}
                     <div className="mt-3 border-t border-border pt-3">
-                      <table className="w-full text-left">
-                        <thead>
-                          <tr>
-                            <th className="font-meta pb-2 text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">Size</th>
-                            <th className="font-meta pb-2 text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">Materials</th>
-                            <th className="font-meta pb-2 text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">Gauge</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {profile.sizes.map((s) => (
-                            <tr key={s.size} className="border-t border-border/60">
-                              <td className="font-meta py-2 text-[13px] font-semibold text-foreground">
-                                {s.size}
-                                {s.note && <span className="ml-1 text-[10px] text-accent">{s.note}</span>}
-                              </td>
-                              <td className="font-meta py-2 text-[12px] text-muted-foreground">{s.materials}</td>
-                              <td className="font-meta py-2 text-[12px] text-muted-foreground">{s.gauge}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
+                      {profile.sizes.map((s) => (
+                        <div key={s.size}>
+                          <p className="font-meta text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">
+                            Standard Material: {s.size}
+                          </p>
+                          <div className="mt-1 space-y-0.5">
+                            {s.materials.map((m) => (
+                              <p key={m.name} className="font-meta text-[12px] font-medium text-foreground">
+                                {m.name} ({m.gauge})
+                              </p>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
 
                     <div className="mt-3 mb-4 flex flex-wrap gap-2">
