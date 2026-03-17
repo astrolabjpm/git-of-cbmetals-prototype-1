@@ -292,7 +292,7 @@ const SiteNav = () => {
             transition={{ duration: 0.15 }}
             className="fixed left-0 right-0 top-[70px] z-50 border-t-2 border-accent bg-card shadow-lg shadow-foreground/20"
           >
-            <div className="mx-auto grid max-w-[1400px] grid-cols-[260px_1fr_220px]">
+            <div className="mx-auto grid max-w-[1400px] grid-cols-[260px_1fr]">
               {/* Left: category column */}
               <div className="flex flex-col bg-surface py-6">
                 <span className="font-meta mb-3 px-5 text-[12px] uppercase tracking-widest text-muted-foreground">
