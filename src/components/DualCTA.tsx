@@ -22,7 +22,7 @@ const DualCTA = () => (
         </p>
         <a
           href="https://www.custombiltmetals.com/resources/"
-          className="mt-5 inline-flex items-center gap-1.5 rounded-sm border-2 border-cta-foreground/35 px-6 py-3 text-[14px] font-bold text-cta-foreground transition-colors hover:border-cta-foreground/60"
+          className="mt-5 inline-flex items-center gap-1.5 rounded-sm border-2 border-cta-foreground/35 px-6 py-3 text-[14px] font-bold text-cta-foreground transition-colors hover:border-cta-foreground/60 hover:bg-cta-foreground/10"
         >
           Go to Resources <ArrowRight className="h-4 w-4" />
         </a>
