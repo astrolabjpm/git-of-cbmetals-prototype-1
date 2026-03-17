@@ -6,7 +6,6 @@ import {
   wallPanels,
   wallRoofPanels,
   wallApplications,
-  leedCredentials,
 } from "@/data/walls";
 import type { ProductPanel } from "@/data/products";
 
