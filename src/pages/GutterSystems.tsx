@@ -389,7 +389,7 @@ const GutterSystems = () => {
 
             {/* Ribbon with CTAs + PDF */}
             <div className="mt-4 flex flex-wrap items-center gap-4 rounded-sm border border-border bg-surface px-4 py-3">
-              <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-flex items-center gap-1.5 rounded-sm bg-accent px-4 py-2 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+              <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-flex items-center gap-1.5 rounded-sm bg-accent px-4 py-2 text-[13px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
                 Get a Quote <ArrowRight className="h-3.5 w-3.5" />
               </a>
               <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1.5 rounded-sm border border-border px-4 py-2 text-[13px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
