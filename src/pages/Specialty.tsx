@@ -1,42 +1,45 @@
 import SiteNav from "@/components/SiteNav";
-import { ArrowRight, Droplets, Shield, Paintbrush, Layers, Factory, Gem, Home, Hammer } from "lucide-react";
+import FooterNav from "@/components/FooterNav";
+import DualCTA from "@/components/DualCTA";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import heroImg from "@/assets/hero-specialty.jpg";
+import imgCopper from "@/assets/specialty-copper.jpg";
+import imgRheinzink from "@/assets/specialty-alloy.jpg";
+import imgZincalume from "@/assets/specialty-sl1750.jpg";
+import imgA606 from "@/assets/specialty-a606.jpg";
+import imgFlatShingles from "@/assets/specialty-flat-shingles.jpg";
+import imgVintage from "@/assets/specialty-vintage.jpg";
 
 const bareMetals = [
   {
     code: "COPPER",
     name: "True Copper",
     description: "16 oz. natural copper develops a rich verdigris patina over time. A living finish that evolves with the environment — ideal for architectural accents, custom homes, and restoration projects.",
-    icon: Gem,
-    tags: ["Natural Patina", "Premium Residential", "Heritage"],
+    image: imgCopper,
   },
   {
     code: "RHEINZINK®",
     name: "Rheinzink® Pre-Weathered Zinc",
     description: "Pre-aged zinc with a distinctive blue-grey finish. Specified for European-inspired architectural projects and high-end commercial applications.",
-    icon: Shield,
-    tags: ["Pre-Weathered", "Architectural", "Blue-Grey"],
+    image: imgRheinzink,
   },
   {
     code: "ZINCALUME+",
     name: "Bare Zincalume® Plus",
     description: "Zinc-aluminum coated bare steel delivering the classic bright metallic appearance without paint. Cost-efficient option for traditional metal roofing aesthetics.",
-    icon: Layers,
-    tags: ["Bare Metallic", "Cost-Efficient", "Traditional"],
+    image: imgZincalume,
   },
   {
     code: "A606",
     name: "A606 Weathering Steel",
     description: "Cor-Ten style steel that develops a stable, self-protecting rust-orange patina. Specified for dramatic commercial and residential builds with an industrial aesthetic.",
-    icon: Factory,
-    tags: ["Rust Patina", "Industrial", "Self-Protecting"],
+    image: imgA606,
   },
   {
     code: "ALUMINUM",
     name: "Bare & Coated Aluminum",
     description: "Bare and PVDF-coated aluminum panels for enhanced durability. Coastal and marine-grade options with manufacturer-backed corrosion warranties.",
-    icon: Droplets,
-    tags: ["Marine-Grade", "Corrosion Resistant", "Coastal"],
+    image: "",
   },
 ];
 
@@ -45,44 +48,32 @@ const specialtyProducts = [
     code: "COPPER SHINGLES",
     name: "Copper Shingles",
     description: "Premium copper shingles for residential and heritage restoration projects. Natural patina finish develops over time.",
-    icon: Home,
+    image: imgFlatShingles,
   },
   {
     code: "VAIL®",
     name: "Vail® Shingles",
-    description: "Contemporary shingle profile with a mountain aesthetic. Designed for modern residential projects.",
-    icon: Paintbrush,
+    description: "Specialty shingle profile available in select metals and finishes. Contact your CBM branch for specifications and availability.",
+    image: "",
   },
   {
     code: "CUSTOM FLAT",
     name: "Custom Flat Shingles",
     description: "Architect-specified flat shingles available in custom dimensions. For unique residential and commercial designs.",
-    icon: Hammer,
+    image: "",
   },
   {
     code: "VINTAGE",
     name: "Vintage® Standing Seam",
     description: "Classic standing seam aesthetic with a traditional profile. Available in specialty print coats and bare metals.",
-    icon: Gem,
+    image: imgVintage,
   },
 ];
 
-const availableProfiles = [
-  "Contour",
-  "SL-1750",
-  "CB-150",
-  "CB-2000",
-  "Bermuda",
-  "WS-100",
-];
-
-const whySpecialty = [
-  "Distinct architectural appearance",
-  "Long-term durability",
-  "Coastal-ready aluminum options",
-  "Custom fabrication capabilities",
-  "Low maintenance performance",
-  "Ideal for accent walls, roofs, façades, and design features",
+const onThisPage = [
+  { id: "bare-metals", label: "Natural Bare Metal Finishes", blurb: "Copper, zinc, weathering steel, and aluminum" },
+  { id: "specialty-shingles", label: "Specialty Shingles & Products", blurb: "Copper shingles, Vail®, custom flat, Vintage®" },
+  { id: "resources-specs", label: "Resources & Specs", blurb: "Quotes, specs, and data sheets" },
 ];
 
 const Specialty = () => (
@@ -107,23 +98,54 @@ const Specialty = () => (
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/75 via-foreground/40 to-transparent" />
         <div className="relative px-8">
           <div className="mx-auto max-w-[1200px] py-20 sm:py-28">
-            <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
-              Custom-Bilt Metals · Specialty Products
-            </p>
-            <h1 className="max-w-[640px] text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
-              Specialty Metal Roofing &amp; Architectural Panels
-            </h1>
-            <p className="mt-4 max-w-[520px] text-[14px] leading-[1.5] text-primary-foreground/65">
-              Bare metal products — copper, zinc, and weathering steel for natural patina. We offer all of our product profiles in copper, zinc, and bare Zincalume® for a traditional metal look.
-            </p>
-            <div className="mt-6 flex gap-3">
-              <a href="https://www.custombiltmetals.com/request-a-quote/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
-                Request a Quote <ArrowRight className="h-4 w-4" />
-              </a>
-              <a href="https://www.custombiltmetals.com/contact-us/" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
-                Contact Us <ArrowRight className="h-4 w-4" />
-              </a>
+            <div className="max-w-[680px]">
+              <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
+                Specialty Metal Roofing &amp; Custom Architectural Panels
+              </p>
+              <h1 className="text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
+                Bare Metal Products:<br />
+                Copper, Zinc, and Weathering Steel for Natural Patina
+              </h1>
+              <p className="mt-4 text-[20px] font-semibold leading-[1.5] text-primary-foreground/65">
+                We offer all of our product profiles in copper, Zinc and bare Zincalume® for a traditional metal look.
+              </p>
+              <div className="mt-6 flex gap-3">
+                <a href="https://www.custombiltmetals.com/request-a-quote/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+                  Request a Quote <ArrowRight className="h-4 w-4" />
+                </a>
+                <a href="https://www.custombiltmetals.com/contact-us/" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+                  Contact Us <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* On This Page */}
+      <section className="bg-secondary px-8 py-10">
+        <div className="mx-auto max-w-[1200px]">
+          <p className="font-meta mb-5 text-[11px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+            On This Page
+          </p>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            {onThisPage.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="group block border-t-[4px] border-foreground pt-3 transition-colors hover:border-accent"
+              >
+                <span className="flex items-center justify-between text-[14px] font-bold text-foreground group-hover:text-accent">
+                  {item.label}
+                  <ChevronDown className="h-4 w-4 opacity-0 transition-opacity group-hover:opacity-100 text-accent" />
+                </span>
+                <p className="mt-1 text-[13px] leading-[1.5] text-muted-foreground">{item.blurb}</p>
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -138,148 +160,88 @@ const Specialty = () => (
       </section>
 
       {/* Natural Bare Metal Finishes */}
-      <section className="border-b border-border bg-background px-8 py-12">
+      <section id="bare-metals" className="border-b border-border bg-background px-8 py-12">
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-8">
             <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Natural Bare Metal Finishes</h2>
             <hr className="mt-2 border-t-2 border-foreground" />
             <p className="mt-3 max-w-[700px] text-[14px] leading-[1.5] text-muted-foreground">
-              The design of a building can be dramatically enhanced by the authentic look of bare metal roofing. Because our natural bare metal products contain no reflective or emissive coatings, they maintain their raw, traditional metal appearance.
+              The design of a building can be dramatically enhanced by the authentic look of bare metal roofing. Because our natural bare metal products contain no reflective or emissive coatings, they maintain their raw, traditional metal appearance. Available across CBM standing seam profiles including Contour, SL-1750, CB-150, CB-2000, Bermuda, and WS-100.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {bareMetals.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.code}
-                  className="rounded-sm border border-border bg-card p-6 shadow-[var(--card-shadow)] transition-shadow hover:shadow-[var(--card-shadow-hover)]"
-                >
-                  <div className="mb-3 flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-surface">
-                      <Icon className="h-5 w-5 text-accent" />
-                    </div>
-                    <div>
-                      <p className="font-meta text-[12px] uppercase tracking-wide text-muted-foreground">{item.code}</p>
-                      <h3 className="text-[16px] font-bold leading-[1.2] text-foreground">{item.name}</h3>
+            {bareMetals.map((item) => (
+              <div
+                key={item.code}
+                className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow hover:shadow-[var(--card-shadow-hover)]"
+              >
+                {item.image && (
+                  <div className="p-5 pb-0">
+                    <div className="relative h-[170px] overflow-hidden rounded-sm bg-white">
+                      <img src={item.image} alt={`${item.name} metal roofing`} loading="lazy" className="h-full w-full object-cover" />
                     </div>
                   </div>
-                  <p className="text-[14px] leading-[1.5] text-muted-foreground">{item.description}</p>
-                  <div className="mt-3 flex flex-wrap gap-1.5">
-                    {item.tags.map((tag) => (
-                      <span key={tag} className="rounded-sm bg-surface px-2 py-0.5 text-[12px] font-medium text-info">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                )}
+                <div className="p-5">
+                  <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">{item.code}</p>
+                  <h3 className="mt-1 text-[16px] font-bold leading-[1.2] text-foreground">{item.name}</h3>
+                  <p className="mt-2 text-[14px] leading-[1.5] text-muted-foreground">{item.description}</p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Specialty Shingles & Products */}
-      <section className="border-b border-border bg-surface px-8 py-12">
+      <section id="specialty-shingles" className="border-b border-border bg-surface px-8 py-12">
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-8">
             <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Specialty Shingles &amp; Products</h2>
             <hr className="mt-2 border-t-2 border-foreground" />
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {specialtyProducts.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.code}
-                  className="rounded-sm border border-border bg-card p-5 shadow-[var(--card-shadow)] transition-shadow hover:shadow-[var(--card-shadow-hover)]"
-                >
-                  <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-sm bg-surface">
-                    <Icon className="h-5 w-5 text-accent" />
+            {specialtyProducts.map((item) => (
+              <div
+                key={item.code}
+                className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)] transition-shadow hover:shadow-[var(--card-shadow-hover)]"
+              >
+                {item.image && (
+                  <div className="p-5 pb-0">
+                    <div className="relative h-[140px] overflow-hidden rounded-sm bg-white">
+                      <img src={item.image} alt={`${item.name}`} loading="lazy" className="h-full w-full object-cover" />
+                    </div>
                   </div>
-                  <p className="font-meta text-[12px] uppercase tracking-wide text-muted-foreground">{item.code}</p>
+                )}
+                <div className="p-5">
+                  <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">{item.code}</p>
                   <h3 className="mt-1 text-[16px] font-bold leading-[1.2] text-foreground">{item.name}</h3>
                   <p className="mt-2 text-[14px] leading-[1.5] text-muted-foreground">{item.description}</p>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Available Panel Profiles */}
-      <section className="border-b border-border bg-background px-8 py-12">
+      {/* Cross-reference callout */}
+      <section id="resources-specs" className="bg-background px-8 py-8">
         <div className="mx-auto max-w-[1200px]">
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Specialty Panel Profiles</h2>
-            <hr className="mt-2 border-t-2 border-foreground" />
-            <p className="mt-3 max-w-[700px] text-[14px] leading-[1.5] text-muted-foreground">
-              We manufacture and supply multiple architectural panel profiles available in select metals and finishes for both residential and commercial applications.
+          <div className="rounded-sm border border-border border-l-4 border-l-accent bg-card px-6 py-5">
+            <p className="text-[14px] leading-[1.5] text-foreground">
+              <span className="font-bold">Vintage® Standing Seam</span> also appears on the{" "}
+              <a href="/products" className="font-semibold text-info hover:text-foreground underline">Roofing Systems page</a>{" "}
+              for standard panel applications. Specialty bare metal versions are available on request.
             </p>
-          </div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-            {availableProfiles.map((profile) => (
-              <div
-                key={profile}
-                className="flex items-center justify-center rounded-sm border border-border bg-card px-4 py-5 text-center text-[14px] font-bold text-foreground shadow-[var(--card-shadow)]"
-              >
-                {profile}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Specialty */}
-      <section className="border-b border-border bg-surface px-8 py-12">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Why Choose Specialty Metal Roofing?</h2>
-            <hr className="mt-2 border-t-2 border-foreground" />
-          </div>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {whySpecialty.map((reason) => (
-              <div key={reason} className="flex items-start gap-2.5 rounded-sm border border-border bg-card p-4">
-                <Shield className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
-                <span className="text-[14px] leading-[1.5] text-foreground">{reason}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <div className="bg-cta">
-        <div className="mx-auto grid max-w-[1200px] grid-cols-1 sm:grid-cols-2">
-          <div className="px-10 py-12">
-            <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Designing or Building a New Project?</h3>
-            <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Contact us today to discuss your specialty metal roofing project or request product specifications.</p>
-            <a href="https://www.custombiltmetals.com/request-a-quote/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm bg-accent px-6 py-3 text-[14px] font-bold text-accent-foreground">
-              Request a Quote <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-          <div className="px-10 py-12" style={{ backgroundColor: 'hsl(197 57% 17%)' }}>
-            <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Need Specs or Data Sheets?</h3>
-            <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Download spec sheets, installation guides, and CAD details from our resource library.</p>
-            <a href="https://www.custombiltmetals.com/resources/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm border-2 border-cta-foreground/35 px-6 py-3 text-[14px] font-bold text-cta-foreground">
-              See Product Data Sheets <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
-      </div>
+      <DualCTA />
 
       {/* Footer */}
-      <footer className="border-t border-border bg-background px-8 py-6 text-center text-[14px] text-muted-foreground">
-        <nav aria-label="Breadcrumb">
-          <ol className="inline-flex items-center gap-1">
-            <li><a href="https://www.custombiltmetals.com" className="hover:text-foreground">Home</a></li>
-            <li>/</li>
-            <li><a href="/products" className="hover:text-foreground">Products</a></li>
-            <li>/</li>
-            <li className="text-foreground">Specialty</li>
-          </ol>
-        </nav>
-      </footer>
+      <FooterNav />
     </div>
   </>
 );
