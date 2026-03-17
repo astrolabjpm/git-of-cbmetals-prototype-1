@@ -97,6 +97,7 @@ const secondaryCategories = [
     sections: [
       {
         heading: "Wall & Soffit Panels",
+        anchor: "/walls-soffits#wall-soffit",
         items: [
           { code: "WS-100", name: "Wall & Soffit Panel", desc: '1" concealed fastener · 12" width · Vented option · LEED' },
           { code: "CORRUGATED", name: "Corrugated Wall Panel", desc: '7/8" corrugation · Bare metal options · ULTRA-Cool®' },
@@ -104,6 +105,7 @@ const secondaryCategories = [
       },
       {
         heading: "Roof + Wall Panels",
+        anchor: "/walls-soffits#roof-wall",
         items: [
           { code: "TFR-36", name: "TFR-36 Panel", desc: "36\" coverage · Polycarbonate skylight match · Commercial + ag" },
           { code: "PBR", name: "PBR Panel", desc: "Structural overlap · 26ga + 24ga · Heavy commercial + ag" },
