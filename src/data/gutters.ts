@@ -22,13 +22,13 @@ export interface GutterComponent {
   bestFor: string;
   description: string;
   image: string;
-  hasColorChart?: boolean;
 }
 
 export interface GutterMachine {
   id: string;
   name: string;
   profile: string;
+  specSheet: string;
 }
 
 export const gutterCategories = [
@@ -50,7 +50,7 @@ export const gutterProfiles: GutterProfile[] = [
       { size: '5"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
       { size: '6"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
     ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-2000.jpg",
+    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/Seamless-CIMG0883-1024x768.jpg",
   },
   {
     id: "half-round",
@@ -63,7 +63,7 @@ export const gutterProfiles: GutterProfile[] = [
       { size: '5"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
       { size: '6"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
     ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-150.jpg",
+    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/Half-Round-20150610_103158-Copy-1024x576.jpg",
   },
   {
     id: "fascia",
@@ -77,7 +77,7 @@ export const gutterProfiles: GutterProfile[] = [
       { size: '6"', materials: "Aluminum · Copper · Steel", gauge: "Al 0.027 · Cu 16 oz · Steel 26ga" },
       { size: '7.25"', materials: "Copper · Steel", gauge: "Cu 16 oz · Steel 26ga", note: "Super/Deep" },
     ],
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-100.jpg",
+    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/architecturalelements.00451-1024x682.jpg",
   },
 ];
 
@@ -88,41 +88,16 @@ export const gutterComponents: GutterComponent[] = [
     name: "Downspouts",
     bestFor: "Round and rectangular profiles",
     description: "Matched to gutter profile and color. Available in standard lengths.",
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-2000.jpg",
-  },
-  {
-    id: "miters",
-    code: "MITERS & CAPS",
-    name: "Miters & End Caps",
-    bestFor: "Left, right, inside, outside",
-    description: "Profile-matched to K-style, half-round, and fascia gutters. Solder or snap-fit.",
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-150.jpg",
-  },
-  {
-    id: "hangers",
-    code: "HANGERS",
-    name: "Hangers & Mounting",
-    bestFor: "Hidden and exposed hanger types",
-    description: "Spaced to code for wind load requirements. Profile-specific options available.",
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-100.jpg",
-  },
-  {
-    id: "colors",
-    code: "COLORS",
-    name: "Colors & Finishes",
-    bestFor: "Dura Coat XT-10 coated standard",
-    description: "Aluminum and steel finished with Dura Coat XT-10. Copper and Zincalume® in natural finish.",
-    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/SL-1750.jpg",
-    hasColorChart: true,
+    image: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/Down-Spouts-IMG_1703-1024x683.jpg",
   },
 ];
 
 export const gutterMachines: GutterMachine[] = [
-  { id: "im-5", name: 'Iron Man 5" Seamless Rollformer', profile: "K-Style · 5\" · Aluminum" },
-  { id: "im-56", name: 'Iron Man 5/6" Seamless Rollformer', profile: "K-Style · 5\" & 6\" combo · Aluminum" },
-  { id: "im-6hr", name: 'Iron Man 6" Half-Round Rollformer', profile: "Half-Round · 6\" · Aluminum" },
-  { id: "im-55f", name: 'Iron Man 5.5" Fascia Cutter', profile: "Fascia · 5.5\" · Aluminum" },
-  { id: "im-7", name: 'Iron Man 7" Seamless Rollformer', profile: "Fascia/K-Style · 7\" · Aluminum" },
+  { id: "im-5", name: 'Iron Man 5" Seamless Rollformer', profile: "K-Style · 5\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5in-Seamless.pdf" },
+  { id: "im-56", name: 'Iron Man 5/6" Seamless Rollformer', profile: "K-Style · 5\" & 6\" combo · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5-6-Seamless.pdf" },
+  { id: "im-6hr", name: 'Iron Man 6" Half-Round Rollformer', profile: "Half-Round · 6\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-6in-Half-Round.pdf" },
+  { id: "im-55f", name: 'Iron Man 5" Fascia Cutter', profile: "Fascia · 5.5\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-5.5in-Fascia.pdf" },
+  { id: "im-7", name: 'Iron Man 7" Seamless Rollformer', profile: "Fascia/K-Style · 7\" · Aluminum", specSheet: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/KWM-7in-Seamless.pdf" },
 ];
 
 export const gutterLocations = [
