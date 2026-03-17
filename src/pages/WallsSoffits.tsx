@@ -42,7 +42,7 @@ const WallsSoffits = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
           <div className="relative px-8">
             <div className="mx-auto flex max-w-[1200px] items-center py-20 sm:py-28">
-              <div className="max-w-[560px]">
+              <div className="max-w-[680px]">
                 <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
                   Walls, Soffits and Airflow
                 </p>
