@@ -378,7 +378,7 @@ const SiteNav = () => {
                                 {item.code}
                               </div>
                               <div className="text-[13px] font-semibold text-foreground">{item.name}</div>
-                              <div className="text-[12px] leading-[1.4] text-muted-foreground">{item.desc}</div>
+                              <div className="text-[12px] leading-[1.5] text-muted-foreground">{item.desc}</div>
                             </Link>
                           ))}
                         </div>
