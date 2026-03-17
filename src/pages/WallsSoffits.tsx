@@ -44,27 +44,29 @@ const WallsSoffits = () => {
         <section className="relative min-h-[480px] sm:min-h-[540px]">
           <img src={heroImg} alt="Commercial building with metal wall panels" className="absolute inset-0 h-full w-full object-cover" loading="eager" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/50 to-transparent" />
-          <div className="relative mx-auto flex max-w-[1200px] items-center px-8 py-20 sm:py-28 lg:px-10">
-            <div className="max-w-[560px]">
-              <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
-                Custom-Bilt Metals — Wall &amp; Soffit Systems
-              </p>
-              <h1 className="text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
-                Metal Wall &amp; Soffit Panels
-              </h1>
-              <p className="mt-3 text-[20px] font-semibold leading-[1.2] text-primary-foreground/85 sm:text-[22px]">
-                Beyond the Roof. Wall. Soffit. Complete Envelope.
-              </p>
-              <p className="mt-4 max-w-[420px] text-[14px] leading-[1.4] text-primary-foreground/65">
-                Metal wall and soffit panels in matching or accent colors to your roofing system. Concealed fastener, LEED-compliant, ULTRA-Cool® coated.
-              </p>
-              <div className="mt-6 flex gap-3">
-                <a href="https://www.custombiltmetals.com/request-a-quote/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
-                  Get a Quote <ArrowRight className="h-4 w-4" />
-                </a>
-                <a href="#wall-soffit" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
-                  Browse Panels <ArrowDown className="h-4 w-4" />
-                </a>
+          <div className="relative px-8">
+            <div className="mx-auto flex max-w-[1200px] items-center py-20 sm:py-28">
+              <div className="max-w-[560px]">
+                <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
+                  Custom-Bilt Metals — Wall &amp; Soffit Systems
+                </p>
+                <h1 className="text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
+                  Metal Wall &amp; Soffit Panels
+                </h1>
+                <p className="mt-3 text-[20px] font-semibold leading-[1.2] text-primary-foreground/85 sm:text-[22px]">
+                  Beyond the Roof. Wall. Soffit. Complete Envelope.
+                </p>
+                <p className="mt-4 max-w-[420px] text-[14px] leading-[1.5] text-primary-foreground/65">
+                  Metal wall and soffit panels in matching or accent colors to your roofing system. Concealed fastener, LEED-compliant, ULTRA-Cool® coated.
+                </p>
+                <div className="mt-6 flex gap-3">
+                  <a href="https://www.custombiltmetals.com/request-a-quote/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+                    Get a Quote <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <a href="#wall-soffit" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+                    Browse Panels <ArrowDown className="h-4 w-4" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -84,7 +86,7 @@ const WallsSoffits = () => {
                   <p.icon className="h-5 w-5" />
                 </div>
                 <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">{p.title}</h3>
-                <p className="text-[13px] leading-[1.4] text-muted-foreground">{p.body}</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">{p.body}</p>
                 <p className="font-meta mt-2 text-[12px] font-semibold text-accent">{p.tag}</p>
               </div>
             ))}
@@ -117,8 +119,8 @@ const WallsSoffits = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Wall &amp; Soffit Panels</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
-              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.4] text-muted-foreground">
+              <hr className="mt-2 border-t-2 border-foreground" />
+              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.5] text-muted-foreground">
                 Flush-panel interlocking seam construction. Available in matching or accent colors to your CBM roofing system.
               </p>
             </div>
@@ -135,13 +137,13 @@ const WallsSoffits = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Roof + Wall Panels — TFR-36 &amp; PBR</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
-              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.4] text-muted-foreground">
+              <hr className="mt-2 border-t-2 border-foreground" />
+              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.5] text-muted-foreground">
                 Exposed fastener panels equally suited to roofing and wall applications. 36" coverage for fast installation.
               </p>
             </div>
 
-            <div className="mb-4 rounded-sm border border-border bg-card px-4 py-3 text-[13px] text-muted-foreground">
+            <div className="mb-4 rounded-sm border border-border bg-card px-4 py-3 text-[14px] text-muted-foreground">
               These panels also appear on <a href="/" className="font-semibold text-info hover:underline">/products/roofing-systems/ →</a> for roofing applications. This section covers their use as <strong className="text-foreground">wall cladding</strong>.
             </div>
 
@@ -153,12 +155,12 @@ const WallsSoffits = () => {
 
             <div className="mt-4 grid grid-cols-1 gap-6 rounded-sm border border-border bg-card px-4 py-4 sm:grid-cols-2">
               <div>
-                <p className="font-meta mb-1 text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground/60">Choose TFR-36 when</p>
-                <p className="text-[13px] leading-[1.4] text-muted-foreground">You need polycarbonate skylight match, anti-siphon groove is a spec requirement, or substrate is open framing.</p>
+                <p className="font-meta mb-1 text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">Choose TFR-36 when</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">You need polycarbonate skylight match, anti-siphon groove is a spec requirement, or substrate is open framing.</p>
               </div>
               <div>
-                <p className="font-meta mb-1 text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground/60">Choose PBR when</p>
-                <p className="text-[13px] leading-[1.4] text-muted-foreground">You need structural side lap for wind/load conditions, heavier gauge (24ga) is required, or the project is agricultural or heavy commercial.</p>
+                <p className="font-meta mb-1 text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">Choose PBR when</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">You need structural side lap for wind/load conditions, heavier gauge (24ga) is required, or the project is agricultural or heavy commercial.</p>
               </div>
             </div>
           </div>
@@ -169,8 +171,8 @@ const WallsSoffits = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">LEED Credits &amp; Sustainability</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
-              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.4] text-muted-foreground">
+              <hr className="mt-2 border-t-2 border-foreground" />
+              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.5] text-muted-foreground">
                 CBM wall and soffit panels are designed to support LEED certification on qualifying projects.
               </p>
             </div>
@@ -181,7 +183,7 @@ const WallsSoffits = () => {
                 </span>
               ))}
             </div>
-            <p className="mt-5 text-[14px] leading-[1.4] text-muted-foreground">
+            <p className="mt-5 text-[14px] leading-[1.5] text-muted-foreground">
               ULTRA-Cool® technology reflects more heat than virtually any other coating available, helping buildings maintain lower interior temperatures and reducing HVAC load.
             </p>
             <a href="#" className="font-meta mt-4 inline-block text-[12px] font-semibold text-info hover:underline">Download LEED Documentation ↓</a>
@@ -193,8 +195,8 @@ const WallsSoffits = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Wall &amp; Soffit Applications</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
-              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.4] text-muted-foreground">
+              <hr className="mt-2 border-t-2 border-foreground" />
+              <p className="mt-3 max-w-[580px] text-[14px] leading-[1.5] text-muted-foreground">
                 CBM wall panels are specified across building types. Match to your roofing panel for a single-supplier, color-matched building envelope.
               </p>
             </div>
@@ -203,7 +205,7 @@ const WallsSoffits = () => {
                 <div key={app.title} className="rounded-sm border border-border bg-card p-4">
                   <div className="mb-2 h-8 w-8 rounded-sm bg-muted" />
                   <h3 className="text-[15px] font-bold leading-[1.2] text-foreground">{app.title}</h3>
-                  <p className="mt-1 text-[13px] leading-[1.4] text-muted-foreground">{app.subtitle}</p>
+                  <p className="mt-1 text-[14px] leading-[1.5] text-muted-foreground">{app.subtitle}</p>
                 </div>
               ))}
             </div>
@@ -215,7 +217,7 @@ const WallsSoffits = () => {
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Why Match Your Walls to CBM</h2>
-              <div className="mt-2 h-[2px] w-12 bg-foreground" />
+              <hr className="mt-2 border-t-2 border-foreground" />
             </div>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {[
@@ -227,7 +229,7 @@ const WallsSoffits = () => {
                 <div key={s.label}>
                   <p className="font-meta text-[28px] font-medium leading-[1.2] text-accent">{s.num}</p>
                   <p className="mt-1.5 text-[15px] font-bold leading-[1.2] text-foreground">{s.label}</p>
-                  <p className="mt-1 text-[14px] leading-[1.4] text-muted-foreground">{s.sub}</p>
+                  <p className="mt-1 text-[14px] leading-[1.5] text-muted-foreground">{s.sub}</p>
                 </div>
               ))}
             </div>
@@ -247,19 +249,19 @@ const WallsSoffits = () => {
               <h2 className="mb-4 text-xl font-bold leading-[1.2] text-foreground">Metal Wall &amp; Soffit Panels: Selection, Installation &amp; LEED</h2>
               <div className="mb-5">
                 <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">Metal Wall Panels vs. Traditional Siding</h3>
-                <p className="text-[14px] leading-[1.4] text-muted-foreground">Metal wall panels outlast traditional siding materials by decades. They resist fire, rot, termites, and wind damage while requiring virtually zero maintenance.</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">Metal wall panels outlast traditional siding materials by decades. They resist fire, rot, termites, and wind damage while requiring virtually zero maintenance.</p>
               </div>
               <div className="mb-5">
                 <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">Concealed vs. Exposed Fastener Wall Panels</h3>
-                <p className="text-[14px] leading-[1.4] text-muted-foreground">Concealed fastener panels like the WS-100 hide all attachments behind interlocking seams. Exposed fastener panels (TFR-36, PBR) are more economical and install faster — ideal for agricultural and industrial walls.</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">Concealed fastener panels like the WS-100 hide all attachments behind interlocking seams. Exposed fastener panels (TFR-36, PBR) are more economical and install faster — ideal for agricultural and industrial walls.</p>
               </div>
               <div className="mb-5">
                 <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">Soffit Venting — Solid vs. Perforated Metal</h3>
-                <p className="text-[14px] leading-[1.4] text-muted-foreground">Proper attic ventilation prevents moisture buildup, ice dams, and premature roof aging. The WS-100 vented panel provides continuous airflow across the entire soffit.</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">Proper attic ventilation prevents moisture buildup, ice dams, and premature roof aging. The WS-100 vented panel provides continuous airflow across the entire soffit.</p>
               </div>
               <div>
                 <h3 className="mb-2 text-[15px] font-bold leading-[1.2] text-foreground">Earning LEED Credits with Metal Wall Panels</h3>
-                <p className="text-[14px] leading-[1.4] text-muted-foreground">CBM wall panels qualify for LEED credits under Materials &amp; Resources and Energy &amp; Atmosphere. Contact your CBM branch for the LEED documentation package.</p>
+                <p className="text-[14px] leading-[1.5] text-muted-foreground">CBM wall panels qualify for LEED credits under Materials &amp; Resources and Energy &amp; Atmosphere. Contact your CBM branch for the LEED documentation package.</p>
               </div>
             </div>
           </div>
@@ -270,14 +272,14 @@ const WallsSoffits = () => {
           <div className="mx-auto grid max-w-[1200px] grid-cols-1 sm:grid-cols-2">
             <div className="px-10 py-12">
               <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Ready to Spec?</h3>
-              <p className="mt-2 max-w-sm text-[14px] leading-[1.4] text-cta-foreground/60">Tell us your project type, panel application, and color requirements. A CBM rep will respond same or next business day.</p>
+              <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Tell us your project type, panel application, and color requirements. A CBM rep will respond same or next business day.</p>
               <a href="https://www.custombiltmetals.com/request-a-quote/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm bg-accent px-6 py-3 text-[14px] font-bold text-accent-foreground transition-opacity hover:opacity-90">
                 Request a Quote <ArrowRight className="h-4 w-4" />
               </a>
             </div>
             <div className="px-10 py-12" style={{ backgroundColor: 'hsl(197 57% 17%)' }}>
               <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Specs, CAD &amp; LEED Docs</h3>
-              <p className="mt-2 max-w-sm text-[14px] leading-[1.4] text-cta-foreground/60">Download installation guides, specifications, CAD files, and LEED documentation packages.</p>
+              <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Download installation guides, specifications, CAD files, and LEED documentation packages.</p>
               <a href="https://www.custombiltmetals.com/resources/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm border-2 border-cta-foreground/35 px-6 py-3 text-[14px] font-bold text-cta-foreground transition-colors hover:border-cta-foreground/60">
                 Go to Resources <ArrowRight className="h-4 w-4" />
               </a>
@@ -286,7 +288,7 @@ const WallsSoffits = () => {
         </div>
 
         {/* Footer */}
-        <footer className="border-t border-border bg-background px-8 py-6 text-center text-[13px] text-muted-foreground">
+        <footer className="border-t border-border bg-background px-8 py-6 text-center text-[14px] text-muted-foreground">
           <nav aria-label="Breadcrumb">
             <ol className="inline-flex items-center gap-1">
               <li><a href="https://www.custombiltmetals.com" className="hover:text-foreground">Home</a></li>

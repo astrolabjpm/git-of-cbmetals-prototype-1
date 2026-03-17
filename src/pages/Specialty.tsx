@@ -105,23 +105,25 @@ const Specialty = () => (
       <section className="relative min-h-[420px]">
         <img src={heroImg} alt="Specialty metal roofing on western US architecture" className="absolute inset-0 h-full w-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/75 via-foreground/40 to-transparent" />
-        <div className="relative mx-auto max-w-[1200px] px-8 py-20 sm:py-28 lg:px-10">
-          <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
-            Custom-Bilt Metals · Specialty Products
-          </p>
-          <h1 className="max-w-[640px] text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
-            Specialty Metal Roofing &amp; Architectural Panels
-          </h1>
-          <p className="mt-4 max-w-[520px] text-[14px] leading-[1.4] text-primary-foreground/65">
-            Bare metal products — copper, zinc, and weathering steel for natural patina. We offer all of our product profiles in copper, zinc, and bare Zincalume® for a traditional metal look.
-          </p>
-          <div className="mt-6 flex gap-3">
-            <a href="https://www.custombiltmetals.com/request-a-quote/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
-              Request a Quote <ArrowRight className="h-4 w-4" />
-            </a>
-            <a href="https://www.custombiltmetals.com/contact-us/" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
-              Contact Us <ArrowRight className="h-4 w-4" />
-            </a>
+        <div className="relative px-8">
+          <div className="mx-auto max-w-[1200px] py-20 sm:py-28">
+            <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
+              Custom-Bilt Metals · Specialty Products
+            </p>
+            <h1 className="max-w-[640px] text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
+              Specialty Metal Roofing &amp; Architectural Panels
+            </h1>
+            <p className="mt-4 max-w-[520px] text-[14px] leading-[1.5] text-primary-foreground/65">
+              Bare metal products — copper, zinc, and weathering steel for natural patina. We offer all of our product profiles in copper, zinc, and bare Zincalume® for a traditional metal look.
+            </p>
+            <div className="mt-6 flex gap-3">
+              <a href="https://www.custombiltmetals.com/request-a-quote/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+                Request a Quote <ArrowRight className="h-4 w-4" />
+              </a>
+              <a href="https://www.custombiltmetals.com/contact-us/" className="inline-flex items-center gap-1.5 rounded-sm border-2 border-primary-foreground/50 px-5 py-3 text-[13px] font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+                Contact Us <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -129,7 +131,7 @@ const Specialty = () => (
       {/* Intro */}
       <section className="border-b border-border bg-background px-8 py-12">
         <div className="mx-auto max-w-[1200px]">
-          <p className="max-w-[800px] text-[16px] leading-[1.4] text-muted-foreground">
+          <p className="max-w-[800px] text-[16px] leading-[1.5] text-muted-foreground">
             Elevate your project with the distinctive beauty and performance of specialty metal roofing and architectural metal panels. Designed for projects that demand visual impact and long-term durability, our specialty products combine natural metal finishes with advanced fabrication options.
           </p>
         </div>
@@ -140,8 +142,8 @@ const Specialty = () => (
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-8">
             <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Natural Bare Metal Finishes</h2>
-            <div className="mt-2 h-[2px] w-12 bg-foreground" />
-            <p className="mt-3 max-w-[700px] text-[14px] leading-[1.4] text-muted-foreground">
+            <hr className="mt-2 border-t-2 border-foreground" />
+            <p className="mt-3 max-w-[700px] text-[14px] leading-[1.5] text-muted-foreground">
               The design of a building can be dramatically enhanced by the authentic look of bare metal roofing. Because our natural bare metal products contain no reflective or emissive coatings, they maintain their raw, traditional metal appearance.
             </p>
           </div>
@@ -162,7 +164,7 @@ const Specialty = () => (
                       <h3 className="text-[16px] font-bold leading-[1.2] text-foreground">{item.name}</h3>
                     </div>
                   </div>
-                  <p className="text-[14px] leading-[1.4] text-muted-foreground">{item.description}</p>
+                  <p className="text-[14px] leading-[1.5] text-muted-foreground">{item.description}</p>
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {item.tags.map((tag) => (
                       <span key={tag} className="rounded-sm bg-surface px-2 py-0.5 text-[12px] font-medium text-info">
@@ -182,7 +184,7 @@ const Specialty = () => (
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-8">
             <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Specialty Shingles &amp; Products</h2>
-            <div className="mt-2 h-[2px] w-12 bg-foreground" />
+            <hr className="mt-2 border-t-2 border-foreground" />
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {specialtyProducts.map((item) => {
@@ -197,7 +199,7 @@ const Specialty = () => (
                   </div>
                   <p className="font-meta text-[12px] uppercase tracking-wide text-muted-foreground">{item.code}</p>
                   <h3 className="mt-1 text-[16px] font-bold leading-[1.2] text-foreground">{item.name}</h3>
-                  <p className="mt-2 text-[14px] leading-[1.4] text-muted-foreground">{item.description}</p>
+                  <p className="mt-2 text-[14px] leading-[1.5] text-muted-foreground">{item.description}</p>
                 </div>
               );
             })}
@@ -210,8 +212,8 @@ const Specialty = () => (
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-8">
             <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Specialty Panel Profiles</h2>
-            <div className="mt-2 h-[2px] w-12 bg-foreground" />
-            <p className="mt-3 max-w-[700px] text-[14px] leading-[1.4] text-muted-foreground">
+            <hr className="mt-2 border-t-2 border-foreground" />
+            <p className="mt-3 max-w-[700px] text-[14px] leading-[1.5] text-muted-foreground">
               We manufacture and supply multiple architectural panel profiles available in select metals and finishes for both residential and commercial applications.
             </p>
           </div>
@@ -233,13 +235,13 @@ const Specialty = () => (
         <div className="mx-auto max-w-[1200px]">
           <div className="mb-6">
             <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Why Choose Specialty Metal Roofing?</h2>
-            <div className="mt-2 h-[2px] w-12 bg-foreground" />
+            <hr className="mt-2 border-t-2 border-foreground" />
           </div>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {whySpecialty.map((reason) => (
               <div key={reason} className="flex items-start gap-2.5 rounded-sm border border-border bg-card p-4">
                 <Shield className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent" />
-                <span className="text-[14px] leading-[1.4] text-foreground">{reason}</span>
+                <span className="text-[14px] leading-[1.5] text-foreground">{reason}</span>
               </div>
             ))}
           </div>
@@ -251,14 +253,14 @@ const Specialty = () => (
         <div className="mx-auto grid max-w-[1200px] grid-cols-1 sm:grid-cols-2">
           <div className="px-10 py-12">
             <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Designing or Building a New Project?</h3>
-            <p className="mt-2 max-w-sm text-[14px] leading-[1.4] text-cta-foreground/60">Contact us today to discuss your specialty metal roofing project or request product specifications.</p>
+            <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Contact us today to discuss your specialty metal roofing project or request product specifications.</p>
             <a href="https://www.custombiltmetals.com/request-a-quote/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm bg-accent px-6 py-3 text-[14px] font-bold text-accent-foreground">
               Request a Quote <ArrowRight className="h-4 w-4" />
             </a>
           </div>
           <div className="px-10 py-12" style={{ backgroundColor: 'hsl(197 57% 17%)' }}>
             <h3 className="text-xl font-bold leading-[1.2] text-cta-foreground">Need Specs or Data Sheets?</h3>
-            <p className="mt-2 max-w-sm text-[14px] leading-[1.4] text-cta-foreground/60">Download spec sheets, installation guides, and CAD details from our resource library.</p>
+            <p className="mt-2 max-w-sm text-[14px] leading-[1.5] text-cta-foreground/60">Download spec sheets, installation guides, and CAD details from our resource library.</p>
             <a href="https://www.custombiltmetals.com/resources/" className="mt-5 inline-flex items-center gap-1.5 rounded-sm border-2 border-cta-foreground/35 px-6 py-3 text-[14px] font-bold text-cta-foreground">
               See Product Data Sheets <ArrowRight className="h-4 w-4" />
             </a>
@@ -267,7 +269,7 @@ const Specialty = () => (
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-background px-8 py-6 text-center text-[13px] text-muted-foreground">
+      <footer className="border-t border-border bg-background px-8 py-6 text-center text-[14px] text-muted-foreground">
         <nav aria-label="Breadcrumb">
           <ol className="inline-flex items-center gap-1">
             <li><a href="https://www.custombiltmetals.com" className="hover:text-foreground">Home</a></li>
