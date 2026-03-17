@@ -18,7 +18,6 @@ const toProductPanel = (w: typeof wallPanels[0]): ProductPanel => ({
 });
 
 const WallsSoffits = () => {
-  const [activeTab, setActiveTab] = useState("wall-soffit");
 
   return (
     <>
