@@ -74,16 +74,14 @@ const GutterSystems = () => {
             <div className="mx-auto flex max-w-[1200px] items-center py-20 sm:py-28">
               <div className="max-w-[560px]">
                 <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
-                  Custom-Bilt Metals — Gutter Systems
+                  GUTTER SYSTEMS
                 </p>
                 <h1 className="text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
-                  Seamless Gutter Systems &amp; Components
+                  Seamless Gutter Systems:<br />
+                  No Joints, No Leaks, No Debris Buildup
                 </h1>
-                <p className="mt-3 text-[20px] font-semibold leading-[1.2] text-primary-foreground/85 sm:text-[22px]">
-                  Custom Seamless. No Seams to Leak. Western U.S. Stock.
-                </p>
-                <p className="mt-4 max-w-[420px] text-[14px] leading-[1.5] text-primary-foreground/65">
-                  Continuous seamless gutter systems in K-style, half-round, and fascia profiles. Aluminum, steel, copper, and Zincalume. Available from 10 locations.
+                <p className="mt-3 text-[20px] font-semibold leading-[1.3] text-primary-foreground/85 sm:text-[22px]">
+                  Custom-Bilt continuous rain gutter systems offer the most efficient way to collect and drain rainwater.
                 </p>
                 <div className="mt-6 flex gap-3">
                   <a href="https://www.custombiltmetals.com/locations/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
