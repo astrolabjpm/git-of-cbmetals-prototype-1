@@ -359,7 +359,7 @@ const GalleryMenu = () => (
           Upload a photo of your home or building. Browse colors and panel profiles in real time. No account
           needed.
         </p>
-        <button className="rounded-sm bg-accent py-2.5 text-center text-[13px] font-bold text-accent-foreground transition-opacity hover:opacity-90">
+        <button className="rounded-sm bg-accent py-2.5 text-center text-[13px] font-bold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">
           Launch Visualizer →
         </button>
 
