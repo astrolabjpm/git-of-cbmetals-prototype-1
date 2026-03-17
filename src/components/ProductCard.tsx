@@ -93,7 +93,7 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
 
         {/* Document accordion */}
         {product.links.length > 0 && (
-          <div className="mt-3 border-t border-border">
+          <div className="mt-auto pt-3 border-t border-border">
             <button
               onClick={() => setDocsOpen(!docsOpen)}
               className="font-meta flex w-full items-center justify-between py-2 text-[12px] font-medium text-info transition-colors hover:text-foreground"
