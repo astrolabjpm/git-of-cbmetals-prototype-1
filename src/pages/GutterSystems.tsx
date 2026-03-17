@@ -339,7 +339,7 @@ const GutterSystems = () => {
                     {/* CTAs — bottom aligned */}
                     <div className="mt-auto pt-3 pb-2 flex flex-wrap gap-2">
                       <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm">Get a Quote</a>
-                      <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
+                      <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground transition-colors hover:text-foreground hover:bg-surface">
                         <MapPin className="h-3 w-3" /> Find a Location
                       </a>
                     </div>
