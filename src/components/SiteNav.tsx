@@ -359,7 +359,7 @@ const SiteNav = () => {
                         <div className="font-meta mb-1 mt-3 border-b border-border pb-1 text-[12px] uppercase tracking-widest text-muted-foreground">
                           {section.heading}
                         </div>
-                        <div className="grid grid-cols-3 gap-1">
+                        <div className="grid grid-cols-4 gap-1">
                           {section.items.map((item) => (
                             <Link
                               key={item.code}
