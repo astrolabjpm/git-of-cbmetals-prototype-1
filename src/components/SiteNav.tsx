@@ -547,7 +547,7 @@ const SiteNav = () => {
                 <Link
                   to="/products"
                   onClick={closeAll}
-                  className="font-meta mt-4 inline-block self-start rounded-sm bg-info px-3 py-2 text-[12px] font-medium text-accent-foreground"
+                  className="font-meta mt-4 inline-block self-start rounded-sm bg-info px-3 py-2 text-[12px] font-medium text-accent-foreground transition-colors hover:bg-info/80 hover:shadow-sm"
                 >
                   Architect Hub →
                 </Link>
