@@ -48,13 +48,13 @@ const WallsSoffits = () => {
             <div className="mx-auto flex max-w-[1200px] items-center py-20 sm:py-28">
               <div className="max-w-[560px]">
                 <p className="font-meta mb-3 text-[12px] font-semibold uppercase tracking-[0.1em] text-primary-foreground/70">
-                  Custom-Bilt Metals — Wall &amp; Soffit Systems
+                  Walls, Soffits and Airflow
                 </p>
                 <h1 className="text-[36px] font-bold leading-[1.2] text-primary-foreground sm:text-[44px]">
-                  Metal Wall &amp; Soffit Panels
+                  Metal Wall and Soffit Panels with Cool Technology
                 </h1>
-                <p className="mt-3 text-[20px] font-semibold leading-[1.2] text-primary-foreground/85 sm:text-[22px]">
-                  Beyond the Roof. Wall. Soffit. Complete Envelope.
+                <p className="mt-3 text-[20px] font-semibold leading-[1.3] text-primary-foreground/85 sm:text-[22px]">
+                  Custom-Bilt offer designs to create finished appearances that range from historical or rustic designs in natural or weathered metals to an edgier contemporary look in painted colors.
                 </p>
                 <p className="mt-4 max-w-[420px] text-[14px] leading-[1.5] text-primary-foreground/65">
                   Metal wall and soffit panels in matching or accent colors to your roofing system. Concealed fastener, LEED-compliant, ULTRA-Cool® coated.
