@@ -24,6 +24,7 @@ const productCategories = [
     sections: [
       {
         heading: "Standing Seam — CB Series (concealed fastener)",
+        anchor: "/#standing-seam",
         items: [
           { code: "CB-2000", name: '2" Seam Standing Seam', desc: "Most popular · Residential + commercial" },
           { code: "CB-150", name: '1.5" Seam Standing Seam', desc: "Residential · Lower pitch applications" },
@@ -32,6 +33,7 @@ const productCategories = [
       },
       {
         heading: "Standing Seam — SL Series (snap-lock)",
+        anchor: "/#sl-series",
         items: [
           { code: "SL-1750", name: '1.75" Snap-Lock', desc: "Commercial + faster-install residential" },
           { code: "SL-150", name: '1.5" Snap-Lock', desc: "Residential · Mid-pitch" },
@@ -40,6 +42,7 @@ const productCategories = [
       },
       {
         heading: "Additional Standing Seam",
+        anchor: "/#additional-ss",
         items: [
           { code: "SLZ-1000", name: "Snap-Lock Zee", desc: '1" zee profile · Residential + light commercial' },
           { code: "CS-100", name: "Cap Seam", desc: "Concealed clip · Architectural + commercial" },
@@ -49,6 +52,7 @@ const productCategories = [
       },
       {
         heading: "Exposed Fastener & Corrugated",
+        anchor: "/#exposed-fastener",
         items: [
           { code: "TFR-36", name: "TFR-36 Panel", desc: "Exposed fastener · 36\" coverage · Roof + wall" },
           { code: "PBR", name: "PBR Panel", desc: "Structural overlap · Ag + heavy commercial" },
