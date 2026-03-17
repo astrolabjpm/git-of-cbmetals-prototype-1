@@ -15,7 +15,7 @@ const bareMetals = [
     code: "COPPER",
     name: "True Copper",
     description: "16 oz. natural copper develops a rich verdigris patina over time. A living finish that evolves with the environment — ideal for architectural accents, custom homes, and restoration projects.",
-    image: imgCopper,
+    image: "",
   },
   {
     code: "RHEINZINK®",
@@ -27,7 +27,7 @@ const bareMetals = [
     code: "ZINCALUME+",
     name: "Bare Zincalume® Plus",
     description: "Zinc-aluminum coated bare steel delivering the classic bright metallic appearance without paint. Cost-efficient option for traditional metal roofing aesthetics.",
-    image: imgZincalume,
+    image: "",
   },
   {
     code: "A606",
@@ -39,7 +39,7 @@ const bareMetals = [
     code: "ALUMINUM",
     name: "Bare & Coated Aluminum",
     description: "Bare and PVDF-coated aluminum panels for enhanced durability. Coastal and marine-grade options with manufacturer-backed corrosion warranties.",
-    image: "",
+    image: imgZincalume,
   },
 ];
 
@@ -48,7 +48,7 @@ const specialtyProducts = [
     code: "COPPER SHINGLES",
     name: "Copper Shingles",
     description: "Premium copper shingles for residential and heritage restoration projects. Natural patina finish develops over time.",
-    image: imgFlatShingles,
+    image: imgCopper,
   },
   {
     code: "VAIL®",
@@ -60,7 +60,7 @@ const specialtyProducts = [
     code: "CUSTOM FLAT",
     name: "Custom Flat Shingles",
     description: "Architect-specified flat shingles available in custom dimensions. For unique residential and commercial designs.",
-    image: "",
+    image: imgFlatShingles,
   },
   {
     code: "VINTAGE",
@@ -224,18 +224,6 @@ const Specialty = () => (
         </div>
       </section>
 
-      {/* Cross-reference callout */}
-      <section id="resources-specs" className="bg-background px-8 py-8">
-        <div className="mx-auto max-w-[1200px]">
-          <div className="rounded-sm border border-border border-l-4 border-l-accent bg-card px-6 py-5">
-            <p className="text-[14px] leading-[1.5] text-foreground">
-              <span className="font-bold">Vintage® Standing Seam</span> also appears on the{" "}
-              <a href="/products" className="font-semibold text-info hover:text-foreground underline">Roofing Systems page</a>{" "}
-              for standard panel applications. Specialty bare metal versions are available on request.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <DualCTA />
