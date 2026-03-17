@@ -87,6 +87,7 @@ export const wallRoofPanels: WallPanel[] = [
     links: [
       { label: "TFR-36 Sale Sheet", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/TFR-36_Panel_Sale_Sheet.pdf", type: "PDF" },
       { label: "PBR-TFR Guide", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/PBR-TFR_Guide.pdf", type: "PDF" },
+      { label: "PBR-TFR Color Chart", url: "https://www.custombiltmetals.com/wp-content/uploads/2021/11/pbr-tfr-color-chart.pdf", type: "PDF" },
     ],
   },
   {
