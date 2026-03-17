@@ -333,34 +333,28 @@ const GutterSystems = () => {
         </section>
 
         {/* S3B — Component List */}
-        <section id="components" className="border-b border-border bg-surface px-8 py-12">
+        <section id="components" className="border-b border-border bg-background px-8 py-12">
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
               <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Gutter Systems – Component List</h2>
               <hr className="mt-2 border-t-2 border-foreground" />
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {componentCards.map((card) => (
-                <div key={card.title} className="flex flex-col rounded-sm border border-border bg-card p-5 shadow-[var(--card-shadow)]">
-                  <h3 className="mb-3 text-[14px] font-bold text-foreground">{card.title}</h3>
-                  <div className="flex-1">
-                    {card.items.map((item, i) => (
-                      <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{item}</p>
-                    ))}
-                  </div>
-                  <div className="mt-4 pt-3 pb-2 flex flex-wrap gap-2">
-                    <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">Get a Quote</a>
-                    <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
-                      <MapPin className="h-3 w-3" /> Find a Location
-                    </a>
-                  </div>
-                </div>
-              ))}
+              <ComponentCardDownspouts />
+              <ComponentCardFittings />
+              <ComponentCardHangers />
+              <ComponentCardGuards />
             </div>
 
-            {/* Component PDF ribbon */}
-            <div className="mt-4 flex flex-wrap items-center gap-4 rounded-sm border border-border bg-card px-4 py-3">
-              <span className="text-[14px] text-muted-foreground">Full component reference:</span>
+            {/* Ribbon with CTAs + PDF */}
+            <div className="mt-4 flex flex-wrap items-center gap-4 rounded-sm border border-border bg-surface px-4 py-3">
+              <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-flex items-center gap-1.5 rounded-sm bg-accent px-4 py-2 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
+                Get a Quote <ArrowRight className="h-3.5 w-3.5" />
+              </a>
+              <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1.5 rounded-sm border border-border px-4 py-2 text-[13px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
+                <MapPin className="h-3.5 w-3.5" /> Find a Location
+              </a>
+              <span className="text-muted-foreground">|</span>
               <a
                 href="https://www.custombiltmetals.com/wp-content/uploads/2015/07/Gutter-Systems-Component-List-9-15-15.pdf"
                 target="_blank"
