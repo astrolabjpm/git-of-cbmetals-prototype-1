@@ -39,13 +39,24 @@ const productCategories = [
         ],
       },
       {
-        heading: "Additional Profiles",
+        heading: "Additional Standing Seam",
         items: [
           { code: "SLZ-1000", name: "Snap-Lock Zee", desc: '1" zee profile · Residential + light commercial' },
-          { code: "CS-100", name: "Clip Seam", desc: "Concealed clip · Architectural + commercial" },
+          { code: "CS-100", name: "Cap Seam", desc: "Concealed clip · Architectural + commercial" },
           { code: "Vintage", name: "Vintage Profile", desc: "Traditional profile · Heritage residential" },
+          { code: "SHAKES", name: "Aluminum Shakes & Shingles", desc: "120 mph wind rated · 98% recycled · Cool Roof" },
+        ],
+      },
+      {
+        heading: "Exposed Fastener",
+        items: [
           { code: "TFR-36", name: "TFR-36 Panel", desc: "Exposed fastener · 36\" coverage · Roof + wall" },
           { code: "PBR", name: "PBR Panel", desc: "Structural overlap · Ag + heavy commercial" },
+        ],
+      },
+      {
+        heading: "Corrugated & Wall",
+        items: [
           { code: "Corrugated", name: "Corrugated Panel", desc: "Classic profile · Roof + wall · Ag + residential" },
         ],
       },
