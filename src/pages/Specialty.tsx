@@ -112,7 +112,7 @@ const Specialty = () => (
               <div className="mt-6 flex gap-3">
                 <a
                   href="https://www.custombiltmetals.com/request-a-quote/"
-                  className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+                  className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-colors hover:bg-accent-hover hover:shadow-sm"
                 >
                   Request a Quote <ArrowRight className="h-4 w-4" />
                 </a>
