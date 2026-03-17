@@ -39,7 +39,7 @@ const PageIntro = () => (
               {link.label}
               <ChevronDown className="h-3.5 w-3.5 opacity-0 transition-opacity group-hover:opacity-100 text-accent" />
             </span>
-            <span className="mt-0.5 block text-[13px] leading-[1.5] text-muted-foreground">
+            <span className="mt-0.5 block text-[14px] leading-[1.5] text-muted-foreground">
               {blurbs[link.label]}
             </span>
           </a>
