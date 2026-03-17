@@ -56,9 +56,6 @@ const WallsSoffits = () => {
                 <p className="mt-3 text-[20px] font-semibold leading-[1.3] text-primary-foreground/85 sm:text-[22px]">
                   Custom-Bilt offer designs to create finished appearances that range from historical or rustic designs in natural or weathered metals to an edgier contemporary look in painted colors.
                 </p>
-                <p className="mt-4 max-w-[420px] text-[14px] leading-[1.5] text-primary-foreground/65">
-                  Metal wall and soffit panels in matching or accent colors to your roofing system. Concealed fastener, LEED-compliant, ULTRA-Cool® coated.
-                </p>
                 <div className="mt-6 flex gap-3">
                   <a href="https://www.custombiltmetals.com/request-a-quote/" className="inline-flex items-center gap-1.5 rounded-sm bg-accent px-5 py-3 text-[13px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">
                     Get a Quote <ArrowRight className="h-4 w-4" />
