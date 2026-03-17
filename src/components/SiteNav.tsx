@@ -65,7 +65,7 @@ const productCategories = [
   {
     id: "gutters",
     label: "Gutter Systems",
-    count: "K-style · Half-round · Fascia · Integrated",
+    count: "K-style · Half-round · Fascia · Super Fascia",
     href: "/gutter-systems",
     sections: [
       {
