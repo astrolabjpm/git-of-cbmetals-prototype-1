@@ -36,7 +36,7 @@ const imageMap: Record<string, string> = {
 
 const pageLinks = [
   { label: "Gutter Profiles", anchor: "#profiles", blurb: "K-Style, Half-Round, and Fascia seamless profiles in aluminum, steel, copper." },
-  { label: "Integrated System & Downspouts", anchor: "#integrated", blurb: "Integrated roof+gutter system and downspout components." },
+  { label: "Components", anchor: "#components", blurb: "Downspouts, elbows, hangers, guards, and accessories." },
   { label: "Gutter Machines", anchor: "#machines", blurb: "Iron Man rollformer series — purchase includes lifetime alignment." },
   { label: "Locations", anchor: "#gutter-locations", blurb: "Gutter stock available at 10 CBM branches across the Western U.S." },
 ];
@@ -79,45 +79,45 @@ const MachineDocAccordion = ({ specSheet }: { specSheet: string }) => {
   );
 };
 
-const SimpleDocAccordion = ({ links }: { links: { label: string; url: string }[] }) => {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="mt-auto border-t border-border pt-2">
-      <button
-        onClick={() => setOpen(!open)}
-        className="font-meta flex w-full items-center justify-between py-2 text-[12px] font-medium text-info transition-colors hover:text-foreground"
-      >
-        Documents &amp; Downloads
-        <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-      </button>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden"
-          >
-            <div className="pb-2">
-              {links.map((link) => (
-                <div key={link.label} className="flex items-center justify-between border-b border-border/60 py-1.5 last:border-0">
-                  <span className="font-meta text-[12px] text-foreground">{link.label}</span>
-                  <div className="flex items-center gap-2">
-                    <span className="font-meta rounded bg-secondary px-1.5 py-0.5 text-[10px] text-muted-foreground">PDF</span>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="font-meta inline-flex items-center gap-0.5 text-[12px] font-semibold text-info hover:text-foreground">
-                      <Download className="h-3 w-3" /> Download
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
+const componentCards = [
+  {
+    title: "Downspouts",
+    items: [
+      'Aluminum: 2"×3", 3"×4", 4"×5"',
+      '2" round, 3" round, 4" round',
+      "Copper & Steel: same sizing",
+      "Contact branch for complete list",
+    ],
+  },
+  {
+    title: "Elbows, Miters & End Caps",
+    items: [
+      "Elbows: A, B, Round, Offset, Y-Branch",
+      'Miters: 5" & 6" Box, Strip, Strip Bay',
+      'End Caps: 4"K, 5"K, 6"K, 5" Fascia, 5" Line',
+      "Conductor Heads: Box w/ Round Outlet, Square Leader Head",
+    ],
+  },
+  {
+    title: "Hangers, Outlets & Flashing",
+    items: [
+      'Hidden Hangers: 5" and 6"',
+      'S.S.T. Bar: 5" and 6"',
+      "Wrap Around hanger",
+      'Outlets: 2"×3", Round, Pop-in, Ultimate, Adaptors',
+      "Flashing: Drip Edge, Lip Guard, Custom Form",
+    ],
+  },
+  {
+    title: "Guards, Strainers & Accessories",
+    items: [
+      'Gutter Guards: 6"×25\' Roll, 5"×4\' & 6"×4\' Flat Deluxe, 20" Roll Plastic, E-Z Lock',
+      'Strainers: 2", 3", Perforated Flat, Cage',
+      "Accessories: Sealants, Aerosol Paint, Expansion Joints, Rain Chains, Splash Blocks",
+      "Tools: Crimpers, Aviation Snip, Gutter Savers, Ladder Max",
+    ],
+  },
+];
 
 const GutterSystems = () => {
   return (
@@ -228,8 +228,9 @@ const GutterSystems = () => {
                     <div className="mt-3 border-t border-border pt-3">
                       {profile.sizes.map((s) => (
                         <div key={s.size}>
-                          <p className="font-meta text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">
-                            Standard Material: {s.size}
+                          <p className="text-[16px] font-bold text-foreground">{s.size}</p>
+                          <p className="font-meta mt-1 text-[10px] font-medium uppercase tracking-[0.05em] text-muted-foreground">
+                            Standard Material
                           </p>
                           <div className="mt-1 space-y-0.5">
                             {s.materials.map((m) => (
@@ -243,7 +244,7 @@ const GutterSystems = () => {
                     </div>
 
                     {/* CTAs — bottom aligned */}
-                    <div className="mt-auto pt-3 flex flex-wrap gap-2">
+                    <div className="mt-auto pt-3 pb-2 flex flex-wrap gap-2">
                       <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">Get a Quote</a>
                       <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
                         <MapPin className="h-3 w-3" /> Find a Location
@@ -254,7 +255,7 @@ const GutterSystems = () => {
               ))}
             </div>
 
-            {/* Single color chart button */}
+            {/* Ribbon with color chart + spec sheet */}
             <div className="mt-4 flex flex-wrap items-center gap-4 rounded-sm border border-border bg-surface px-4 py-3">
               <span className="text-[14px] text-muted-foreground">Documents apply across all gutter profiles:</span>
               <a
@@ -266,64 +267,57 @@ const GutterSystems = () => {
                 Rain Gutter Color Chart
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
+              <a
+                href="https://www.custombiltmetals.com/wp-content/uploads/2015/07/Gutter-Guide-Specs.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-meta inline-flex items-center gap-1.5 rounded-sm border border-info px-4 py-2 text-[13px] font-semibold text-info transition-colors hover:bg-info hover:text-background"
+              >
+                Gutter Specifications
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
             </div>
           </div>
         </section>
 
-        {/* S3B — Integrated System + Downspouts (2 col) */}
-        <section id="integrated" className="border-b border-border bg-surface px-8 py-12">
+        {/* S3B — Component List */}
+        <section id="components" className="border-b border-border bg-surface px-8 py-12">
           <div className="mx-auto max-w-[1200px]">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Integrated System &amp; Downspouts</h2>
+              <h2 className="text-2xl font-bold leading-[1.2] text-foreground">Gutter Systems – Component List</h2>
               <hr className="mt-2 border-t-2 border-foreground" />
             </div>
-            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-              {/* Integrated card */}
-              <article className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)]">
-                <div className="p-5 pb-0">
-                  <div className="relative h-[200px] overflow-hidden rounded-sm bg-white">
-                    <img src="https://www.custombiltmetals.com/wp-content/uploads/2015/07/architecturalelements.00451-1024x682.jpg" alt="Integrated roof and gutter system" loading="lazy" className="h-full w-full object-contain" />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {componentCards.map((card) => (
+                <div key={card.title} className="flex flex-col rounded-sm border border-border bg-card p-5 shadow-[var(--card-shadow)]">
+                  <h3 className="mb-3 text-[14px] font-bold text-foreground">{card.title}</h3>
+                  <div className="flex-1">
+                    {card.items.map((item, i) => (
+                      <p key={i} className="text-[13px] leading-[1.6] text-muted-foreground">{item}</p>
+                    ))}
                   </div>
-                </div>
-                <div className="flex flex-1 flex-col p-5">
-                  <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">INTEGRATED SYSTEM</p>
-                  <h3 className="mt-1 text-[16px] font-bold leading-[1.2] text-foreground">Integrated Gutter and Roof System</h3>
-                  <p className="mt-1 text-[14px] font-semibold text-accent">Best for: New construction — single-system water management</p>
-                  <p className="mt-2 text-[14px] leading-[1.5] text-muted-foreground">
-                    A single continuous system where the roofing panel and gutter are formed as one unit, eliminating the joint between roof and gutter entirely. Regional availability varies — contact your local CBM branch.
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-2">
+                  <div className="mt-4 pt-3 pb-2 flex flex-wrap gap-2">
                     <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">Get a Quote</a>
                     <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
                       <MapPin className="h-3 w-3" /> Find a Location
                     </a>
                   </div>
-                  <SimpleDocAccordion links={[
-                    { label: "Gutter Specifications", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/Gutter-Guide-Specs.pdf" },
-                  ]} />
                 </div>
-              </article>
+              ))}
+            </div>
 
-              {/* Downspouts card */}
-              <article className="flex flex-col overflow-hidden rounded-sm border border-border bg-card shadow-[var(--card-shadow)]">
-                <div className="flex flex-1 flex-col p-5">
-                  <p className="font-meta text-[10px] font-medium uppercase tracking-[0.06em] text-muted-foreground">DOWNSPOUTS</p>
-                  <h3 className="mt-1 text-[16px] font-bold leading-[1.2] text-foreground">Downspouts</h3>
-                  <p className="mt-1 text-[14px] font-semibold text-accent">Best for: Rectangular and round profiles — aluminum, copper, steel</p>
-                  <p className="mt-2 text-[14px] leading-[1.5] text-muted-foreground">
-                    Rectangular profiles: 2"×3", 3"×4", 4"×5". Round profiles: 2", 3", 4". Available in coated aluminum and specialty metals (copper, steel). Contact your branch for complete sizing list.
-                  </p>
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">Get a Quote</a>
-                    <a href="https://www.custombiltmetals.com/locations/" className="font-meta inline-flex items-center gap-1 rounded-sm border border-border px-3 py-1.5 text-[12px] font-semibold text-muted-foreground transition-colors hover:text-foreground">
-                      <MapPin className="h-3 w-3" /> Find a Location
-                    </a>
-                  </div>
-                  <SimpleDocAccordion links={[
-                    { label: "Downspout Component List", url: "https://www.custombiltmetals.com/wp-content/uploads/2015/07/Gutter-Systems-Component-List-9-15-15.pdf" },
-                  ]} />
-                </div>
-              </article>
+            {/* Component PDF ribbon */}
+            <div className="mt-4 flex flex-wrap items-center gap-4 rounded-sm border border-border bg-card px-4 py-3">
+              <span className="text-[14px] text-muted-foreground">Full component reference:</span>
+              <a
+                href="https://www.custombiltmetals.com/wp-content/uploads/2015/07/Gutter-Systems-Component-List-9-15-15.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-meta inline-flex items-center gap-1.5 rounded-sm border border-info px-4 py-2 text-[13px] font-semibold text-info transition-colors hover:bg-info hover:text-background"
+              >
+                Gutter Component PDF
+                <ExternalLink className="h-3.5 w-3.5" />
+              </a>
             </div>
           </div>
         </section>
@@ -349,7 +343,7 @@ const GutterSystems = () => {
                   <div className="flex flex-1 flex-col p-4">
                     <h3 className="text-[14px] font-bold leading-[1.2] text-foreground">{m.name}</h3>
                     <p className="font-meta mt-1 text-[12px] text-muted-foreground">{m.profile}</p>
-                    <div className="mt-3 flex gap-2">
+                    <div className="mt-3 pb-2 flex gap-2">
                       <a href="https://www.custombiltmetals.com/request-a-quote/" className="font-meta inline-block rounded-sm bg-accent px-3.5 py-1.5 text-[12px] font-semibold text-accent-foreground transition-opacity hover:opacity-90">Inquire</a>
                     </div>
                     <MachineDocAccordion specSheet={m.specSheet} />
