@@ -362,13 +362,17 @@ const SiteNav = () => {
                     {currentCat.sections.map((section) => (
                       <div key={section.heading}>
                         <div className="font-meta mb-1 mt-3 border-b border-border pb-1 text-[12px] uppercase tracking-widest text-muted-foreground">
-                          {section.heading}
+                          {section.anchor ? (
+                            <Link to={section.anchor} onClick={closeAll} className="hover:text-accent transition-colors">
+                              {section.heading}
+                            </Link>
+                          ) : section.heading}
                         </div>
                         <div className="grid grid-cols-4 gap-1">
                           {section.items.map((item) => (
                             <Link
                               key={item.code}
-                              to={currentCat.href}
+                              to={section.anchor || currentCat.href}
                               onClick={closeAll}
                               className="rounded-sm border border-transparent p-2.5 transition-colors hover:border-border hover:bg-surface"
                             >
