@@ -107,26 +107,6 @@ const WallsSoffits = () => {
           </div>
         </div>
 
-        {/* Tabs */}
-        <nav className="sticky top-0 z-50 border-b border-border bg-background shadow-sm">
-          <div className="mx-auto flex max-w-[1200px] overflow-x-auto">
-            {wallCategories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => {
-                  setActiveTab(cat.id);
-                  document.getElementById(cat.id)?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-                className={`shrink-0 border-b-[3px] px-6 py-4 text-left transition-colors ${
-                  activeTab === cat.id ? "border-accent" : "border-transparent hover:border-muted-foreground/30"
-                }`}
-              >
-                <span className="block text-[13px] font-bold text-foreground">{cat.label}</span>
-                <span className="font-meta block text-[12px] text-muted-foreground">{cat.subtitle}</span>
-              </button>
-            ))}
-          </div>
-        </nav>
 
         {/* S3A — Wall & Soffit Panels */}
         <section id="wall-soffit" className="border-b border-border bg-background px-8 py-12">
