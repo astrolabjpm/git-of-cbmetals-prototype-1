@@ -341,7 +341,7 @@ const SiteNav = () => {
               <div className="p-6">
                 {currentCat && (
                   <>
-                    <div className="mb-4 border-b border-border pb-2.5">
+                    <div className="mb-4 pb-2.5">
                       <h3 className="text-[16px] font-bold leading-[1.2] text-foreground">{currentCat.label}</h3>
                       <Link
                         to={currentCat.href}
