@@ -115,19 +115,18 @@ const secondaryCategories = [
     href: "/specialty",
     sections: [
       {
-        heading: "Bare Metals & Alloys",
+      heading: "Bare Metals & Alloys",
         items: [
-          { code: "COPPER", name: "True Copper", desc: "16 oz. · Natural verdigris patina · Premium residential" },
-          { code: "RHEINZINK®", name: "Rheinzink Pre-weathered Zinc", desc: "Blue-grey · Pre-aged finish · Architectural" },
-          { code: "ZINCALUME+", name: "Bare Zincalume® Plus", desc: "Bright metallic · Cost-efficient traditional metal look" },
           { code: "A606", name: "A606 Weathering Steel", desc: "Rust-orange patina · Self-protecting · Design-forward" },
+          { code: "SPECIALTY ALLOYS", name: "Specialty Alloys (Rheinzink®)", desc: "Blue-grey · Pre-aged finish · Architectural" },
+          { code: "SL-1750 ALUMINUM", name: "SL-1750 Aluminum", desc: "Bare + PVDF-coated · Coastal + marine-grade options" },
         ],
       },
       {
-        heading: "Specialty Shingles",
+        heading: "Specialty Profiles & Shingles",
         items: [
+          { code: "VINTAGE®", name: "Vintage® Standing Seam", desc: "Traditional profile · Specialty print coats + bare metals" },
           { code: "COPPER SHINGLES", name: "Copper Shingles", desc: "Premium residential · Heritage restoration" },
-          { code: "VAIL®", name: "Vail® Shingles", desc: "Contemporary · Mountain aesthetic" },
           { code: "CUSTOM FLAT", name: "Custom Flat Shingles", desc: "Architect-specified · Custom dimensions" },
         ],
       },
