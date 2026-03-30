@@ -62,6 +62,31 @@ const productCategories = [
     ],
   },
   {
+    id: "shingles",
+    label: "Metal Shingles & Shakes",
+    count: "5 profiles · Aluminum + steel · Isaiah Industries",
+    href: "/metal-shingles-shakes",
+    sections: [
+      {
+        heading: "Aluminum Shakes & Shingles",
+        anchor: "/metal-shingles-shakes#aluminum-shakes",
+        items: [
+          { code: "COUNTRY MANOR", name: "Country Manor Shake", desc: "Aluminum · Cedar shake aesthetic · Concealed fastener · 120 mph wind" },
+          { code: "OXFORD", name: "Oxford Shingle", desc: "Aluminum · 12\"×60\" panels · Contemporary + traditional · Solar-ready" },
+          { code: "SLATE ROCK", name: "Oxford Slate Rock", desc: "Aluminum · 4-layer PVDF print coat · Natural slate look · 40 lbs / 100 sf" },
+        ],
+      },
+      {
+        heading: "Steel Shingles",
+        anchor: "/metal-shingles-shakes#steel-shingles",
+        items: [
+          { code: "KASSELWOOD", name: "KasselWood Steel Shingle", desc: "G90 steel · Cedar + slate colors · Class A fire · Class IV impact" },
+          { code: "KASSELSHAKE", name: "KasselShake Steel Shake", desc: "G90 steel · ThermoBond PVDF finish · Bold shake texture · 120 mph wind" },
+        ],
+      },
+    ],
+  },
+  {
     id: "gutters",
     label: "Gutter Systems",
     count: "K-style · Half-round · Fascia · Super Fascia",
