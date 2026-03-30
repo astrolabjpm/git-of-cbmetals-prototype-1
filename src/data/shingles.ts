@@ -26,6 +26,7 @@ export const aluminumShingles: ProductPanel[] = [
     image: countryManorImg,
     links: [],
     showLocation: true,
+    imageCover: true,
   },
   {
     id: "oxford-shingle",
@@ -47,6 +48,7 @@ export const aluminumShingles: ProductPanel[] = [
     image: oxfordShingleImg,
     links: [],
     showLocation: true,
+    imageCover: true,
   },
   {
     id: "oxford-slate-rock",
@@ -68,6 +70,7 @@ export const aluminumShingles: ProductPanel[] = [
     image: oxfordSlateRockImg,
     links: [],
     showLocation: true,
+    imageCover: true,
   },
 ];
 
@@ -92,6 +95,7 @@ export const steelShingles: ProductPanel[] = [
     image: kasselwoodImg,
     links: [],
     showLocation: true,
+    imageCover: true,
   },
   {
     id: "kasselshake",
@@ -113,5 +117,6 @@ export const steelShingles: ProductPanel[] = [
     image: kasselshakeImg,
     links: [],
     showLocation: true,
+    imageCover: true,
   },
 ];
