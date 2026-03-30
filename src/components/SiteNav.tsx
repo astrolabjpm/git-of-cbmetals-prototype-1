@@ -47,7 +47,7 @@ const productCategories = [
           { code: "SLZ-1000", name: "Snap-Lock Zee", desc: '1" zee profile · Residential + light commercial' },
           { code: "CS-100", name: "Cap Seam", desc: "Concealed clip · Architectural + commercial" },
           { code: "Vintage", name: "Vintage Profile", desc: "Traditional profile · Heritage residential" },
-          { code: "SHAKES", name: "Aluminum Shakes & Shingles", desc: "120 mph wind rated · 98% recycled · Cool Roof" },
+          { code: "Vintage", name: "Vintage Profile", desc: "Traditional profile · Heritage residential" },
         ],
       },
       {
