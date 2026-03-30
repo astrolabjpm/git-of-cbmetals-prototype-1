@@ -8,6 +8,7 @@ import Products from "./pages/Products.tsx";
 import GutterSystems from "./pages/GutterSystems.tsx";
 import WallsSoffits from "./pages/WallsSoffits.tsx";
 import Specialty from "./pages/Specialty.tsx";
+import MetalShingles from "./pages/MetalShingles.tsx";
 import MenuPage from "./pages/MenuPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/gutter-systems" element={<GutterSystems />} />
           <Route path="/walls-soffits" element={<WallsSoffits />} />
           <Route path="/specialty" element={<Specialty />} />
+          <Route path="/metal-shingles-shakes" element={<MetalShingles />} />
           <Route path="/menu/:section" element={<MenuPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

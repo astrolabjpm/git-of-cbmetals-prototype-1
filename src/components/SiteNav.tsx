@@ -47,7 +47,7 @@ const productCategories = [
           { code: "SLZ-1000", name: "Snap-Lock Zee", desc: '1" zee profile · Residential + light commercial' },
           { code: "CS-100", name: "Cap Seam", desc: "Concealed clip · Architectural + commercial" },
           { code: "Vintage", name: "Vintage Profile", desc: "Traditional profile · Heritage residential" },
-          { code: "SHAKES", name: "Aluminum Shakes & Shingles", desc: "120 mph wind rated · 98% recycled · Cool Roof" },
+          { code: "Vintage", name: "Vintage Profile", desc: "Traditional profile · Heritage residential" },
         ],
       },
       {
@@ -57,6 +57,31 @@ const productCategories = [
           { code: "TFR-36", name: "TFR-36 Panel", desc: "Exposed fastener · 36\" coverage · Roof + wall" },
           { code: "PBR", name: "PBR Panel", desc: "Structural overlap · Ag + heavy commercial" },
           { code: "Corrugated", name: "Corrugated Panel", desc: "Classic profile · Roof + wall · Ag + residential" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "shingles",
+    label: "Metal Shingles & Shakes",
+    count: "5 profiles · Aluminum + steel · Isaiah Industries",
+    href: "/metal-shingles-shakes",
+    sections: [
+      {
+        heading: "Aluminum Shakes & Shingles",
+        anchor: "/metal-shingles-shakes#aluminum-shakes",
+        items: [
+          { code: "COUNTRY MANOR", name: "Country Manor Shake", desc: "Aluminum · Cedar shake aesthetic · Concealed fastener · 120 mph wind" },
+          { code: "OXFORD", name: "Oxford Shingle", desc: "Aluminum · 12\"×60\" panels · Contemporary + traditional · Solar-ready" },
+          { code: "SLATE ROCK", name: "Oxford Slate Rock", desc: "Aluminum · 4-layer PVDF print coat · Natural slate look · 40 lbs / 100 sf" },
+        ],
+      },
+      {
+        heading: "Steel Shingles",
+        anchor: "/metal-shingles-shakes#steel-shingles",
+        items: [
+          { code: "KASSELWOOD", name: "KasselWood Steel Shingle", desc: "G90 steel · Cedar + slate colors · Class A fire · Class IV impact" },
+          { code: "KASSELSHAKE", name: "KasselShake Steel Shake", desc: "G90 steel · ThermoBond PVDF finish · Bold shake texture · 120 mph wind" },
         ],
       },
     ],
