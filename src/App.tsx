@@ -8,6 +8,7 @@ import Products from "./pages/Products.tsx";
 import GutterSystems from "./pages/GutterSystems.tsx";
 import WallsSoffits from "./pages/WallsSoffits.tsx";
 import Specialty from "./pages/Specialty.tsx";
+import MetalShingles from "./pages/MetalShingles.tsx";
 import MenuPage from "./pages/MenuPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
