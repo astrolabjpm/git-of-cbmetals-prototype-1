@@ -1,5 +1,5 @@
 import type { ProductPanel, ProductMeta } from "@/data/products";
-import countryManorImg from "@/assets/country-manor-shake.jpg";
+import countryManorImg from "@/assets/country-manor-shake-hero.jpg";
 import oxfordShingleImg from "@/assets/oxford-shingle.jpg";
 import oxfordSlateRockImg from "@/assets/oxford-slate-rock.jpg";
 import kasselwoodImg from "@/assets/kasselwood.jpg";
