@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import SiteNav from "@/components/SiteNav";
 import { ArrowRight } from "lucide-react";
 import heroImg from "@/assets/hero-products.jpg";
+import countryManorImg from "@/assets/country-manor-shake.jpg";
 
 const productPages = [
   {
