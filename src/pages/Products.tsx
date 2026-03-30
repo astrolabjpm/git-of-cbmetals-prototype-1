@@ -13,6 +13,13 @@ const productPages = [
     image: "https://www.custombiltmetals.com/wp-content/uploads/2015/08/CB-2000.jpg",
   },
   {
+    title: "Metal Shingles & Shakes",
+    description: "Interlocking aluminum and steel shingle systems by Isaiah Industries. Cedar shake, slate, and shingle aesthetics with concealed fasteners, Kynar 500 PVDF coatings, and lifetime warranties.",
+    href: "/metal-shingles-shakes",
+    products: "Country Manor Shake · Oxford Shingle · Oxford Slate Rock · KasselWood · KasselShake",
+    image: countryManorImg,
+  },
+  {
     title: "Seamless Gutter Systems",
     description: "K-style, half-round, and fascia seamless gutters in aluminum, steel, copper, and Zincalume. Formed on-site. Includes downspouts, components, and Iron Man rollforming machines.",
     href: "/gutter-systems",
