@@ -28,6 +28,7 @@ export interface ProductPanel {
   image: string;
   links: ProductLink[];
   showLocation?: boolean;
+  imageCover?: boolean;
 }
 
 export interface ProductCategoryInfo {

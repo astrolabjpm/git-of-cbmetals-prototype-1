@@ -16,12 +16,12 @@ const ProductCard = ({ product, compact = false }: ProductCardProps) => {
       {/* Image with padding */}
       {product.image && (
         <div className="p-5 pb-0">
-          <div className={`relative overflow-hidden rounded-sm bg-white ${compact ? "h-[120px]" : "h-[170px]"}`}>
+          <div className={`relative overflow-hidden rounded-sm ${product.imageCover ? "bg-muted" : "bg-white"} ${compact ? "h-[120px]" : "h-[170px]"}`}>
             <img
               src={product.image}
               alt={`${product.name} metal roofing panel profile`}
               loading="lazy"
-              className="h-full w-full object-contain"
+              className={`h-full w-full ${product.imageCover ? "object-cover" : "object-contain"}`}
             />
           </div>
         </div>
